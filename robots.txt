@@ -12,3 +12,4 @@ Disallow: /GUIDA-TECNICA.md
 
 # Sitemap
 Sitemap: https://ratioapp.co/sitemap.xml
+ 
