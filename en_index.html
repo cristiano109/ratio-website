@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RATIO — Executive Decisions. Without Error.</title>
+  <meta name="description" content="RATIO is a decision intelligence system for executive selection. Structured assessments, verified outputs, certified decisions." />
+  <meta property="og:title" content="RATIO — Executive Decisions. Without Error." />
+  <meta property="og:description" content="Decision intelligence for high-stakes executive hiring. Structured. Verified. Defensible." />
+  <meta property="og:locale" content="en_US" />
+  <link rel="canonical" href="https://ratioapp.co/en_index.html" />
+  <link rel="alternate" hreflang="it" href="https://ratioapp.co/index.html" />
+  <link rel="alternate" hreflang="en" href="https://ratioapp.co/en_index.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style-2.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMSTXZRSMX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TMSTXZRSMX');
+  </script>
+</head>
+<body class="booting">
+
+  <!-- BOOT OVERLAY — system initialization screen -->
+  <div id="boot-overlay" aria-hidden="true">
+    <div class="boot-inner">
+      <div class="boot-logo">RATIO</div>
+      <div class="boot-log" id="boot-log" aria-label="System initialization log"></div>
+      <div class="boot-bar-wrap">
+        <div class="boot-bar" id="boot-bar"></div>
+      </div>
+      <div class="boot-status" id="boot-status">INITIALISING...</div>
+    </div>
+  </div>
+
+  <!-- SYSTEM GRID OVERLAY -->
+  <div class="sys-grid-overlay" aria-hidden="true"></div>
+  <div class="sys-scanline" aria-hidden="true"></div>
+
+  <!-- ============================
+       NAVIGATION
+  ============================= -->
+  <header id="main-header" role="banner">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <div class="nav-logo">
+        <img src="./ratio-logo.png" alt="RATIO" class="logo-img" />
+        <span class="logo-badge">SYS v2.4</span>
+      </div>
+      <ul class="nav-links" role="list">
+        <li><a href="#home"          class="nav-link active" data-section="home">HOME</a></li>
+        <li><a href="#chi-siamo"     class="nav-link" data-section="chi-siamo">ABOUT</a></li>
+        <li><a href="#come-funziona" class="nav-link" data-section="come-funziona">HOW IT WORKS</a></li>
+        <li><a href="#output"        class="nav-link" data-section="output">OUTPUT</a></li>
+        <li><a href="./en_insights.html" class="nav-link">INSIGHTS</a></li>
+        <li><a href="#contatti"      class="nav-link" data-section="contatti">CONTACT</a></li>
+      </ul>
+      <div class="nav-contact">
+        <span class="sys-status-dot"></span>
+        <a href="mailto:decision@ratioapp.co" class="nav-email">decision@ratioapp.co</a>
+      </div>
+      <div class="lang-switcher" aria-label="Select language">
+        <a href="./index.html" class="lang-btn" aria-label="Versione italiana">IT</a>
+        <span class="lang-sep" aria-hidden="true"></span>
+        <a href="./en_index.html" class="lang-btn active" aria-label="English version">EN</a>
+      </div>
+      <button class="nav-toggle" aria-label="Mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-progress-bar" id="nav-progress"></div>
+  </header>
+
+  <!-- ============================
+       HERO
+  ============================= -->
+  <section id="home" class="section hero-section" aria-labelledby="hero-headline">
+    <div class="hero-bg-layers" aria-hidden="true">
+      <div class="hero-layer-1"></div>
+      <div class="hero-layer-2"></div>
+      <div class="hero-layer-3"></div>
+      <div class="hero-radial-glow"></div>
+      <div class="hero-scan-sweep" aria-hidden="true"></div>
+    </div>
+
+    <div class="container hero-container">
+
+      <!-- LEFT COLUMN -->
+      <div class="hero-left">
+        <div class="hero-eyebrow cin-item" data-cin-delay="0">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">DECISION FILTER — EXECUTIVE SELECTION</span>
+          <span class="eyebrow-ver">REL. 2.4.1</span>
+        </div>
+
+        <h1 id="hero-headline" class="hero-headline cin-item" data-cin-delay="120">
+          Hire without error.<br />
+          <span class="headline-accent">With total control</span><br />
+          of risk.
+        </h1>
+
+        <p class="hero-body cin-item" data-cin-delay="260">
+          A decision intelligence system for executive selection.<br />Turning complex evaluations into verifiable decisions.
+        </p>
+        <p class="hero-clarify cin-item" data-cin-delay="320">
+          We assess candidates for critical roles when the decision cannot be left to intuition.
+        </p>
+
+        <div class="hero-cta-row cin-item" data-cin-delay="380">
+          <a href="#contatti" class="btn-primary">
+            <span class="btn-label">CONTACT US</span>
+            <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+          <a href="#come-funziona" class="btn-ghost">
+            <span>VIEW THE SYSTEM</span>
+            <span class="btn-slash">//</span>
+          </a>
+        </div>
+
+        <div class="hero-meta-row cin-item" data-cin-delay="480">
+          <div class="meta-chip"><span class="meta-dot green"></span><span>System Operational</span></div>
+          <div class="meta-chip"><span class="meta-dot yellow"></span><span>3 Slots Remaining</span></div>
+          <div class="meta-chip"><span class="meta-dot red"></span><span>Access by Selection</span></div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: DASHBOARD PANEL -->
+      <aside class="hero-panel" id="hero-panel" aria-label="Assessment preview">
+
+        <div class="panel-header panel-row" data-panel-row="0">
+          <div class="panel-header-left">
+            <span class="panel-title">ASSESSMENT PREVIEW</span>
+            <span class="panel-ref">REF: ASS-2024-0847</span>
+          </div>
+          <div class="panel-header-right">
+            <span class="panel-status reserved">RESTRICTED</span>
+            <span class="panel-ver">v2.4</span>
+          </div>
+        </div>
+
+        <div class="panel-divider panel-row" data-panel-row="1"></div>
+
+        <div class="panel-fields">
+          <div class="panel-field panel-row" data-panel-row="2">
+            <span class="field-label">ASSESSMENT REF.</span>
+            <span class="field-value mono">ASS-2024-0847</span>
+          </div>
+          <div class="panel-field panel-row" data-panel-row="3">
+            <span class="field-label">POSITION</span>
+            <span class="field-value">Chief Operating Officer</span>
+          </div>
+          <div class="panel-field panel-row" data-panel-row="4">
+            <span class="field-label">ANALYSIS DATE</span>
+            <span class="field-value mono">14.11.2024 — 09:42 CET</span>
+          </div>
+          <div class="panel-field panel-row" data-panel-row="5">
+            <span class="field-label">CLASSIFICATION</span>
+            <span class="field-value"><span class="badge badge-red">LEVEL 3 — CRITICAL</span></span>
+          </div>
+          <div class="panel-field panel-row" data-panel-row="6">
+            <span class="field-label">ANALYST</span>
+            <span class="field-value mono">SYS/AUTO — rev. A.Ferri</span>
+          </div>
+        </div>
+
+        <div class="panel-divider panel-row" data-panel-row="7"></div>
+        <div class="panel-section-label panel-row" data-panel-row="8">ANALYSIS METRICS</div>
+
+        <div class="panel-metrics">
+          <div class="metric-row panel-row" data-panel-row="9" data-value="87">
+            <div class="metric-header">
+              <span class="metric-name">ROLE COMPATIBILITY</span>
+              <span class="metric-value green">87<span class="metric-unit">/100</span></span>
+            </div>
+            <div class="metric-bar-track">
+              <div class="metric-bar-fill green" style="width: 87%"></div>
+              <div class="metric-bar-ghost"></div>
+            </div>
+            <div class="metric-sub"><span>Threshold: 70</span><span class="metric-delta green">↑ +12 vs average</span></div>
+          </div>
+
+          <div class="metric-row panel-row" data-panel-row="10" data-value="74">
+            <div class="metric-header">
+              <span class="metric-name">LEADERSHIP PROFILE</span>
+              <span class="metric-value yellow">74<span class="metric-unit">/100</span></span>
+            </div>
+            <div class="metric-bar-track">
+              <div class="metric-bar-fill yellow" style="width: 74%"></div>
+              <div class="metric-bar-ghost"></div>
+            </div>
+            <div class="metric-sub"><span>Threshold: 65</span><span class="metric-delta yellow">↔ within range</span></div>
+          </div>
+
+          <div class="metric-row panel-row" data-panel-row="11" data-value="81">
+            <div class="metric-header">
+              <span class="metric-name">DECISION STABILITY</span>
+              <span class="metric-value green">81<span class="metric-unit">/100</span></span>
+            </div>
+            <div class="metric-bar-track">
+              <div class="metric-bar-fill green" style="width: 81%"></div>
+              <div class="metric-bar-ghost"></div>
+            </div>
+            <div class="metric-sub"><span>Threshold: 60</span><span class="metric-delta green">↑ +21 vs average</span></div>
+          </div>
+
+          <div class="metric-row metric-risk panel-row" data-panel-row="12" data-value="34">
+            <div class="metric-header">
+              <span class="metric-name">RISK INDEX</span>
+              <span class="metric-value red">ELEVATED — <span class="metric-unit">34%</span></span>
+            </div>
+            <div class="metric-bar-track">
+              <div class="metric-bar-fill red" style="width: 34%"></div>
+              <div class="metric-bar-ghost"></div>
+            </div>
+            <div class="metric-sub"><span>Critical threshold: 30%</span><span class="metric-delta red">↑ Monitor</span></div>
+          </div>
+        </div>
+
+        <div class="panel-divider panel-row" data-panel-row="13"></div>
+
+        <div class="panel-recommendation panel-row" data-panel-row="14">
+          <span class="rec-label">RECOMMENDATION</span>
+          <div class="rec-value">
+            <span class="rec-dot green"></span>
+            <span class="rec-text">PROCEED — SECOND PHASE MANDATORY</span>
+          </div>
+          <div class="rec-note">Analyst note: verify stability under situational pressure Q3.</div>
+        </div>
+
+        <div class="panel-footer panel-row" data-panel-row="15">
+          <span class="panel-ts mono">GEN: 14.11.2024 09:47 CET</span>
+          <span class="panel-hash mono">SHA: d4f9c2a1</span>
+          <span class="panel-conf">CONFIDENTIAL</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span class="scroll-label">SCROLL</span>
+    </div>
+  </section>
+
+  <!-- ============================
+       OPERATIONAL CONTEXT
+  ============================= -->
+  <section id="chi-siamo" class="section context-section" aria-labelledby="context-headline">
+    <div class="section-layer-top" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="section-intro reveal-block" data-reveal="fade-up-slow">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span>OPERATIONAL CONTEXT</span>
+          <span class="eyebrow-code">MOD.CTX-01</span>
+        </div>
+        <h2 id="context-headline" class="section-headline">
+          Wrong decisions cost<br />more than talent.
+        </h2>
+        <p class="section-subtext">
+          The problem is not finding candidates. It is selecting the right one when the cost of error is high.
+        </p>
+        <p class="section-subtext context-secondary">
+          Every executive hiring mistake carries a structural cost. This is not a people problem — it is a methodology problem.
+        </p>
+      </div>
+
+      <!-- WHAT IT IS BLOCK -->
+      <div class="what-it-is reveal-block" data-reveal="fade-up-slow" data-reveal-delay="60">
+        <div class="wii-inner">
+          <div class="wii-label">WHAT RATIO IS</div>
+          <p class="wii-text">
+            RATIO is not a recruiter. Not a headhunter. Not an automated test.<br />
+            It is a decision evaluation system for selecting candidates in high-impact roles.
+          </p>
+        </div>
+      </div>
+
+      <div class="cards-grid three-col">
+        <article class="data-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="0" data-index="01">
+          <div class="card-index">01</div>
+          <div class="card-header">
+            <div class="card-icon-wrap"><i class="fas fa-chart-bar card-icon"></i></div>
+            <h3 class="card-title">Assessment Error</h3>
+          </div>
+          <p class="card-body">Nearly half of all executive hires fail within 18 months. Standard selection processes are not built to detect the signals that matter.</p>
+          <div class="card-metric">
+            <div class="card-metric-number red" data-count="46">46<span>%</span></div>
+            <div class="card-metric-label">MISMATCH RATE</div>
+            <div class="micro-bars" aria-hidden="true">
+              <span style="height:30%"></span><span style="height:55%"></span><span style="height:46%"></span><span style="height:62%"></span><span style="height:46%"></span>
+            </div>
+          </div>
+          <div class="card-footer-meta">
+            <span class="cfm-label">Source: Global HR Benchmark 2024</span>
+            <span class="cfm-status red">CRITICAL</span>
+          </div>
+        </article>
+
+        <article class="data-card featured reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="100" data-index="02">
+          <div class="card-index">02</div>
+          <div class="card-header">
+            <div class="card-icon-wrap"><i class="fas fa-brain card-icon"></i></div>
+            <h3 class="card-title">The Cost of Judgement</h3>
+          </div>
+          <p class="card-body">Cognitive bias cannot be corrected through experience. It systematically amplifies errors at the most critical stages of the decision-making process.</p>
+          <div class="card-metric">
+            <div class="card-metric-number yellow" data-count="3.2">3.2<span>×</span></div>
+            <div class="card-metric-label">BIAS AMPLIFICATION</div>
+            <div class="micro-bars" aria-hidden="true">
+              <span style="height:80%"></span><span style="height:100%"></span><span style="height:90%"></span><span style="height:75%"></span><span style="height:85%"></span>
+            </div>
+          </div>
+          <div class="card-footer-meta">
+            <span class="cfm-label">Kahneman-derived index 2023</span>
+            <span class="cfm-status yellow">CAUTION</span>
+          </div>
+        </article>
+
+        <article class="data-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="200" data-index="03">
+          <div class="card-index">03</div>
+          <div class="card-header">
+            <div class="card-icon-wrap"><i class="fas fa-euro-sign card-icon"></i></div>
+            <h3 class="card-title">The Price of a Mistake</h3>
+          </div>
+          <p class="card-body">A failed executive hire is equivalent to four times the annual cost of the role. The organisational damage is rarely accounted for — but it is real.</p>
+          <div class="card-metric">
+            <div class="card-metric-number red" data-count="4">4<span>×</span></div>
+            <div class="card-metric-label">COST MULTIPLIER</div>
+            <div class="micro-bars" aria-hidden="true">
+              <span style="height:25%"></span><span style="height:40%"></span><span style="height:60%"></span><span style="height:85%"></span><span style="height:100%"></span>
+            </div>
+          </div>
+          <div class="card-footer-meta">
+            <span class="cfm-label">McKinsey Talent Report 2024</span>
+            <span class="cfm-status red">CRITICAL</span>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="section-layer-bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============================
+       SYSTEM ARCHITECTURE
+  ============================= -->
+  <section id="sistema" class="section system-section" aria-labelledby="system-headline">
+    <div class="section-layer-top alt" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="section-split-header">
+        <div class="split-left reveal-block" data-reveal="fade-up-slow">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span>SYSTEM ARCHITECTURE</span>
+            <span class="eyebrow-code">MOD.SYS-02</span>
+          </div>
+          <h2 id="system-headline" class="section-headline">
+            Not a process.<br />A decision filter.
+          </h2>
+        </div>
+        <div class="split-right reveal-block" data-reveal="fade-right" data-reveal-delay="150">
+          <p class="split-subtext">RATIO analyses how a person thinks, decides and performs under pressure. Every criterion is empirically weighted. Every output is verifiable, signed and defensible in audit.</p>
+          <div class="sys-info-row">
+            <div class="sys-info-chip"><span class="sic-key">MODULES</span><span class="sic-val">03</span></div>
+            <div class="sys-info-chip"><span class="sic-key">CRITERIA</span><span class="sic-val">128+</span></div>
+            <div class="sys-info-chip"><span class="sic-key">ACCURACY</span><span class="sic-val">94%</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards-grid three-col modules-grid">
+        <article class="module-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="0" data-module="01">
+          <div class="module-card-top">
+            <div class="module-tag">MODULE <span>01</span></div>
+            <div class="module-status-dot green"></div>
+          </div>
+          <h3 class="module-title">Role Fit</h3>
+          <p class="module-desc">Measures whether the candidate can sustain the role — not merely occupy it.</p>
+          <ul class="module-features" role="list">
+            <li>— Core competency mapping</li>
+            <li>— Role gap analysis</li>
+            <li>— Contextual adaptability index</li>
+            <li>— Weighted compatibility score</li>
+            <li>— Industry benchmark comparison</li>
+          </ul>
+          <div class="module-metrics-row">
+            <div class="mini-metric"><span class="mini-val">32</span><span class="mini-lbl">Criteria</span></div>
+            <div class="mini-metric"><span class="mini-val">±4%</span><span class="mini-lbl">Margin</span></div>
+            <div class="mini-metric"><span class="mini-val">92%</span><span class="mini-lbl">Acc.</span></div>
+          </div>
+          <div class="module-footer-meta">
+            <span class="mfm-code">RATIO/MOD-01/v2.4</span>
+            <span class="mfm-status active">ACTIVE</span>
+          </div>
+        </article>
+
+        <article class="module-card focus reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="120" data-module="02">
+          <div class="module-card-top">
+            <div class="module-tag">MODULE <span>02</span></div>
+            <div class="module-status-dot red pulsing"></div>
+          </div>
+          <h3 class="module-title">Risk Analysis</h3>
+          <p class="module-desc">Identifies risks before they become errors. Behavioural patterns, narrative inconsistencies, instability under pressure.</p>
+          <ul class="module-features" role="list">
+            <li>— Cognitive bias profiling</li>
+            <li>— Decision pattern analysis</li>
+            <li>— Stress instability index</li>
+            <li>— Narrative inconsistency detection</li>
+            <li>— Composite risk score</li>
+          </ul>
+          <div class="module-metrics-row">
+            <div class="mini-metric"><span class="mini-val">58</span><span class="mini-lbl">Criteria</span></div>
+            <div class="mini-metric"><span class="mini-val">±2%</span><span class="mini-lbl">Margin</span></div>
+            <div class="mini-metric"><span class="mini-val">96%</span><span class="mini-lbl">Acc.</span></div>
+          </div>
+          <div class="module-footer-meta">
+            <span class="mfm-code">RATIO/MOD-02/v2.4</span>
+            <span class="mfm-status critical">CRITICAL</span>
+          </div>
+        </article>
+
+        <article class="module-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="240" data-module="03">
+          <div class="module-card-top">
+            <div class="module-tag">MODULE <span>03</span></div>
+            <div class="module-status-dot green"></div>
+          </div>
+          <h3 class="module-title">Decision Output</h3>
+          <p class="module-desc">Structured, verifiable, defensible final decision. Not an opinion — a formal document with signature and integrity hash.</p>
+          <ul class="module-features" role="list">
+            <li>— Classified structured report</li>
+            <li>— Recommendation with rationale</li>
+            <li>— Final composite score</li>
+            <li>— SHA-256 hash archiving</li>
+            <li>— Senior analyst review</li>
+          </ul>
+          <div class="module-metrics-row">
+            <div class="mini-metric"><span class="mini-val">38</span><span class="mini-lbl">Criteria</span></div>
+            <div class="mini-metric"><span class="mini-val">±3%</span><span class="mini-lbl">Margin</span></div>
+            <div class="mini-metric"><span class="mini-val">94%</span><span class="mini-lbl">Acc.</span></div>
+          </div>
+          <div class="module-footer-meta">
+            <span class="mfm-code">RATIO/MOD-03/v2.4</span>
+            <span class="mfm-status active">ACTIVE</span>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="section-layer-bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============================
+       HOW IT WORKS — PROCESS
+  ============================= -->
+  <section id="come-funziona" class="section process-section" aria-labelledby="process-headline">
+    <div class="container">
+      <div class="section-split-header">
+        <div class="split-left reveal-block" data-reveal="fade-up-slow">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span>OPERATIONAL PROCESS</span>
+            <span class="eyebrow-code">MOD.PROC-03</span>
+          </div>
+          <h2 id="process-headline" class="section-headline">Four phases.<br />No uncontrolled variables.</h2>
+        </div>
+        <div class="split-right reveal-block" data-reveal="fade-right" data-reveal-delay="100">
+          <p class="split-subtext">Every phase has documented entry and exit criteria. The sequence is fixed. The system does not allow shortcuts.</p>
+        </div>
+      </div>
+
+      <div class="process-timeline">
+        <article class="process-step reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="0" data-step="01">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <div class="step-tag">INPUT</div>
+            <h3 class="step-title">Initial alignment</h3>
+            <p class="step-body">We define the role, context and risk level of the decision.</p>
+            <div class="step-meta">
+              <span class="step-duration"><i class="fas fa-clock"></i> 2–4h</span>
+              <span class="step-output">OUTPUT: RoleSpec v1</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="process-step reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="80" data-step="02">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <div class="step-tag">ANALYSIS</div>
+            <h3 class="step-title">Candidate evaluation</h3>
+            <p class="step-body">We analyse how the candidate thinks, decides and performs under pressure.</p>
+            <div class="step-meta">
+              <span class="step-duration"><i class="fas fa-clock"></i> 6–8h</span>
+              <span class="step-output">OUTPUT: DataSet v2</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="process-step reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="160" data-step="03">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <div class="step-tag">VERIFICATION</div>
+            <h3 class="step-title">Operational verification</h3>
+            <p class="step-body">Simulation or real scenario to observe behaviour and priorities under pressure.</p>
+            <div class="step-meta">
+              <span class="step-duration"><i class="fas fa-clock"></i> 12–24h</span>
+              <span class="step-output">OUTPUT: AnalysisLog v3</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="process-step output-step reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="240" data-step="04">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <div class="step-tag">OUTPUT</div>
+            <h3 class="step-title">Decision synthesis</h3>
+            <p class="step-body">Clear output with risk exposure, compatibility and a final, defensible recommendation.</p>
+            <div class="step-meta">
+              <span class="step-duration"><i class="fas fa-clock"></i> 24–48h</span>
+              <span class="step-output final">ASSESSMENT REPORT FINAL</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Human supervision note -->
+      <div class="process-human-note reveal-block" data-reveal="fade-up-slow" data-reveal-delay="300">
+        <div class="phn-block">
+          <div class="phn-label">
+            <span class="phn-dot"></span>
+            <span>ACTIVE HUMAN OVERSIGHT</span>
+          </div>
+          <div class="phn-desc">Analysis conducted by a senior corporate mental coach</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================
+       OUTPUT SECTION — CINEMATIC SCENE
+  ============================= -->
+  <section id="output" class="section output-section" aria-labelledby="output-headline">
+    <div class="output-scene-bg" aria-hidden="true">
+      <div class="osb-grid"></div>
+      <div class="osb-vignette"></div>
+      <div class="osb-glow-red"></div>
+      <div class="osb-glow-green"></div>
+    </div>
+    <div class="section-layer-top" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="output-layout">
+
+        <!-- LEFT: REPORT MOCKUP — CINEMATIC GENERATION -->
+        <div class="report-mockup-wrap" id="report-scene">
+
+          <!-- Cinematic "generating" overlay -->
+          <div class="report-gen-overlay" id="report-gen-overlay" aria-hidden="true">
+            <div class="rgo-inner">
+              <span class="rgo-spinner"></span>
+              <span class="rgo-label">GENERATING REPORT...</span>
+              <span class="rgo-pct" id="rgo-pct">0%</span>
+            </div>
+          </div>
+
+          <div class="report-mockup" id="report-mockup" aria-label="RATIO Report Sample">
+            <div class="report-header report-line" data-rline="0">
+              <div class="rh-left">
+                <div class="rh-logo">RATIO</div>
+                <div class="rh-subtitle">ASSESSMENT REPORT</div>
+              </div>
+              <div class="rh-right">
+                <span class="badge badge-red report-badge">RESTRICTED</span>
+                <span class="report-ver mono">v2.4.1</span>
+              </div>
+            </div>
+            <div class="panel-divider report-line" data-rline="1"></div>
+
+            <div class="report-fields">
+              <div class="report-field-row report-line" data-rline="2">
+                <span class="rf-key">DOCUMENT REF.</span>
+                <span class="rf-val mono">ASS-2024-0847-FNL</span>
+              </div>
+              <div class="report-field-row report-line" data-rline="3">
+                <span class="rf-key">DATE</span>
+                <span class="rf-val mono">14.11.2024</span>
+              </div>
+              <div class="report-field-row report-line" data-rline="4">
+                <span class="rf-key">CANDIDATE</span>
+                <span class="rf-val">M.R. — ID ANON.47</span>
+              </div>
+              <div class="report-field-row report-line" data-rline="5">
+                <span class="rf-key">POSITION</span>
+                <span class="rf-val">Chief Operating Officer</span>
+              </div>
+              <div class="report-field-row report-line" data-rline="6">
+                <span class="rf-key">REVIEWER</span>
+                <span class="rf-val mono">A.Ferri / SYS-AUTO</span>
+              </div>
+              <div class="report-field-row report-line" data-rline="7">
+                <span class="rf-key">MODEL VERSION</span>
+                <span class="rf-val mono">RATIO/CORE/v2.4</span>
+              </div>
+            </div>
+
+            <div class="panel-divider report-line" data-rline="8"></div>
+            <div class="panel-section-label report-line" data-rline="9">FINAL METRICS</div>
+
+            <div class="report-metrics">
+              <div class="rm-row report-line" data-rline="10">
+                <span class="rm-name">Role compatibility</span>
+                <div class="rm-bar-wrap"><div class="rm-bar green" style="width:87%"></div></div>
+                <span class="rm-score green">87/100</span>
+              </div>
+              <div class="rm-row report-line" data-rline="11">
+                <span class="rm-name">Leadership profile</span>
+                <div class="rm-bar-wrap"><div class="rm-bar yellow" style="width:74%"></div></div>
+                <span class="rm-score yellow">74/100</span>
+              </div>
+              <div class="rm-row report-line" data-rline="12">
+                <span class="rm-name">Decision stability</span>
+                <div class="rm-bar-wrap"><div class="rm-bar green" style="width:81%"></div></div>
+                <span class="rm-score green">81/100</span>
+              </div>
+              <div class="rm-row report-line risk-line" data-rline="13">
+                <span class="rm-name">Risk index</span>
+                <div class="rm-bar-wrap"><div class="rm-bar red" style="width:34%"></div></div>
+                <span class="rm-score red">ELEVATED 34%</span>
+              </div>
+            </div>
+
+            <div class="panel-divider report-line" data-rline="14"></div>
+
+            <div class="report-recommendation report-line report-final-line" data-rline="15">
+              <div class="rrec-label">SYSTEM RECOMMENDATION</div>
+              <div class="rrec-value">
+                <span class="rec-dot green"></span>
+                <span class="rrec-text">PROCEED — SECOND PHASE MANDATORY</span>
+              </div>
+            </div>
+
+            <div class="report-analyst-notes report-line" data-rline="16">
+              <div class="ran-label">ANALYST NOTES</div>
+              <div class="ran-text">Profile consistent with high-pressure operational role. Verify stability under situational stress in Q3.</div>
+            </div>
+
+            <div class="report-footer report-line" data-rline="17">
+              <span class="mono rf-small">GEN: 14.11.2024 09:47 CET</span>
+              <span class="mono rf-small">SHA-256: d4f9c2a1e3b8...</span>
+              <span class="mono rf-small">RATIO-CERTIFIED</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: COPY -->
+        <div class="output-copy">
+          <div class="section-eyebrow reveal-block" data-reveal="fade-up-slow">
+            <span class="eyebrow-line"></span>
+            <span>DECISION OUTPUT</span>
+            <span class="eyebrow-code">MOD.OUT-04</span>
+          </div>
+          <h2 id="output-headline" class="section-headline reveal-block" data-reveal="fade-up-slow" data-reveal-delay="80">
+            Not a report.<br />
+            <span class="headline-accent">A decision.</span>
+          </h2>
+          <p class="output-clarify reveal-block" data-reveal="fade-up-slow" data-reveal-delay="140">
+            A structured candidate analysis with documented evidence of risks, compatibility and decision-making behaviour.
+          </p>
+          <p class="output-body reveal-block" data-reveal="fade-up-slow" data-reveal-delay="220">
+            Every decision is traceable, justifiable and defensible. Not a consultant's opinion — a formal output with digital signature, SHA-256 hash and certified timestamp.
+          </p>
+          <p class="output-human reveal-block" data-reveal="fade-up-slow" data-reveal-delay="280">
+            Every assessment is reviewed and validated by a senior analyst.
+          </p>
+
+          <div class="output-features">
+            <div class="of-row reveal-block" data-reveal="fade-right" data-reveal-delay="0">
+              <div class="of-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="of-text">
+                <div class="of-title">Named and classified access</div>
+                <div class="of-sub">Controlled distribution. Authorised recipients only.</div>
+              </div>
+            </div>
+            <div class="of-row reveal-block" data-reveal="fade-right" data-reveal-delay="100">
+              <div class="of-icon"><i class="fas fa-fingerprint"></i></div>
+              <div class="of-text">
+                <div class="of-title">SHA-256 cryptographic integrity</div>
+                <div class="of-sub">Every document is immutable and independently verifiable.</div>
+              </div>
+            </div>
+            <div class="of-row reveal-block" data-reveal="fade-right" data-reveal-delay="200">
+              <div class="of-icon"><i class="fas fa-archive"></i></div>
+              <div class="of-text">
+                <div class="of-title">Permanent certified archiving</div>
+                <div class="of-sub">Available for audit, legal review and accountability.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="output-cta-row reveal-block" data-reveal="fade-up-slow" data-reveal-delay="300">
+            <a href="#contatti" class="btn-primary">
+              <span class="btn-label">INITIATE AN EXECUTIVE ASSESSMENT</span>
+              <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#come-funziona" class="btn-ghost">
+              <span>VIEW THE PROCESS</span>
+              <span class="btn-slash">//</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-layer-bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============================
+       CTA BANNER
+  ============================= -->
+  <section class="cta-banner" aria-label="Main call to action">
+    <div class="cta-banner-bg" aria-hidden="true"><div class="cta-grid-overlay"></div></div>
+    <div class="container">
+      <div class="cta-content reveal-block" data-reveal="fade-up-slow">
+        <div class="cta-eyebrow">
+          <span class="eyebrow-line light"></span>
+          <span>THE DECISION MOMENT</span>
+        </div>
+        <h2 class="cta-headline">You are not choosing the best.<br />You are avoiding the wrong one.</h2>
+        <p class="cta-subheadline">This is where a decision becomes critical.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CONTACT
+  ============================= -->
+  <section id="contatti" class="section contact-section" aria-labelledby="contact-headline">
+    <div class="container">
+      <div class="section-eyebrow center-eyebrow reveal-block" data-reveal="fade-up-slow">
+        <span class="eyebrow-line"></span>
+        <span>CONTACT</span>
+        <span class="eyebrow-code">MOD.CONT-05</span>
+      </div>
+      <h2 id="contact-headline" class="section-headline centered reveal-block" data-reveal="fade-up-slow" data-reveal-delay="80">Get in touch.</h2>
+      <p class="contact-subtext reveal-block" data-reveal="fade-up-slow" data-reveal-delay="160">Write to us to receive information about the process.</p>
+
+      <div class="contact-layout">
+        <!-- MINIMAL CONTACT FORM -->
+        <form class="contact-form-minimal reveal-block" data-reveal="fade-up-slow" data-reveal-delay="0"
+              id="contact-form" novalidate aria-label="RATIO contact form">
+
+          <div class="form-field">
+            <label class="form-label" for="cf-ruolo">ROLE TO FILL</label>
+            <input type="text" id="cf-ruolo" name="ruolo" class="form-input"
+                   placeholder="e.g. CFO, COO, VP Sales" required />
+            <span class="form-validation-msg" aria-live="polite"></span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="cf-livello">POSITION LEVEL</label>
+            <select id="cf-livello" name="livello" class="form-input form-select" required>
+              <option value="">— Select —</option>
+              <option value="operational">Operational</option>
+              <option value="managerial">Managerial</option>
+              <option value="executive">Executive</option>
+            </select>
+            <span class="form-validation-msg" aria-live="polite"></span>
+          </div>
+
+          <div class="form-footer-minimal">
+            <button type="submit" class="btn-primary" id="form-submit-btn">
+              <span class="btn-label">SEND REQUEST</span>
+              <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+            </button>
+          </div>
+
+        </form>
+
+        <aside class="contact-info reveal-block" data-reveal="fade-right" data-reveal-delay="100" aria-label="Contact information">
+          <div class="ci-block">
+            <div class="ci-label">DIRECT CONTACT</div>
+            <a href="mailto:decision@ratioapp.co" class="ci-value mono">decision@ratioapp.co</a>
+          </div>
+          <div class="ci-block">
+            <div class="ci-label">OPERATIONAL HQ</div>
+            <div class="ci-value">Dubai, UAE</div>
+          </div>
+          <div class="ci-block">
+            <div class="ci-label">SYSTEM STATUS</div>
+            <div class="ci-value"><span class="sys-status-dot"></span><span>System active — limited access</span></div>
+          </div>
+          <div class="ci-block">
+            <div class="ci-label">AVAILABILITY</div>
+            <div class="ci-value">Mon–Fri, 09:00–18:00 CET</div>
+          </div>
+          <div class="ci-block">
+            <div class="ci-label">AVERAGE RESPONSE</div>
+            <div class="ci-value"><span class="metric-value green mono">8h</span><span class="ci-sub"> during business hours</span></div>
+          </div>
+          <div class="ci-separator"></div>
+          <div class="ci-process-note">
+            <i class="fas fa-lock ci-lock-icon"></i>
+            <span>The full process is shared after the initial conversation.</span>
+          </div>
+          <div class="ci-separator"></div>
+          <div class="ci-legal">
+            <div class="ci-label">COMPLIANCE</div>
+            <div class="ci-value-small">GDPR Compliant · ISO 27001 · Anonymous data by default</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       FOOTER
+  ============================= -->
+  <footer id="main-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <div class="footer-logo">RATIO</div>
+        <p class="footer-desc">Decision intelligence for executive selection. Verifiable, defensible, certified outputs.</p>
+        <a href="mailto:decision@ratioapp.co" class="footer-email mono">decision@ratioapp.co</a>
+        <div class="footer-sys-info">
+          <span class="mono">SYS v2.4.1</span>
+          <span class="footer-sep">·</span>
+          <span class="mono">BUILD 20241114</span>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <ul role="list">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#chi-siamo">ABOUT</a></li>
+          <li><a href="#come-funziona">HOW IT WORKS</a></li>
+          <li><a href="#output">OUTPUT</a></li>
+          <li><a href="./en_insights.html">INSIGHTS</a></li>
+          <li><a href="#contatti">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2025 RATIO — Decision Intelligence. Dubai, UAE. All rights reserved.</span>
+        <span class="mono footer-hash">SHA: d4f9c2a1 · CERTIFIED</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>

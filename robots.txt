@@ -1,0 +1,14 @@
+# robots.txt — RATIO Decision Intelligence
+# Canonical domain: https://ratioapp.co
+# Updated: 2025-06-12
+
+User-agent: *
+Allow: /
+
+# Disallow internal/non-public files
+Disallow: /README.md
+Disallow: /BRIEF.md
+Disallow: /GUIDA-TECNICA.md
+
+# Sitemap
+Sitemap: https://ratioapp.co/sitemap.xml
