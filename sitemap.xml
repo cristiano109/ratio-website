@@ -1,203 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage IT -->
+  <!-- Homepage -->
   <url>
-    <loc>https://ratioapp.co/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/index.html"/>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://ratioapp.co/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ratioapp.co/en</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Homepage EN -->
+  <!-- Insights index -->
   <url>
-    <loc>https://ratioapp.co/en_index.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/index.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_index.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/index.html"/>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://ratioapp.co/insights</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ratioapp.co/en/insights</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Founder IT -->
+  <!-- Insight 1 -->
   <url>
-    <loc>https://ratioapp.co/cristiano-ludovisi.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/cristiano-ludovisi.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_cristiano-ludovisi.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/cristiano-ludovisi.html"/>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://ratioapp.co/insights/insight-1</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ratioapp.co/en/insights/en_insight-1</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Founder EN -->
+  <!-- Insight 2 -->
   <url>
-    <loc>https://ratioapp.co/en_cristiano-ludovisi.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/cristiano-ludovisi.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_cristiano-ludovisi.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/cristiano-ludovisi.html"/>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>yearly</changefreq>
+    <loc>https://ratioapp.co/insights/insight-2</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ratioapp.co/en/insights/en_insight-2</loc>
+    <lastmod>2026-06-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Insights listing IT -->
+  <!-- Insight 3 -->
   <url>
-    <loc>https://ratioapp.co/insights.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insights.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insights.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insights.html"/>
-    <lastmod>2025-07-02</lastmod>
+    <loc>https://ratioapp.co/insights/insight-3</loc>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
-
-  <!-- Insights listing EN -->
   <url>
-    <loc>https://ratioapp.co/en_insights.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insights.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insights.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insights.html"/>
-    <lastmod>2025-07-02</lastmod>
+    <loc>https://ratioapp.co/en/insights/en_insight-3</loc>
+    <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Insight 1 IT -->
+  <!-- Insight 4 -->
   <url>
-    <loc>https://ratioapp.co/insight-1.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-1.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-1.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-1.html"/>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ratioapp.co/insights/insight-4</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ratioapp.co/en/insights/en_insight-4</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Insight 1 EN -->
+  <!-- Insight 5 -->
   <url>
-    <loc>https://ratioapp.co/en_insight-1.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-1.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-1.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-1.html"/>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ratioapp.co/insights/insight-5</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ratioapp.co/en/insights/en_insight-5</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Insight 2 IT -->
+  <!-- Insight 6 -->
   <url>
-    <loc>https://ratioapp.co/insight-2.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-2.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-2.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-2.html"/>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ratioapp.co/insights/insight-6</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ratioapp.co/en/insights/en_insight-6</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Insight 2 EN -->
+  <!-- Founder pages -->
   <url>
-    <loc>https://ratioapp.co/en_insight-2.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-2.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-2.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-2.html"/>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ratioapp.co/cristiano-ludovisi</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
-
-  <!-- Insight 3 IT -->
   <url>
-    <loc>https://ratioapp.co/insight-3.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-3.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-3.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-3.html"/>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Insight 3 EN -->
-  <url>
-    <loc>https://ratioapp.co/en_insight-3.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-3.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-3.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-3.html"/>
-    <lastmod>2025-06-06</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Insight 4 IT -->
-  <url>
-    <loc>https://ratioapp.co/insight-4.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-4.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-4.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-4.html"/>
-    <lastmod>2025-06-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Insight 4 EN -->
-  <url>
-    <loc>https://ratioapp.co/en_insight-4.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-4.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-4.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-4.html"/>
-    <lastmod>2025-06-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Insight 5 IT -->
-  <url>
-    <loc>https://ratioapp.co/insight-5.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-5.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-5.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-5.html"/>
-    <lastmod>2025-06-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Insight 5 EN -->
-  <url>
-    <loc>https://ratioapp.co/en_insight-5.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-5.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-5.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-5.html"/>
-    <lastmod>2025-06-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Insight 6 IT -->
-  <url>
-    <loc>https://ratioapp.co/insight-6.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-6.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-6.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-6.html"/>
-    <lastmod>2025-07-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Insight 6 EN -->
-  <url>
-    <loc>https://ratioapp.co/en_insight-6.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-6.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-6.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-6.html"/>
-    <lastmod>2025-07-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ratioapp.co/en/en_cristiano-ludovisi</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
