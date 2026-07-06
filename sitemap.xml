@@ -127,5 +127,20 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Insight 7 -->
+  <url>
+    <loc>https://ratioapp.co/insight-7.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ratioapp.co/en_insight-7.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
+
 
