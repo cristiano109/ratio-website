@@ -232,6 +232,42 @@
     linear-gradient(155deg, var(--black-3) 0%, var(--black-1) 100%);
 }
 
+.cover-4 {
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 30%, rgba(63,209,122,0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 70% at 80% 70%, rgba(240,200,50,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 50% at 60% 10%, rgba(255,46,46,0.06) 0%, transparent 55%),
+    linear-gradient(150deg, var(--black-4) 0%, var(--black-1) 100%);
+}
+
+.cover-5 {
+  background:
+    radial-gradient(ellipse 65% 55% at 15% 25%, rgba(255,46,46,0.16) 0%, transparent 58%),
+    radial-gradient(ellipse 55% 65% at 85% 75%, rgba(63,209,122,0.10) 0%, transparent 52%),
+    radial-gradient(ellipse 75% 45% at 55% 90%, rgba(240,200,50,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse 90% 30% at 50% 5%, rgba(255,255,255,0.03) 0%, transparent 40%),
+    linear-gradient(160deg, var(--black-4) 0%, rgba(8,10,12,1) 60%, var(--black-2) 100%);
+}
+
+.cover-6 {
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 20%, rgba(100,200,255,0.13) 0%, transparent 58%),
+    radial-gradient(ellipse 50% 70% at 80% 80%, rgba(63,209,122,0.09) 0%, transparent 52%),
+    radial-gradient(ellipse 80% 40% at 60% 5%, rgba(240,200,50,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 50% at 10% 80%, rgba(100,200,255,0.05) 0%, transparent 45%),
+    linear-gradient(165deg, var(--black-4) 0%, rgba(6,9,14,1) 55%, var(--black-2) 100%);
+}
+
+/* COVER 7 — executive hiring / assunzione pericolosa / orange-green-blue */
+.cover-7 {
+  background:
+    radial-gradient(ellipse 65% 55% at 75% 25%, rgba(255,140,60,0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 65% at 15% 75%, rgba(63,209,122,0.10) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 35% at 40% 5%, rgba(100,180,255,0.07) 0%, transparent 48%),
+    radial-gradient(ellipse 55% 45% at 85% 80%, rgba(255,200,80,0.05) 0%, transparent 42%),
+    linear-gradient(150deg, var(--black-4) 0%, rgba(8,10,13,1) 58%, var(--black-2) 100%);
+}
+
 /* Geometric grid lines on covers */
 .cover-bg::after {
   content: '';
@@ -353,6 +389,9 @@
 .insight-card-footer {
   margin-top: auto;
   padding-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .insight-cta-inline {
@@ -1210,9 +1249,63 @@
   .insights-hero {
     padding: 110px 0 56px;
   }
+
+  /* Hero headline più piccolo su mobile */
+  .insights-hero-headline {
+    font-size: clamp(32px, 9vw, 52px);
+  }
+
+  /* Card featured: cover più bassa su mobile */
+  .insight-card.featured .insight-card-cover {
+    min-height: 180px;
+  }
+
+  /* Card body: padding ridotto */
   .insight-card-body {
     padding: 20px;
   }
+
+  /* Titolo insight più leggibile */
+  .insight-title {
+    font-size: 17px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Sottotitolo insight */
+  .insight-subtitle {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Meta chip: font più piccolo */
+  .insight-card-meta {
+    font-size: 11px;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  /* Grid 2 colonne → 1 colonna */
+  .insights-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Container padding laterale su mobile */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Insights main: meno padding verticale */
+  .insights-main {
+    padding: 48px 0 64px;
+  }
+
+  /* Methodology note: testo più piccolo */
+  .insights-methodology-note {
+    font-size: 9px;
+    padding: 8px 12px;
+  }
+
   .article-text h2 {
     font-size: 20px;
   }
