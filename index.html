@@ -7,6 +7,27 @@
   <link rel="canonical" href="https://ratioapp.co/index.html" />
   <link rel="alternate" hreflang="it" href="https://ratioapp.co/index.html" />
   <link rel="alternate" hreflang="en" href="https://ratioapp.co/en_index.html" />
+
+  <!-- Schema.org: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://ratioapp.co/#organization",
+    "name": "RATIO Decision Intelligence",
+    "url": "https://ratioapp.co",
+    "logo": { "@type": "ImageObject", "url": "https://ratioapp.co/ratio-logo.png" },
+    "description": "Filtro decisionale per la selezione executive. Output verificabili, difendibili, certificati.",
+    "email": "decision@ratioapp.co",
+    "areaServed": ["Italy", "UAE", "Worldwide"],
+    "knowsAbout": ["Decision Intelligence", "Executive Assessment", "Decision Risk", "Executive Hiring", "Board Decision Making"],
+    "sameAs": [
+      "https://www.linkedin.com/company/ratioappco/",
+      "https://www.youtube.com/@ratiodecisionintelligence"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -43,7 +64,7 @@
   <!-- ============================
        NAVIGATION
   ============================= -->
-  <header id="main-header" role="banner">
+  <header id="main-header" class="nav-visible" role="banner">
     <nav class="nav-inner" role="navigation" aria-label="Navigazione principale">
       <div class="nav-logo">
         <img src="./ratio-logo.png" alt="RATIO" class="logo-img" />
@@ -60,6 +81,14 @@
       <div class="nav-contact">
         <span class="sys-status-dot"></span>
         <a href="mailto:decision@ratioapp.co" class="nav-email">decision@ratioapp.co</a>
+      </div>
+      <div class="nav-social" aria-label="Canali social">
+        <a href="https://www.linkedin.com/company/ratioappco/" class="nav-social-link" target="_blank" rel="noopener noreferrer" aria-label="RATIO su LinkedIn">
+          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/@ratiodecisionintelligence" class="nav-social-link nav-social-link--yt" target="_blank" rel="noopener noreferrer" aria-label="RATIO su YouTube">
+          <i class="fab fa-youtube" aria-hidden="true"></i>
+        </a>
       </div>
       <div class="lang-switcher" aria-label="Seleziona lingua">
         <a href="./index.html" class="lang-btn active" aria-label="Versione italiana">IT</a>
@@ -280,6 +309,27 @@
         </div>
       </div>
 
+      <!-- FOUNDER CARD -->
+      <a href="./cristiano-ludovisi.html" class="founder-strip-card reveal-block" data-reveal="fade-up-slow" data-reveal-delay="80" aria-label="Scopri Cristiano Ludovisi, Founder di RATIO" style="display:flex; margin-bottom: 32px;">
+        <div class="fsc-left">
+          <div class="fsc-avatar" aria-hidden="true">
+            <span class="fsc-avatar-letter">CL</span>
+            <span class="fsc-avatar-dot"></span>
+          </div>
+          <div class="fsc-info">
+            <div class="fsc-label">FOUNDER &amp; CEO</div>
+            <div class="fsc-name">Cristiano Ludovisi</div>
+            <div class="fsc-role">Decision Intelligence &middot; Italia &amp; Dubai</div>
+          </div>
+        </div>
+        <div class="fsc-center">
+          <p class="fsc-quote">"Ho trasformato oltre 20 anni di esperienza imprenditoriale in un sistema per proteggere le decisioni che le organizzazioni non possono permettersi di sbagliare."</p>
+        </div>
+        <div class="fsc-right">
+          <span class="fsc-cta">Scopri la storia <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+
       <div class="cards-grid three-col">
         <article class="data-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="0" data-index="01">
           <div class="card-index">01</div>
@@ -344,6 +394,129 @@
     </div>
     <div class="section-layer-bottom" aria-hidden="true"></div>
   </section>
+
+
+
+  <style>
+  .founder-strip-section {
+    padding: 0 0 0 0;
+    position: relative;
+    z-index: 2;
+  }
+  .founder-strip-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 40px;
+    border: 1px solid rgba(63,209,122,0.18);
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(63,209,122,0.04) 0%, rgba(15,20,28,0.98) 60%, rgba(8,11,16,0.98) 100%);
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 280ms ease, transform 280ms ease, box-shadow 280ms ease;
+    margin: 0 0 0 0;
+  }
+  .founder-strip-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(63,209,122,0.4), transparent);
+  }
+  .founder-strip-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(63,209,122,0.15), transparent);
+  }
+  .founder-strip-card:hover {
+    border-color: rgba(63,209,122,0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(63,209,122,0.08);
+  }
+  .fsc-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
+  }
+  .fsc-avatar {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    border: 1px solid rgba(63,209,122,0.3);
+    background: rgba(63,209,122,0.08);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .fsc-avatar-letter {
+    font-family: var(--font-sans);
+    font-size: 14px; font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--green-bright);
+  }
+  .fsc-avatar-dot {
+    position: absolute;
+    bottom: 2px; right: 2px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--green-bright);
+    border: 2px solid var(--black-2);
+    box-shadow: 0 0 6px var(--green-bright);
+  }
+  .fsc-info { display: flex; flex-direction: column; gap: 3px; }
+  .fsc-label {
+    font-family: var(--font-mono);
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--green-bright);
+  }
+  .fsc-name {
+    font-size: 18px; font-weight: 800;
+    letter-spacing: -0.025em;
+    color: var(--white);
+  }
+  .fsc-role {
+    font-family: var(--font-mono);
+    font-size: 10px; font-weight: 400;
+    color: var(--gray-5);
+    letter-spacing: 0.04em;
+  }
+  .fsc-center {
+    flex: 1;
+    padding: 0 32px;
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+  .fsc-quote {
+    font-size: 14px;
+    color: var(--gray-6);
+    line-height: 1.65;
+    font-style: italic;
+    margin: 0;
+  }
+  .fsc-right { flex-shrink: 0; }
+  .fsc-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--green-bright);
+    white-space: nowrap;
+    transition: gap 200ms ease;
+  }
+  .founder-strip-card:hover .fsc-cta { gap: 12px; }
+  @media (max-width: 900px) {
+    .founder-strip-card { flex-direction: column; gap: 24px; padding: 24px; text-align: center; }
+    .fsc-center { padding: 16px 0; border-left: none; border-right: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .fsc-left { justify-content: center; }
+  }
+  @media (max-width: 640px) {
+    .founder-strip-card { padding: 20px 16px; }
+    .fsc-name { font-size: 16px; }
+  }
+  </style>
 
   <!-- ============================
        ARCHITETTURA DEL SISTEMA
@@ -807,6 +980,20 @@
             <span>Il processo completo viene condiviso dopo il primo confronto.</span>
           </div>
           <div class="ci-separator"></div>
+          <div class="ci-block">
+            <div class="ci-label">CANALI UFFICIALI</div>
+            <div class="ci-social-links">
+              <a href="https://www.linkedin.com/company/ratioappco/" class="ci-social-btn" target="_blank" rel="noopener noreferrer" aria-label="RATIO su LinkedIn">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.youtube.com/@ratiodecisionintelligence" class="ci-social-btn ci-social-btn--yt" target="_blank" rel="noopener noreferrer" aria-label="RATIO su YouTube">
+                <i class="fab fa-youtube" aria-hidden="true"></i>
+                <span>YouTube</span>
+              </a>
+            </div>
+          </div>
+          <div class="ci-separator"></div>
           <div class="ci-legal">
             <div class="ci-label">CONFORMITÀ</div>
             <div class="ci-value-small">GDPR Compliant · ISO 27001 · Dati anonimi per default</div>
@@ -825,6 +1012,14 @@
         <div class="footer-logo">RATIO</div>
         <p class="footer-desc">Filtro decisionale per la selezione executive. Output verificabili, difendibili, certificati.</p>
         <a href="mailto:decision@ratioapp.co" class="footer-email mono">decision@ratioapp.co</a>
+        <div class="footer-social" aria-label="Canali social RATIO">
+          <a href="https://www.linkedin.com/company/ratioappco/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="RATIO su LinkedIn">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@ratiodecisionintelligence" class="footer-social-link footer-social-link--yt" target="_blank" rel="noopener noreferrer" aria-label="RATIO su YouTube">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
         <div class="footer-sys-info">
           <span class="mono">SYS v2.4.1</span>
           <span class="footer-sep">·</span>
