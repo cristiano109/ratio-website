@@ -258,6 +258,16 @@
     linear-gradient(165deg, var(--black-4) 0%, rgba(6,9,14,1) 55%, var(--black-2) 100%);
 }
 
+/* COVER 8 — boardroom / consensus / gold-grey-black */
+.cover-8 {
+  background:
+    radial-gradient(ellipse 60% 55% at 70% 20%, rgba(212,175,55,0.13) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 65% at 20% 70%, rgba(160,160,170,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 75% 35% at 45% 5%, rgba(212,175,55,0.06) 0%, transparent 48%),
+    radial-gradient(ellipse 55% 50% at 85% 80%, rgba(100,100,110,0.06) 0%, transparent 44%),
+    linear-gradient(155deg, var(--black-4) 0%, rgba(7,8,10,1) 60%, var(--black-2) 100%);
+}
+
 /* COVER 7 — executive hiring / assunzione pericolosa / orange-green-blue */
 .cover-7 {
   background:
