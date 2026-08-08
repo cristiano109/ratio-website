@@ -278,6 +278,17 @@
     linear-gradient(150deg, var(--black-4) 0%, rgba(8,10,13,1) 58%, var(--black-2) 100%);
 }
 
+/* COVER 9 — signal / framing / deep blue-indigo + amber */
+.cover-9 {
+  background:
+    radial-gradient(ellipse 65% 55% at 75% 20%, rgba(99,102,241,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 65% at 15% 70%, rgba(55,90,180,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 70% 35% at 45% 5%, rgba(245,158,11,0.10) 0%, transparent 48%),
+    radial-gradient(ellipse 55% 50% at 85% 85%, rgba(79,70,229,0.08) 0%, transparent 44%),
+    radial-gradient(ellipse 40% 40% at 30% 40%, rgba(245,158,11,0.05) 0%, transparent 40%),
+    linear-gradient(155deg, rgba(7,8,18,1) 0%, rgba(10,11,25,1) 60%, rgba(8,9,20,1) 100%);
+}
+
 /* Geometric grid lines on covers */
 .cover-bg::after {
   content: '';
