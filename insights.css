@@ -278,6 +278,17 @@
     linear-gradient(150deg, var(--black-4) 0%, rgba(8,10,13,1) 58%, var(--black-2) 100%);
 }
 
+/* COVER 10 — executive hiring / decision before interview / deep teal + crimson */
+.cover-10 {
+  background:
+    radial-gradient(ellipse 65% 55% at 70% 20%, rgba(20,184,166,0.15) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 65% at 15% 75%, rgba(220,38,38,0.09) 0%, transparent 50%),
+    radial-gradient(ellipse 75% 35% at 45% 5%, rgba(20,184,166,0.07) 0%, transparent 48%),
+    radial-gradient(ellipse 55% 50% at 85% 80%, rgba(15,118,110,0.08) 0%, transparent 44%),
+    radial-gradient(ellipse 40% 45% at 25% 55%, rgba(220,38,38,0.04) 0%, transparent 40%),
+    linear-gradient(155deg, rgba(5,10,12,1) 0%, rgba(7,14,13,1) 60%, rgba(6,9,11,1) 100%);
+}
+
 /* COVER 9 — signal / framing / deep blue-indigo + amber */
 .cover-9 {
   background:
