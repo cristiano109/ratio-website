@@ -1,0 +1,1930 @@
+<!DOCTYPE html>
+<html lang="it" data-lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decision Risk — Volume I | 10 Analisi sul Rischio Decisionale nell'Executive Hiring — RATIO</title>
+  <meta name="description" content="I primi 10 insight RATIO raccolti in un unico volume. Analisi strutturate sul rischio decisionale, executive hiring, bias cognitivi e decision intelligence. Per CEO, board e imprenditori." />
+  <meta name="keywords" content="decision risk, decision intelligence, executive hiring, rischio decisionale, assunzioni strategiche, bias cognitivi, leadership assessment, RATIO, Cristiano Ludovisi" />
+  <meta name="author" content="RATIO Decision Intelligence" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ratioapp.co/libro-vol1.html" />
+  <link rel="alternate" hreflang="it" href="https://ratioapp.co/libro-vol1.html" />
+  <link rel="alternate" hreflang="en" href="https://ratioapp.co/en_libro-vol1.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Decision Risk — Volume I · RATIO Decision Intelligence" />
+  <meta property="og:description" content="I primi 10 insight RATIO in un unico volume. Analisi sul rischio decisionale, executive hiring e decision intelligence per CEO, board e imprenditori." />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://ratioapp.co/libro-vol1.html" />
+  <meta property="og:image" content="https://ratioapp.co/ratio-logo.png" />
+  <meta property="og:site_name" content="RATIO Decision Intelligence" />
+  <meta property="og:locale" content="it_IT" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Decision Risk — Volume I · RATIO" />
+  <meta name="twitter:description" content="10 analisi strutturate sul rischio decisionale nell'executive hiring. Il primo volume della knowledge base RATIO." />
+  <meta name="twitter:image" content="https://ratioapp.co/ratio-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style-2.css" />
+  <link rel="stylesheet" href="./insights.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMSTXZRSMX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TMSTXZRSMX');
+  </script>
+
+  <style>
+    /* ══════════════════════════════════════════
+       LIBRO — STILI DEDICATI
+    ══════════════════════════════════════════ */
+
+    /* PROGRESS BAR DI LETTURA */
+    #read-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background: var(--green-bright);
+      z-index: 9999;
+      transition: width 0.1s linear;
+      box-shadow: 0 0 8px rgba(63,209,122,0.5);
+    }
+
+    /* LAYOUT LIBRO: sidebar + contenuto */
+    .libro-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      min-height: 100vh;
+      padding-top: 70px;
+    }
+
+    /* SIDEBAR INDICE */
+    .libro-sidebar {
+      position: sticky;
+      top: 70px;
+      height: calc(100vh - 70px);
+      overflow-y: auto;
+      border-right: 1px solid var(--border);
+      background: var(--black-2);
+      padding: 32px 0 48px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    .libro-sidebar::-webkit-scrollbar { width: 4px; }
+    .libro-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .libro-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    .sidebar-book-title {
+      padding: 0 24px 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+    .sidebar-book-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 6px;
+    }
+    .sidebar-book-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+    .sidebar-book-vol {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--gray-4);
+      margin-top: 4px;
+    }
+
+    .sidebar-toc-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      padding: 0 24px;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-toc {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar-toc li a {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 24px;
+      text-decoration: none;
+      transition: background 150ms ease, border-left-color 150ms ease;
+      border-left: 2px solid transparent;
+    }
+    .sidebar-toc li a:hover,
+    .sidebar-toc li a.active {
+      background: rgba(63,209,122,0.05);
+      border-left-color: var(--green-bright);
+    }
+    .sidebar-toc li a.active .toc-num { color: var(--green-bright); }
+    .sidebar-toc li a.active .toc-title { color: var(--white); }
+
+    .toc-num {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gray-4);
+      flex-shrink: 0;
+      padding-top: 2px;
+      min-width: 24px;
+    }
+    .toc-title {
+      font-size: 12px;
+      color: var(--gray-5);
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+
+    .sidebar-toc-section {
+      padding: 20px 24px 8px;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      border-top: 1px solid var(--border);
+      margin-top: 8px;
+    }
+
+    .sidebar-cta-mini {
+      margin: 24px 16px 0;
+      padding: 16px;
+      border: 1px solid rgba(63,209,122,0.2);
+      border-radius: var(--radius-md);
+      background: rgba(63,209,122,0.04);
+      text-align: center;
+    }
+    .sidebar-cta-mini p {
+      font-size: 11px;
+      color: var(--gray-5);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .sidebar-cta-mini a {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      text-decoration: none;
+      border: 1px solid rgba(63,209,122,0.3);
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      display: inline-block;
+      transition: background 150ms ease;
+    }
+    .sidebar-cta-mini a:hover { background: rgba(63,209,122,0.1); }
+
+    /* MAIN CONTENT */
+    .libro-main {
+      max-width: 780px;
+      padding: 0 48px 120px;
+      margin: 0 auto;
+    }
+
+    /* COVER BOOK */
+    .book-cover {
+      padding: 80px 0 72px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+      position: relative;
+    }
+    .book-cover-glow {
+      position: absolute;
+      top: 0; left: -48px; right: -48px;
+      height: 400px;
+      background: radial-gradient(ellipse 80% 60% at 30% 50%, rgba(63,209,122,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .book-cover-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .book-cover-eyebrow-line {
+      height: 1px;
+      width: 32px;
+      background: var(--green-bright);
+    }
+    .book-cover-eyebrow span {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+    }
+    .book-cover-title {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--white);
+      line-height: 1.0;
+      margin-bottom: 8px;
+    }
+    .book-cover-vol {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--green-bright);
+      line-height: 1.0;
+      margin-bottom: 28px;
+    }
+    .book-cover-subtitle {
+      font-size: 16px;
+      color: var(--gray-5);
+      line-height: 1.6;
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+    .book-cover-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .book-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .book-meta-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+    }
+    .book-meta-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .book-meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(63,209,122,0.1);
+      border: 1px solid rgba(63,209,122,0.25);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--green-bright);
+      letter-spacing: 0.06em;
+    }
+    .book-meta-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green-bright);
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    /* PREFAZIONE */
+    .book-preface {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+    .book-section-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 16px;
+    }
+    .book-section-title {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .book-preface p {
+      font-size: 15px;
+      color: var(--gray-5);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .book-preface .preface-signature {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .preface-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(63,209,122,0.08);
+      border: 1px solid rgba(63,209,122,0.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .preface-avatar span { font-size: 13px; font-weight: 800; color: var(--green-bright); }
+    .preface-avatar::after {
+      content: '';
+      position: absolute; bottom: 1px; right: 1px;
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--green-bright);
+      border: 2px solid var(--black-2);
+    }
+    .preface-sig-name { font-size: 14px; font-weight: 700; color: var(--white); }
+    .preface-sig-role { font-family: var(--font-mono); font-size: 10px; color: var(--gray-5); margin-top: 2px; }
+
+    /* INDICE VISIVO */
+    .book-toc-visual {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .toc-card {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+      text-decoration: none;
+      transition: border-color 200ms ease, background 200ms ease;
+      cursor: pointer;
+    }
+    .toc-card:hover {
+      border-color: var(--border-hi);
+      background: rgba(63,209,122,0.04);
+    }
+    .toc-card-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--green-bright);
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+    .toc-card-info {}
+    .toc-card-cat {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      margin-bottom: 4px;
+    }
+    .toc-card-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+    .toc-card-date {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--gray-4);
+      margin-top: 4px;
+    }
+
+    /* CAPITOLI */
+    .book-chapter {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 90px;
+    }
+    .book-chapter:last-of-type { border-bottom: none; }
+
+    .chapter-header {
+      margin-bottom: 40px;
+    }
+    .chapter-num-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .chapter-num {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      background: rgba(63,209,122,0.08);
+      border: 1px solid rgba(63,209,122,0.2);
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+    }
+    .chapter-cat {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+    }
+    .chapter-sep {
+      font-size: 10px;
+      color: var(--gray-4);
+    }
+    .chapter-date {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--gray-4);
+    }
+    .chapter-title {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .chapter-subtitle {
+      font-size: 15px;
+      color: var(--gray-5);
+      line-height: 1.7;
+      max-width: 600px;
+      padding-left: 16px;
+      border-left: 2px solid var(--border-hi);
+    }
+    .chapter-cover-quote {
+      margin: 28px 0;
+      padding: 16px 20px;
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      border-left: 2px solid rgba(63,209,122,0.3);
+    }
+    .chapter-cover-quote span {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: rgba(238,241,244,0.4);
+      letter-spacing: 0.06em;
+      font-style: italic;
+    }
+
+    /* TESTO CAPITOLO */
+    .chapter-body h2 {
+      font-size: clamp(18px, 2.5vw, 22px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      margin: 36px 0 14px;
+      line-height: 1.25;
+    }
+    .chapter-body h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 28px 0 12px;
+    }
+    .chapter-body p {
+      font-size: 15px;
+      color: var(--gray-5);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .chapter-body ul, .chapter-body ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    .chapter-body li {
+      font-size: 15px;
+      color: var(--gray-5);
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .chapter-body strong { color: var(--white); }
+    .chapter-body em { color: var(--gray-5); }
+
+    /* COMPONENTI INLINE NEL LIBRO */
+    .libro-stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .libro-stat {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+      text-align: center;
+    }
+    .libro-stat-value {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: var(--green-bright);
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .libro-stat-label {
+      font-size: 11px;
+      color: var(--gray-4);
+      line-height: 1.5;
+    }
+
+    .libro-pullquote {
+      margin: 32px 0;
+      padding: 24px 28px;
+      border-left: 3px solid var(--green-bright);
+      background: rgba(63,209,122,0.04);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .libro-pullquote p {
+      font-size: 17px !important;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--white) !important;
+      line-height: 1.6 !important;
+      margin: 0 !important;
+    }
+
+    .libro-scenario {
+      margin: 32px 0;
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+    }
+    .libro-scenario-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .libro-scenario p { margin-bottom: 10px; }
+    .libro-scenario p:last-child { margin-bottom: 0; }
+
+    .libro-closing-quote {
+      margin: 40px 0;
+      padding: 32px;
+      background: var(--black-3);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .libro-closing-quote blockquote {
+      font-size: clamp(18px, 2.5vw, 22px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .libro-closing-quote .cq-line { color: var(--gray-5); font-weight: 400; }
+
+    .libro-board-box {
+      margin: 32px 0;
+      padding: 28px 32px;
+      border: 1px solid rgba(63,209,122,0.25);
+      border-radius: var(--radius-md);
+      background: rgba(63,209,122,0.04);
+      position: relative;
+      overflow: hidden;
+    }
+    .libro-board-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--green-bright);
+    }
+    .libro-board-box-tag {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .libro-board-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .libro-board-box p { margin-bottom: 10px; }
+    .libro-board-box .box-q {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 6px 0;
+      font-size: 14px;
+      color: var(--gray-5);
+    }
+    .libro-board-box .box-q::before {
+      content: '→';
+      color: var(--green-bright);
+      flex-shrink: 0;
+    }
+    .libro-board-box .box-verdict {
+      margin-top: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .libro-bias-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .libro-bias-item {
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+    }
+    .libro-bias-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .libro-bias-desc {
+      font-size: 12px;
+      color: var(--gray-5);
+      line-height: 1.6;
+    }
+
+    .libro-timeline {
+      margin: 28px 0;
+    }
+    .libro-tl-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .libro-tl-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 28px;
+      width: 1px;
+      height: calc(100% + 4px);
+      background: var(--border);
+    }
+    .libro-tl-dot {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .libro-tl-dot span {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gray-3);
+    }
+    .libro-tl-dot.green span { background: var(--green-bright); }
+    .libro-tl-dot.amber span { background: var(--yellow-bright); }
+    .libro-tl-dot.red span { background: var(--red-bright); }
+    .libro-tl-content {}
+    .libro-tl-month {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      margin-bottom: 2px;
+    }
+    .libro-tl-event {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+    .libro-tl-desc { font-size: 12px; color: var(--gray-5); line-height: 1.5; }
+
+    /* CHAPTER LINK READ MORE */
+    .chapter-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(63,209,122,0.3);
+      padding-bottom: 2px;
+      transition: border-color 150ms ease;
+    }
+    .chapter-read-more:hover { border-color: var(--green-bright); }
+
+    /* CHAPTER DIVIDER */
+    .chapter-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 48px 0;
+    }
+    .chapter-divider-line { flex: 1; height: 1px; background: var(--border); }
+    .chapter-divider-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+    }
+
+    /* COLOPHON FINALE */
+    .book-colophon {
+      padding: 64px 0 80px;
+      text-align: center;
+    }
+    .book-colophon-logo {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--green-bright);
+      margin-bottom: 8px;
+    }
+    .book-colophon-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+    .book-colophon-sub {
+      font-size: 13px;
+      color: var(--gray-5);
+      margin-bottom: 32px;
+    }
+    .book-colophon-info {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--gray-4);
+      letter-spacing: 0.06em;
+      line-height: 2;
+    }
+    .book-colophon-cta {
+      margin-top: 40px;
+      padding: 32px;
+      border: 1px solid rgba(63,209,122,0.2);
+      border-radius: var(--radius-md);
+      background: rgba(63,209,122,0.04);
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .book-colophon-cta h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    .book-colophon-cta p {
+      font-size: 13px;
+      color: var(--gray-5);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* VOLUME BANNER (annuncio vol 2) */
+    .vol-next-banner {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .vol-next-info {}
+    .vol-next-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      margin-bottom: 6px;
+    }
+    .vol-next-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+    .vol-next-sub { font-size: 12px; color: var(--gray-5); margin-top: 4px; }
+    .vol-next-badge {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gray-4);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .libro-layout { grid-template-columns: 1fr; }
+      .libro-sidebar { display: none; }
+      .libro-main { padding: 0 24px 80px; max-width: 100%; }
+      .toc-grid { grid-template-columns: 1fr; }
+      .libro-stat-row { grid-template-columns: 1fr; }
+      .libro-bias-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .book-cover { padding: 48px 0 40px; }
+      .book-cover-meta { flex-direction: column; gap: 16px; }
+      .vol-next-banner { flex-direction: column; }
+      .chapter-body h2 { font-size: 18px; }
+      .libro-pullquote p { font-size: 15px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress"></div>
+  <div class="sys-grid-overlay" aria-hidden="true"></div>
+  <div class="sys-scanline" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <header id="main-header" class="nav-visible" role="banner">
+    <nav class="nav-inner" role="navigation" aria-label="Navigazione principale">
+      <div class="nav-logo">
+        <a href="./index.html" aria-label="RATIO — Home">
+          <img src="./ratio-logo.png" alt="RATIO" class="logo-img" />
+        </a>
+        <span class="logo-badge">SYS v2.4</span>
+      </div>
+      <ul class="nav-links" role="list">
+        <li><a href="./index.html#home"          class="nav-link">HOME</a></li>
+        <li><a href="./index.html#chi-siamo"     class="nav-link">CHI SIAMO</a></li>
+        <li><a href="./index.html#come-funziona" class="nav-link">COME FUNZIONA</a></li>
+        <li><a href="./index.html#output"        class="nav-link">OUTPUT</a></li>
+        <li><a href="./insights.html"            class="nav-link">INSIGHTS</a></li>
+        <li><a href="./libro-vol1.html"          class="nav-link active">VOLUMI</a></li>
+        <li><a href="./index.html#contatti"      class="nav-link">CONTATTI</a></li>
+      </ul>
+      <div class="nav-contact">
+        <span class="sys-status-dot"></span>
+        <a href="mailto:decision@ratioapp.co" class="nav-email">decision@ratioapp.co</a>
+      </div>
+      <div class="lang-switcher" aria-label="Seleziona lingua">
+        <a href="./libro-vol1.html" class="lang-btn active" aria-label="Versione italiana">IT</a>
+        <span class="lang-sep" aria-hidden="true"></span>
+        <a href="./en_libro-vol1.html" class="lang-btn" aria-label="English version">EN</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu mobile" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-progress-bar" id="nav-progress"></div>
+  </header>
+
+  <!-- LAYOUT LIBRO -->
+  <div class="libro-layout">
+
+    <!-- SIDEBAR INDICE -->
+    <aside class="libro-sidebar" aria-label="Indice del volume">
+      <div class="sidebar-book-title">
+        <div class="sidebar-book-eyebrow">RATIO · Knowledge Base</div>
+        <div class="sidebar-book-name">Decision Risk</div>
+        <div class="sidebar-book-vol">Volume I · Insights 1–10</div>
+      </div>
+
+      <div class="sidebar-toc-label">Contenuti</div>
+      <ul class="sidebar-toc">
+        <li><a href="#prefazione">
+          <span class="toc-num">—</span>
+          <span class="toc-title">Prefazione</span>
+        </a></li>
+        <li><a href="#indice">
+          <span class="toc-num">—</span>
+          <span class="toc-title">Indice</span>
+        </a></li>
+      </ul>
+
+      <div class="sidebar-toc-section">Capitoli</div>
+      <ul class="sidebar-toc">
+        <li><a href="#cap1">
+          <span class="toc-num">01</span>
+          <span class="toc-title">Il costo nascosto di un'assunzione sbagliata</span>
+        </a></li>
+        <li><a href="#cap2">
+          <span class="toc-num">02</span>
+          <span class="toc-title">Perché il CV non basta</span>
+        </a></li>
+        <li><a href="#cap3">
+          <span class="toc-num">03</span>
+          <span class="toc-title">Come ridurre il rischio decisionale</span>
+        </a></li>
+        <li><a href="#cap4">
+          <span class="toc-num">04</span>
+          <span class="toc-title">Le decisioni non iniziano dal candidato</span>
+        </a></li>
+        <li><a href="#cap5">
+          <span class="toc-num">05</span>
+          <span class="toc-title">L'errore avviene prima del colloquio</span>
+        </a></li>
+        <li><a href="#cap6">
+          <span class="toc-num">06</span>
+          <span class="toc-title">Decisioni sbagliate e assunzioni invisibili</span>
+        </a></li>
+        <li><a href="#cap7">
+          <span class="toc-num">07</span>
+          <span class="toc-title">L'assunzione più pericolosa nell'executive hiring</span>
+        </a></li>
+        <li><a href="#cap8">
+          <span class="toc-num">08</span>
+          <span class="toc-title">Il costo silenzioso del consenso</span>
+        </a></li>
+        <li><a href="#cap9">
+          <span class="toc-num">09</span>
+          <span class="toc-title">Il rischio del problema sbagliato</span>
+        </a></li>
+        <li><a href="#cap10">
+          <span class="toc-num">10</span>
+          <span class="toc-title">Perché l'executive hiring fallisce prima del colloquio</span>
+        </a></li>
+      </ul>
+
+      <div class="sidebar-toc-section">Chiusura</div>
+      <ul class="sidebar-toc">
+        <li><a href="#colophon">
+          <span class="toc-num">—</span>
+          <span class="toc-title">Colophon &amp; Volume II</span>
+        </a></li>
+      </ul>
+
+      <div class="sidebar-cta-mini">
+        <p>Vuoi una valutazione riservata per la tua prossima assunzione strategica?</p>
+        <a href="./index.html#contatti">Contattaci</a>
+      </div>
+    </aside>
+
+    <!-- CONTENUTO PRINCIPALE -->
+    <main class="libro-main" role="main">
+
+      <!-- ══ COPERTINA ══ -->
+      <section class="book-cover" id="cover">
+        <div class="book-cover-glow" aria-hidden="true"></div>
+        <div class="book-cover-eyebrow">
+          <div class="book-cover-eyebrow-line"></div>
+          <span>RATIO Decision Intelligence · Knowledge Base</span>
+        </div>
+        <div class="book-cover-title">Decision Risk</div>
+        <div class="book-cover-vol">Volume I</div>
+        <p class="book-cover-subtitle">
+          Dieci analisi strutturate sul rischio decisionale nell'executive hiring. Bias cognitivi, assunzioni invisibili, qualità del processo e decision intelligence applicata alle scelte che contano.
+        </p>
+        <div class="book-cover-meta">
+          <div class="book-meta-item">
+            <span class="book-meta-label">Autori</span>
+            <span class="book-meta-value">RATIO · Cristiano Ludovisi</span>
+          </div>
+          <div class="book-meta-item">
+            <span class="book-meta-label">Periodo</span>
+            <span class="book-meta-value">Aprile – Agosto 2026</span>
+          </div>
+          <div class="book-meta-item">
+            <span class="book-meta-label">Capitoli</span>
+            <span class="book-meta-value">10 Insight</span>
+          </div>
+          <div class="book-meta-item">
+            <span class="book-meta-label">Livello</span>
+            <span class="book-meta-value">C-Suite · Board · Imprenditori</span>
+          </div>
+          <div class="book-meta-badge">Volume Attivo</div>
+        </div>
+      </section>
+
+      <!-- ══ PREFAZIONE ══ -->
+      <section class="book-preface" id="prefazione">
+        <div class="book-section-eyebrow">Prefazione</div>
+        <h2 class="book-section-title">Perché questo volume esiste</h2>
+        <p>
+          RATIO nasce da una constatazione semplice e scomoda: il 46% delle selezioni executive fallisce entro 18 mesi. Non per mancanza di competenza dei selezionatori. Non per candidati inadeguati. Per un problema di processo — e spesso, di domande.
+        </p>
+        <p>
+          Questo volume raccoglie i primi dieci insight pubblicati nella knowledge base di RATIO: analisi strutturate sul rischio decisionale nell'executive hiring, costruite senza statistiche inventate, senza semplificazioni rassicuranti, senza l'illusione che esista un processo perfetto.
+        </p>
+        <p>
+          Quello che troverete in queste pagine è un filo narrativo che attraversa dieci capitoli: dal costo visibile e invisibile degli errori di assunzione, alla natura dei bias cognitivi, alle assunzioni che nessuno formula ma tutti seguono, fino all'architettura decisionale che distingue le organizzazioni che gestiscono il rischio da quelle che lo subiscono.
+        </p>
+        <p>
+          Ogni capitolo può essere letto autonomamente. Letti in sequenza, costruiscono un framework coerente per pensare le decisioni ad alto impatto in modo più preciso, più difendibile — e più onesto.
+        </p>
+        <div class="preface-signature">
+          <div class="preface-avatar"><span>CL</span></div>
+          <div>
+            <div class="preface-sig-name">Cristiano Ludovisi</div>
+            <div class="preface-sig-role">Founder &amp; CEO, RATIO Decision Intelligence · Dubai, UAE</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ INDICE VISIVO ══ -->
+      <section class="book-toc-visual" id="indice">
+        <div class="book-section-eyebrow">Indice</div>
+        <h2 class="book-section-title">10 Capitoli · 1 Framework</h2>
+        <div class="toc-grid">
+          <a class="toc-card" href="#cap1">
+            <span class="toc-card-num">01</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Risk</div>
+              <div class="toc-card-title">Il costo nascosto di un'assunzione sbagliata</div>
+              <div class="toc-card-date">15 Maggio 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap2">
+            <span class="toc-card-num">02</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Assessment</div>
+              <div class="toc-card-title">Perché il CV non basta per valutare un candidato ad alto impatto</div>
+              <div class="toc-card-date">28 Aprile 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap3">
+            <span class="toc-card-num">03</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">Come ridurre il rischio decisionale nelle assunzioni strategiche</div>
+              <div class="toc-card-date">10 Aprile 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap4">
+            <span class="toc-card-num">04</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">Perché le migliori decisioni non iniziano dal candidato</div>
+              <div class="toc-card-date">15 Giugno 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap5">
+            <span class="toc-card-num">05</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Risk</div>
+              <div class="toc-card-title">L'errore di assunzione più costoso avviene prima del colloquio</div>
+              <div class="toc-card-date">23 Giugno 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap6">
+            <span class="toc-card-num">06</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">Le decisioni sbagliate nascono da assunzioni sbagliate</div>
+              <div class="toc-card-date">1 Luglio 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap7">
+            <span class="toc-card-num">07</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Executive Hiring</div>
+              <div class="toc-card-title">L'assunzione più pericolosa nell'executive hiring</div>
+              <div class="toc-card-date">6 Luglio 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap8">
+            <span class="toc-card-num">08</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">Il costo silenzioso del consenso</div>
+              <div class="toc-card-date">22 Luglio 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap9">
+            <span class="toc-card-num">09</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">Il rischio più pericoloso: decidere bene sul problema sbagliato</div>
+              <div class="toc-card-date">8 Agosto 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap10">
+            <span class="toc-card-num">10</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Executive Hiring</div>
+              <div class="toc-card-title">Perché l'executive hiring fallisce prima ancora del colloquio</div>
+              <div class="toc-card-date">11 Agosto 2026</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 1
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap1">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 01</span>
+            <span class="chapter-cat">Decision Risk</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">15 Maggio 2026</span>
+          </div>
+          <h2 class="chapter-title">Il costo nascosto di un'assunzione sbagliata</h2>
+          <p class="chapter-subtitle">Un errore di hiring a livello C-suite non si misura solo con il costo diretto. Si misura con il danno silenzioso che lascia nel tempo.</p>
+          <div class="chapter-cover-quote"><span>"The cost appears after the decision."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <h2>Il problema che nessuno quantifica</h2>
+          <p>Quando un'assunzione si rivela sbagliata, la prima reazione è circoscriverla: basta sostituire il profilo, ricominciare la selezione. Ma questa lettura sottostima radicalmente il danno reale. <strong>Un errore di hiring a livello executive non è un evento puntuale — è un processo di deterioramento che si estende nel tempo.</strong></p>
+          <p>Le ricerche di settore concordano: il costo di un'assunzione sbagliata a livello C-suite oscilla tra 3 e 15 volte la retribuzione annua del ruolo. Ma la cifra diventa ancora più significativa quando si considerano le componenti che non appaiono nei budget: il tempo del management distratto dalla gestione del problema, il danno alla cultura aziendale, le decisioni strategiche sbagliate prese nel frattempo, i talenti che lasciano l'organizzazione.</p>
+
+          <div class="libro-scenario">
+            <div class="libro-scenario-label"><i class="fas fa-file-alt"></i> Scenario realistico</div>
+            <p>Una società in crescita seleziona un CFO per supportare una nuova fase di espansione internazionale. Il profilo è solido sulla carta: esperienza rilevante, referenze positive, colloqui convincenti. Dopo nove mesi emergono segnali chiari di incompatibilità strutturale — non tra le competenze tecniche e il ruolo, ma tra il modello di gestione portato dal dirigente e quello richiesto dal contesto. La decisione di procedere alla sostituzione arriva dopo ulteriori tre mesi di attesa. Il costo diretto della sostituzione viene registrato. Tutto il resto — i ritardi nelle decisioni finanziarie strategiche, gli attriti con il team, le opportunità di acquisizione non valutate, i key manager che nel frattempo hanno avviato conversazioni con competitor — non compare in nessun report. Eppure è reale, ed è permanente.</p>
+          </div>
+
+          <div class="libro-stat-row">
+            <div class="libro-stat">
+              <span class="libro-stat-value">3–15×</span>
+              <span class="libro-stat-label">RAL annua: costo medio di un'assunzione C-suite sbagliata</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">18 mesi</span>
+              <span class="libro-stat-label">Tempo medio prima che l'errore venga riconosciuto e affrontato</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">46%</span>
+              <span class="libro-stat-label">Dei nuovi dirigenti fallisce entro i primi 18 mesi (fonte: DDI)</span>
+            </div>
+          </div>
+
+          <h2>Le tre categorie di costo invisibile</h2>
+          <p><strong>Costi operativi diretti</strong> — Sono i più visibili: il costo del processo di selezione ripetuto, le eventuali penali contrattuali, il periodo di onboarding del sostituto. Solitamente rappresentano la quota minore del danno totale, ma sono gli unici che entrano nei report finanziari.</p>
+          <p><strong>Costi strategici differiti</strong> — Ogni decisione presa da un executive sbagliato produce effetti che persistono molto oltre la sua permanenza. Un CFO inadeguato può aver impostato processi di controllo che richiedono anni per essere smantellati.</p>
+          <p><strong>Costi culturali e di sistema</strong> — I più difficili da misurare, ma spesso i più devastanti. Un leader inadeguato genera rumore organizzativo: decisioni reversibili prese con ritardo, collaboratori ad alta performance che perdono fiducia e cercano alternative, conflitti che consumano energia manageriale.</p>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-chess-king"></i> Stress Test Decisionale</div>
+            <h3>Se quella decisione fosse oggi davanti al board</h3>
+            <p>Immagina di dover spiegare oggi davanti al board perché quella persona è stata assunta.</p>
+            <div class="box-q">Quali evidenze porteresti?</div>
+            <div class="box-q">Quali rischi erano stati identificati?</div>
+            <div class="box-q">Quali segnali erano stati ignorati?</div>
+            <p class="box-verdict">Se le risposte esistono soltanto nella memoria di chi ha partecipato ai colloqui, il problema non è il candidato. <strong>È il processo.</strong></p>
+          </div>
+
+          <div class="libro-pullquote">
+            <p>"Il costo di un errore di hiring non è il prezzo di una sostituzione. È il prezzo di tutto ciò che è successo — e non è successo — nel frattempo."</p>
+          </div>
+
+          <h2>I bias che aumentano il rischio di errore</h2>
+          <div class="libro-bias-grid">
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Halo Effect</div>
+              <div class="libro-bias-desc">Una qualità positiva percepita porta a sovrastimare il profilo complessivo, oscurando segnali di rischio concreti.</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Similarity Bias</div>
+              <div class="libro-bias-desc">Si valutano positivamente i candidati che condividono stile comunicativo o background con il selezionatore.</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Confirmation Bias</div>
+              <div class="libro-bias-desc">Una volta formata un'impressione positiva, si cerca inconsciamente conferma e si minimizzano le evidenze contrarie.</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Urgenza decisionale</div>
+              <div class="libro-bias-desc">La pressione a chiudere rapidamente comprime la due diligence nelle fasi finali, esattamente quando il rischio è più alto.</div>
+            </div>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Le assunzioni sbagliate raramente falliscono in un giorno.<br><span class="cq-line">Falliscono lentamente — ed è proprio per questo che costano così tanto.</span></blockquote>
+          </div>
+        </div>
+        <a href="./insight-1.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Capitolo 02</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 2
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap2">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 02</span>
+            <span class="chapter-cat">Assessment</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">28 Aprile 2026</span>
+          </div>
+          <h2 class="chapter-title">Perché il CV non basta per valutare un candidato ad alto impatto</h2>
+          <p class="chapter-subtitle">Il curriculum descrive il passato. Non predice il comportamento sotto pressione, né il rischio decisionale che un candidato porta con sé.</p>
+          <div class="chapter-cover-quote"><span>"What matters is not on the page."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <h2>Il CV come strumento di marketing, non di valutazione</h2>
+          <p>Il curriculum vitae è un documento ottimizzato per creare un'impressione favorevole. Non è — e non è mai stato — uno strumento di valutazione oggettiva. <strong>Ogni professionista che conosce le regole del gioco impara a selezionare, enfatizzare e contestualizzare le proprie esperienze in funzione del ruolo a cui aspira.</strong></p>
+          <p>Il problema è che molte organizzazioni continuano a usare il CV come filtro primario nella selezione executive, delegando a un documento autoreferenziale una decisione che vale milioni di euro di impatto potenziale.</p>
+
+          <div class="libro-stat-row">
+            <div class="libro-stat">
+              <span class="libro-stat-value">74%</span>
+              <span class="libro-stat-label">Dei profili executive contiene imprecisioni significative nelle responsabilità dichiarate</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">8 sec</span>
+              <span class="libro-stat-label">Tempo medio di prima lettura di un CV da parte di un recruiter senior</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">12%</span>
+              <span class="libro-stat-label">Dei criteri di selezione realmente predittivi è verificabile da un CV</span>
+            </div>
+          </div>
+
+          <h2>Cosa il CV non può misurare</h2>
+          <ul>
+            <li><strong>Capacità decisionale sotto pressione</strong> — Come reagisce quando i dati sono incompleti, il tempo è limitato e le conseguenze sono irreversibili?</li>
+            <li><strong>Gestione del conflitto organizzativo</strong> — Sa navigare le dinamiche di potere senza distruggerle?</li>
+            <li><strong>Adattamento al contesto specifico</strong> — Una performance eccellente in una startup può essere un predittore negativo in un corporate maturo.</li>
+            <li><strong>Solidità dell'ego manageriale</strong> — Sa distinguere tra il suo interesse personale e l'interesse dell'organizzazione quando divergono?</li>
+          </ul>
+
+          <div class="libro-pullquote">
+            <p>"Il curriculum dice dove è stato. Non dice chi è sotto pressione — che è l'unica cosa che conta davvero in un ruolo critico."</p>
+          </div>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-flask"></i> Stress Test di Valutazione</div>
+            <h3>Se eliminassimo il CV</h3>
+            <p>Se eliminassimo il CV di questo candidato e lasciassimo soltanto:</p>
+            <div class="box-q">Comportamenti osservati</div>
+            <div class="box-q">Decisioni prese</div>
+            <div class="box-q">Reazioni sotto pressione</div>
+            <div class="box-q">Coerenza narrativa</div>
+            <p class="box-verdict">Lo assumeremmo comunque? <strong>Se la risposta è no, il CV sta guidando troppo la decisione.</strong></p>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>RATIO non valuta curriculum.<br><span class="cq-line">Valuta il rischio decisionale che il curriculum non mostra.</span></blockquote>
+          </div>
+        </div>
+        <a href="./insight-2.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Capitolo 03</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 3
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap3">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 03</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">10 Aprile 2026</span>
+          </div>
+          <h2 class="chapter-title">Come ridurre il rischio decisionale nelle assunzioni strategiche</h2>
+          <p class="chapter-subtitle">Le assunzioni strategiche non possono affidarsi all'intuizione. Esistono metodologie strutturate per ridurre l'errore a dati misurabili.</p>
+          <div class="chapter-cover-quote"><span>"The quality of a decision is in the process behind it."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>I leader più capaci sanno prendere decisioni veloci in condizioni di incertezza. Ma diventa un rischio quando viene applicata indiscriminatamente alle decisioni di hiring, dove il bias di conferma, l'effetto alone e la pressione temporale si combinano in modo particolarmente insidioso.</p>
+
+          <div class="libro-stat-row">
+            <div class="libro-stat">
+              <span class="libro-stat-value">82%</span>
+              <span class="libro-stat-label">Dei CEO ha sbagliato almeno un'assunzione strategica negli ultimi 3 anni</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">67%</span>
+              <span class="libro-stat-label">Di questi attribuisce l'errore a una valutazione "istintiva" non supportata da dati</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">4×</span>
+              <span class="libro-stat-label">Più alta la probabilità di successo con processo strutturato (McKinsey)</span>
+            </div>
+          </div>
+
+          <h2>I cinque principi di un processo a basso rischio</h2>
+          <p><strong>1. Definire il rischio prima di incontrare i candidati.</strong> Prima ancora di aprire la selezione, il team dovrebbe rispondere: "Quali comportamenti, in questo contesto, potrebbero portare a un fallimento?"</p>
+          <p><strong>2. Separare la valutazione delle competenze tecniche da quella del profilo decisionale.</strong> Le competenze tecniche si verificano con metodi oggettivi. Il profilo decisionale richiede scenari, casi, simulazioni.</p>
+          <p><strong>3. Strutturare il processo di scoring prima della valutazione.</strong> I pesi dei criteri devono essere decisi prima di incontrare i candidati, non adattati retrospettivamente.</p>
+          <p><strong>4. Inserire un punto di revisione indipendente.</strong> Una revisione esterna — anche parziale — del processo aumenta significativamente la qualità della decisione finale.</p>
+          <p><strong>5. Documentare il ragionamento, non solo la scelta.</strong> La tracciabilità del processo decisionale è un investimento, non un costo.</p>
+
+          <div class="libro-pullquote">
+            <p>"Un processo di selezione robusto non è più lento. È più preciso. E la precisione è la sola forma di rispetto per la posta in gioco."</p>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Le migliori decisioni non eliminano il rischio.<br><span class="cq-line">Lo rendono visibile prima che diventi un problema.</span></blockquote>
+          </div>
+        </div>
+        <a href="./insight-3.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Capitolo 04</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 4
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap4">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 04</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">15 Giugno 2026 · Cristiano Ludovisi</span>
+          </div>
+          <h2 class="chapter-title">Perché le migliori decisioni di assunzione non iniziano dal candidato</h2>
+          <p class="chapter-subtitle">Le organizzazioni più efficaci non cercano di eliminare il rischio. Cercano di ridurre gli errori evitabili.</p>
+          <div class="chapter-cover-quote"><span>"The decision begins before the candidate."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>Per anni ho osservato aziende investire enormi quantità di tempo ed energia nella ricerca del "candidato perfetto". Eppure, molte delle decisioni più costose continuavano a trasformarsi in errori evitabili. Con il tempo ho capito che <strong>il problema raramente risiede nel candidato. Il vero problema nasce molto prima.</strong></p>
+          <p>Nasce da domande che spesso nessuno si pone.</p>
+
+          <div class="libro-bias-grid">
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Il problema</div>
+              <div class="libro-bias-desc">Sappiamo davvero quale problema questa persona dovrà risolvere?</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Il successo</div>
+              <div class="libro-bias-desc">Abbiamo definito con precisione cosa significhi successo in quel ruolo?</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Il contesto</div>
+              <div class="libro-bias-desc">Esiste un allineamento reale tra il contesto organizzativo e le aspettative?</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Il rischio</div>
+              <div class="libro-bias-desc">Quali sarebbero le conseguenze di una decisione sbagliata?</div>
+            </div>
+          </div>
+
+          <h2>La domanda giusta</h2>
+          <p>La maggior parte dei processi inizia con: <em>"Chi cerchiamo?"</em> — È la domanda sbagliata.</p>
+          <p>La domanda giusta è: <em>"Qual è il rischio che stiamo cercando di gestire?"</em></p>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-chess-king"></i> Stress Test Decisionale</div>
+            <h3>Prima del prossimo processo di selezione</h3>
+            <p class="box-verdict">Sappiamo con precisione quale errore stiamo cercando di evitare? <strong>Se la risposta non è immediata e condivisa da tutti, il processo ha già un punto di rischio critico.</strong></p>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Le decisioni più importanti meritano<br><span class="cq-line">qualcosa di più dell'intuizione.</span></blockquote>
+          </div>
+          <p style="text-align:center; font-family:var(--font-mono); font-size:11px; color:var(--gray-4); margin-top:-16px;">— Cristiano Ludovisi, Founder &amp; CEO RATIO Decision Intelligence</p>
+        </div>
+        <a href="./insight-4.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Capitolo 05</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 5
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap5">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 05</span>
+            <span class="chapter-cat">Decision Risk</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">23 Giugno 2026</span>
+          </div>
+          <h2 class="chapter-title">L'errore di assunzione più costoso avviene prima del colloquio</h2>
+          <p class="chapter-subtitle">Le organizzazioni spesso attribuiscono gli errori di assunzione al candidato sbagliato. In realtà, molte decisioni falliscono molto prima che il candidato entri nella stanza.</p>
+          <div class="chapter-cover-quote"><span>"The mistake precedes the interview."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>La realtà che emerge dall'analisi dei fallimenti executive è scomoda: <strong>la maggior parte degli errori di assunzione ad alto impatto non nasce durante il processo di selezione. Nasce prima.</strong> Nasce da una decisione mal definita.</p>
+
+          <h2>Le quattro assenze strutturali</h2>
+          <p>Ci sono quattro assenze che ricorrono nei processi che producono errori costosi:</p>
+          <ul>
+            <li><strong>Assenza di una definizione precisa del problema</strong> che il ruolo deve risolvere nei prossimi 18–24 mesi.</li>
+            <li><strong>Assenza di indicatori di successo misurabili.</strong> Come si definisce il successo a 12 mesi? In termini precisi, osservabili, confrontabili.</li>
+            <li><strong>Assenza di una mappa delle decisioni critiche</strong> associate al ruolo. Quali decisioni ad alto impatto questa persona dovrà prendere? In quale contesto?</li>
+            <li><strong>Assenza di una definizione esplicita del rischio.</strong> Definire il rischio non è pessimismo organizzativo. È la base razionale per calibrare l'intensità del processo.</li>
+          </ul>
+
+          <div class="libro-stat-row">
+            <div class="libro-stat">
+              <span class="libro-stat-value">72%</span>
+              <span class="libro-stat-label">Dei fallimenti executive è attribuibile a fit organizzativo, non a competenza tecnica</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">61 gg</span>
+              <span class="libro-stat-label">Durata media del processo C-suite — la definizione del ruolo occupa meno del 10%</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">4×</span>
+              <span class="libro-stat-label">Le org. che definiscono esplicitamente i criteri di rischio commettono errori 4× meno frequenti</span>
+            </div>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Le assunzioni sbagliate raramente nascono da un colloquio andato male.<br><span class="cq-line">Nascono da una decisione mal definita.</span></blockquote>
+          </div>
+        </div>
+        <a href="./insight-5.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Capitolo 06</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 6
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap6">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 06</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">1 Luglio 2026</span>
+          </div>
+          <h2 class="chapter-title">Le decisioni sbagliate non nascono da informazioni insufficienti. Nascono da assunzioni sbagliate.</h2>
+          <p class="chapter-subtitle">Ogni decisione importante si basa su decine di assunzioni invisibili. Più sono sbagliate, maggiore è il rischio.</p>
+          <div class="chapter-cover-quote"><span>"Assumptions are the silent architecture of every decision."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>La realtà che emerge dall'analisi dei fallimenti decisionali racconta una storia diversa da quella che ci aspettiamo. <strong>Le decisioni sbagliate raramente nascono da una carenza di informazioni. Nascono da assunzioni sbagliate su quelle informazioni.</strong> Da credenze non verificate che il cervello tratta come fatti.</p>
+
+          <div class="libro-pullquote">
+            <p>Non prendiamo decisioni sui fatti. Prendiamo decisioni sulle nostre interpretazioni dei fatti — che a loro volta poggiano su assunzioni che non abbiamo mai formulato esplicitamente.</p>
+          </div>
+
+          <h2>Le cinque assunzioni più pericolose</h2>
+          <div class="libro-bias-grid">
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Esperienza = Competenza</div>
+              <div class="libro-bias-desc">L'aver svolto un ruolo per molti anni viene interpretato come padronanza. In realtà l'esperienza misura l'esposizione, non la qualità dell'apprendimento.</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Sicurezza = Leadership</div>
+              <div class="libro-bias-desc">I candidati che non mostrano dubbi vengono percepiti come più capaci. La ricerca suggerisce il contrario: la capacità di sostenere l'incertezza è un indicatore più affidabile.</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Cultura = Adattabilità</div>
+              <div class="libro-bias-desc">L'affinità culturale viene confusa con la capacità di adattamento — che è l'opposto. La familiarità riduce l'attrito iniziale, ma non predice la performance sotto stress.</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Successo passato = Successo futuro</div>
+              <div class="libro-bias-desc">Il track record viene trattato come predittore senza analizzare il contesto in cui è stato costruito. Un CFO eccellente in mercati stabili può non avere gli strumenti per contesti volatili.</div>
+            </div>
+          </div>
+
+          <div class="libro-stat-row">
+            <div class="libro-stat">
+              <span class="libro-stat-value">68%</span>
+              <span class="libro-stat-label">Dei decision maker non riesce a elencare le 3 principali assunzioni dell'ultima decisione strategica</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">3,2×</span>
+              <span class="libro-stat-label">Più probabile un risultato negativo quando le assunzioni di base non vengono rese esplicite</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">11 min</span>
+              <span class="libro-stat-label">Tempo medio dedicato alla verifica delle assunzioni in un processo decisionale da 90 minuti</span>
+            </div>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Le informazioni riducono l'incertezza.<br><span class="cq-line">Le assunzioni sbagliate la ricreano — invisibilmente.</span></blockquote>
+          </div>
+        </div>
+        <a href="./insight-6.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Capitolo 07</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 7
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap7">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 07</span>
+            <span class="chapter-cat">Executive Hiring</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">6 Luglio 2026</span>
+          </div>
+          <h2 class="chapter-title">L'assunzione più pericolosa nell'executive hiring</h2>
+          <p class="chapter-subtitle">Ogni decisione di executive hiring inizia con delle assunzioni. Le organizzazioni che le riconoscono prendono decisioni migliori. Quelle che non lo fanno spesso pagano errori invisibili.</p>
+          <div class="chapter-cover-quote"><span>"The decision begins long before the candidate enters the room."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>La decisione non inizia nella stanza del colloquio. Inizia settimane prima, in un momento silenzioso in cui qualcuno legge per la prima volta un nome, scorge un titolo professionale o riceve una raccomandazione da un collega di fiducia. In quell'istante si forma un'ipotesi. E da quel momento in poi, tutto ciò che segue viene plasmato — spesso invisibilmente — da quella prima assunzione.</p>
+
+          <div class="libro-pullquote">
+            <p>La decisione di hiring non viene presa durante il colloquio. Viene presa la prima volta che qualcuno forma un'opinione sul candidato — e quella opinione è costruita interamente su assunzioni.</p>
+          </div>
+
+          <h2>Le cinque assunzioni più pericolose nell'executive hiring</h2>
+          <div class="libro-bias-grid">
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Scala precedente = Capacità futura</div>
+              <div class="libro-bias-desc">Aver guidato un'organizzazione grande viene interpretato come predittore affidabile per contesti diversi. In realtà la scala misura l'esposizione, non la trasferibilità.</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Brand del datore = Qualità del candidato</div>
+              <div class="libro-bias-desc">Provenire da un'azienda prestigiosa trasferisce automaticamente credibilità. Questa assunzione ignora il contributo individuale dall'interno di un sistema di successo.</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Sicurezza = Solidità decisionale</div>
+              <div class="libro-bias-desc">La sicurezza può essere stile comunicativo, non profondità analitica. La capacità di sostenere l'incertezza è un indicatore più affidabile di qualità decisionale.</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Il processo è obiettivo</div>
+              <div class="libro-bias-desc">L'organizzazione presuppone che il proprio processo generi dati oggettivi. In realtà ogni fase è costruita su assunzioni implicite che determinano quali informazioni vengono raccolte e come.</div>
+            </div>
+          </div>
+
+          <div class="libro-stat-row">
+            <div class="libro-stat">
+              <span class="libro-stat-value">72%</span>
+              <span class="libro-stat-label">Delle decisioni negative era preceduta da un processo descritto come "solido" dai partecipanti</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">2,8×</span>
+              <span class="libro-stat-label">Più probabile un risultato negativo quando le assunzioni non vengono rese esplicite</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">9 min</span>
+              <span class="libro-stat-label">Tempo medio dedicato alla verifica esplicita delle assunzioni in 6 settimane di selezione</span>
+            </div>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Le organizzazioni non sbagliano perché prendono decisioni.<br><span class="cq-line">Sbagliano perché raramente interrogano le assunzioni su cui quelle decisioni sono costruite.</span></blockquote>
+          </div>
+        </div>
+        <a href="./insight-7.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Capitolo 08</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 8
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap8">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 08</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">22 Luglio 2026 · Cristiano Ludovisi</span>
+          </div>
+          <h2 class="chapter-title">Il costo silenzioso del consenso</h2>
+          <p class="chapter-subtitle">Le decisioni executive più pericolose raramente iniziano con dati mancanti. Iniziano quando il consenso arriva troppo presto e viene scambiato per giudizio.</p>
+          <div class="chapter-cover-quote"><span>"Consensus is not judgment. It is the absence of it."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>Nelle organizzazioni più strutturate, il consenso viene spesso trattato come un indicatore di qualità decisionale. Se tutti concordano, la decisione deve essere buona. Se nessuno obietta, il rischio è stato valutato correttamente.</p>
+          <p><strong>Questa credenza è una delle più pericolose nell'executive decision making.</strong> Il consenso facile non è un segnale di chiarezza. È spesso un segnale che qualcosa di importante non è stato detto.</p>
+
+          <div class="libro-pullquote">
+            <p>Quando tutti concordano immediatamente, la domanda da porsi non è "abbiamo preso la decisione giusta?" — è "chi ha deciso di non dissentire, e perché?"</p>
+          </div>
+
+          <h2>Tre meccanismi che producono consenso prematuro</h2>
+          <p><strong>La gerarchia silenzia il dissenso.</strong> Nelle organizzazioni in cui il ranking è visibile, il parere del decision maker con il rango più elevato tende ad assumere uno status normativo prima ancora di essere discusso.</p>
+          <p><strong>La pressione temporale comprime il dibattito.</strong> Quando le decisioni devono essere prese rapidamente, il sistema cognitivo privilegia le scorciatoie — tra cui l'allineamento rapido intorno all'opzione che sembra già accettabile alla maggioranza.</p>
+          <p><strong>La coesione del gruppo produce illusioni di invulnerabilità.</strong> I team con alta coesione tendono a sviluppare una fiducia eccessiva nella propria capacità di giudizio collettivo, riducendo la soglia di attenzione verso i segnali di rischio.</p>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-chess-king"></i> Stress Test Decisionale</div>
+            <h3>Prima di chiudere una decisione con consenso unanime</h3>
+            <div class="box-q">Chi in questa stanza aveva un'obiezione che non ha formulato?</div>
+            <div class="box-q">Il consenso è emerso da un'analisi condivisa o dalla pressione implicita di non dissentire?</div>
+            <div class="box-q">Abbiamo cercato attivamente prospettive contrarie prima di convergere?</div>
+            <p class="box-verdict"><strong>Il consenso che non è stato guadagnato è il rischio che non è stato identificato.</strong></p>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Il dissenso non è un problema da gestire.<br><span class="cq-line">È informazione da elaborare.</span></blockquote>
+          </div>
+        </div>
+        <a href="./insight-8.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Capitolo 09</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 9
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap9">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 09</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">8 Agosto 2026 · Cristiano Ludovisi</span>
+          </div>
+          <h2 class="chapter-title">Il rischio più pericoloso è decidere bene sul problema sbagliato</h2>
+          <p class="chapter-subtitle">Una decisione può essere perfettamente razionale e comunque sbagliata. Il rischio nasce quando l'organizzazione risolve con precisione il problema sbagliato.</p>
+          <div class="chapter-cover-quote"><span>"The right answer to the wrong question is still wrong."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>Esiste una categoria di errore decisionale particolarmente insidiosa perché non produce segnali chiari di disfunzione nel breve periodo. L'organizzazione analizza correttamente i dati disponibili. Seleziona lo strumento giusto. Esegue con precisione. <strong>E produce comunque il risultato sbagliato — perché il problema che ha risolto non era il problema reale.</strong></p>
+
+          <div class="libro-pullquote">
+            <p>Il rischio non è prendere la decisione sbagliata. Il rischio è prendere la decisione giusta per il problema sbagliato.</p>
+          </div>
+
+          <h2>Il Problem Frame Test</h2>
+          <p>Prima di costruire una soluzione, cinque domande che possono rivelare se il problema è stato definito correttamente:</p>
+          <div class="libro-bias-grid">
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Il problema o il sintomo?</div>
+              <div class="libro-bias-desc">Quello che stiamo cercando di risolvere è il problema reale, o la sua manifestazione superficiale?</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Chi l'ha definito?</div>
+              <div class="libro-bias-desc">Il framing del problema riflette la prospettiva di chi lo subisce o di chi ha il potere di nominarlo?</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Quale assunzione lo sostiene?</div>
+              <div class="libro-bias-desc">Qual è la credenza implicita che rende questo il problema da risolvere? Quella credenza è stata verificata?</div>
+            </div>
+            <div class="libro-bias-item">
+              <div class="libro-bias-name">Cosa succederebbe se fosse sbagliato?</div>
+              <div class="libro-bias-desc">Se il problema fosse definito diversamente, la soluzione che stiamo costruendo sarebbe ancora rilevante?</div>
+            </div>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>La qualità di una decisione non dipende dalla qualità della risposta.<br><span class="cq-line">Dipende dalla qualità della domanda che l'ha generata.</span></blockquote>
+          </div>
+        </div>
+        <a href="./insight-9.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Capitolo 10</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CAPITOLO 10
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap10">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Capitolo 10</span>
+            <span class="chapter-cat">Executive Hiring</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">11 Agosto 2026 · Cristiano Ludovisi</span>
+          </div>
+          <h2 class="chapter-title">Perché le decisioni di Executive Hiring falliscono prima ancora del colloquio</h2>
+          <p class="chapter-subtitle">L'errore più importante in una selezione executive può verificarsi prima ancora che il primo candidato entri nella stanza. Il rischio nasce dalla qualità della decisione costruita intorno al ruolo.</p>
+          <div class="chapter-cover-quote"><span>"The interview is too late. The decision starts earlier."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>C'è un momento nel processo di executive hiring in cui il rischio è già stato incorporato nella decisione — silenziosamente, strutturalmente, prima che si parli con qualsiasi candidato. <strong>È il momento in cui il ruolo viene definito.</strong></p>
+          <p>Non la job description — che è un documento operativo. La definizione del ruolo come risposta a un problema organizzativo specifico, in un contesto specifico, con aspettative specifiche. Questo lavoro raramente riceve l'attenzione che merita. E la sua assenza è la prima causa di fallimento nelle selezioni executive.</p>
+
+          <h2>Il processo che precede il processo</h2>
+          <div class="libro-timeline">
+            <div class="libro-tl-item">
+              <div class="libro-tl-dot green"><span></span></div>
+              <div class="libro-tl-content">
+                <div class="libro-tl-month">FASE 0 — Prima di tutto</div>
+                <div class="libro-tl-event">Definizione del contesto decisionale</div>
+                <div class="libro-tl-desc">Quale problema specifico deve risolvere questo ruolo? Quali sono le prime tre decisioni critiche che questa persona dovrà prendere?</div>
+              </div>
+            </div>
+            <div class="libro-tl-item">
+              <div class="libro-tl-dot amber"><span></span></div>
+              <div class="libro-tl-content">
+                <div class="libro-tl-month">FASE 1</div>
+                <div class="libro-tl-event">Definizione degli indicatori di successo</div>
+                <div class="libro-tl-desc">Come misureremo il successo a 12 mesi? Con quali indicatori precisi e osservabili — non generici.</div>
+              </div>
+            </div>
+            <div class="libro-tl-item">
+              <div class="libro-tl-dot amber"><span></span></div>
+              <div class="libro-tl-content">
+                <div class="libro-tl-month">FASE 2</div>
+                <div class="libro-tl-event">Mappatura delle assunzioni critiche</div>
+                <div class="libro-tl-desc">Quali credenze implicite stanno guidando la costruzione del profilo? Sono state verificate o date per scontate?</div>
+              </div>
+            </div>
+            <div class="libro-tl-item">
+              <div class="libro-tl-dot green"><span></span></div>
+              <div class="libro-tl-content">
+                <div class="libro-tl-month">FASE 3</div>
+                <div class="libro-tl-event">Solo ora: inizia il processo di selezione</div>
+                <div class="libro-tl-desc">Con criteri espliciti, documentati e condivisi. Il colloquio diventa verifica di ipotesi precise, non raccolta di impressioni generali.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-chess-king"></i> Stress Test Decisionale</div>
+            <h3>Prima di aprire qualsiasi selezione executive</h3>
+            <div class="box-q">Quale problema specifico deve risolvere questo ruolo nei prossimi 18 mesi?</div>
+            <div class="box-q">Quali saranno le prime tre decisioni critiche che questa persona dovrà prendere?</div>
+            <div class="box-q">Come misureremo il successo a 12 mesi? Con quali indicatori precisi?</div>
+            <div class="box-q">Qual è il costo organizzativo di un errore in questo ruolo?</div>
+            <p class="box-verdict"><strong>Se le risposte non sono documentate prima dell'inizio della selezione, il colloquio non può compensare questa mancanza.</strong></p>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>La qualità di una selezione executive<br><span class="cq-line">non si misura dal candidato che viene scelto.<br>Si misura dalla qualità delle domande<br>che hanno preceduto quella scelta.</span></blockquote>
+          </div>
+        </div>
+        <a href="./insight-10.html" class="chapter-read-more">Leggi l'insight completo <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <!-- ══ COLOPHON ══ -->
+      <section class="book-colophon" id="colophon">
+        <div class="book-colophon-logo">RATIO DECISION INTELLIGENCE</div>
+        <div class="book-colophon-title">Decision Risk — Volume I</div>
+        <p class="book-colophon-sub">10 Insight · Aprile – Agosto 2026</p>
+        <div class="book-colophon-info">
+          <div>Autori: RATIO Decision Intelligence · Cristiano Ludovisi</div>
+          <div>Sede: Dubai, UAE</div>
+          <div>Contatto: decision@ratioapp.co</div>
+          <div>URL: ratioapp.co</div>
+          <div>© 2026 RATIO Decision Intelligence — Tutti i diritti riservati.</div>
+        </div>
+
+        <div class="book-colophon-cta">
+          <h3>Una decisione importante merita un processo difendibile.</h3>
+          <p>Stai pianificando un'assunzione executive? Contattaci per una prima analisi riservata.</p>
+          <a href="./index.html#contatti" class="btn-primary">
+            <span class="btn-label">RICHIEDI UNA PRIMA ANALISI RISERVATA</span>
+            <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- ANNUNCIO VOLUME II -->
+        <div class="vol-next-banner">
+          <div class="vol-next-info">
+            <div class="vol-next-label">In arrivo · Insight 11–20</div>
+            <div class="vol-next-title">Decision Risk — Volume II</div>
+            <div class="vol-next-sub">Il secondo volume sarà disponibile al completamento dei prossimi 10 insight.</div>
+          </div>
+          <a href="./insights.html" class="vol-next-badge">→ Tutti gli Insights</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <div class="footer-logo">RATIO</div>
+        <p class="footer-desc">Filtro decisionale per la selezione executive. Output verificabili, difendibili, certificati.</p>
+        <a href="mailto:decision@ratioapp.co" class="footer-email mono">decision@ratioapp.co</a>
+        <div class="footer-sys-info">
+          <span class="mono">SYS v2.4.1</span>
+          <span class="footer-sep">·</span>
+          <span class="mono">BUILD 20241114</span>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <a href="./index.html#home" class="footer-link">HOME</a>
+        <a href="./index.html#chi-siamo" class="footer-link">CHI SIAMO</a>
+        <a href="./index.html#come-funziona" class="footer-link">COME FUNZIONA</a>
+        <a href="./index.html#output" class="footer-link">OUTPUT</a>
+        <a href="./insights.html" class="footer-link">INSIGHTS</a>
+        <a href="./libro-vol1.html" class="footer-link">VOLUMI</a>
+        <a href="./index.html#contatti" class="footer-link">CONTATTI</a>
+      </div>
+      <div class="footer-right">
+        <p>© 2026 RATIO — Decision Intelligence. Dubai, UAE.</p>
+        <p class="footer-hash mono">SHA: d4f9c2a1 · CERTIFIED</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+  <script>
+    // PROGRESS BAR DI LETTURA
+    (function() {
+      const bar = document.getElementById('read-progress');
+      function updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = pct.toFixed(1) + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+    })();
+
+    // SIDEBAR ACTIVE LINK
+    (function() {
+      const sections = document.querySelectorAll('[id]');
+      const links = document.querySelectorAll('.sidebar-toc a');
+      function onScroll() {
+        let current = '';
+        sections.forEach(s => {
+          const top = s.getBoundingClientRect().top;
+          if (top <= 120) current = s.id;
+        });
+        links.forEach(l => {
+          l.classList.remove('active');
+          if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    // SMOOTH SCROLL
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // MOBILE NAV TOGGLE
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+  </script>
+</body>
+</html>

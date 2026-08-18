@@ -48,6 +48,7 @@
         <li><a href="./index.html#come-funziona" class="nav-link" data-section="come-funziona">COME FUNZIONA</a></li>
         <li><a href="./index.html#output"        class="nav-link" data-section="output">OUTPUT</a></li>
         <li><a href="./insights.html"            class="nav-link active">INSIGHTS</a></li>
+        <li><a href="./libro-vol1.html"          class="nav-link">VOLUMI</a></li>
         <li><a href="./index.html#contatti"      class="nav-link" data-section="contatti">CONTATTI</a></li>
       </ul>
       <div class="nav-contact">
@@ -111,6 +112,129 @@
   ============================= -->
   <main class="insights-main" id="insights-grid" aria-label="Lista articoli Insights">
     <div class="container">
+
+      <!-- ══ VOLUME I CARD ══ -->
+      <a href="./libro-vol1.html" class="volume-card reveal-block" data-reveal="fade-up-slow" aria-label="Leggi Decision Risk — Volume I">
+        <div class="volume-card-inner">
+          <div class="volume-card-left">
+            <div class="volume-card-eyebrow">
+              <span class="volume-card-dot"></span>
+              RATIO · Knowledge Base · Volume I
+            </div>
+            <div class="volume-card-title">Decision Risk — Volume I</div>
+            <div class="volume-card-sub">I primi 10 insight raccolti in un unico volume. Analisi strutturate sul rischio decisionale nell'executive hiring.</div>
+            <div class="volume-card-meta">
+              <span>10 Capitoli</span>
+              <span class="volume-meta-sep">·</span>
+              <span>Aprile – Agosto 2026</span>
+              <span class="volume-meta-sep">·</span>
+              <span>C-Suite · Board · Imprenditori</span>
+            </div>
+          </div>
+          <div class="volume-card-right">
+            <div class="volume-card-badge">Leggi il Volume <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+      </a>
+      <style>
+        .volume-card {
+          display: block;
+          text-decoration: none;
+          margin-bottom: 32px;
+          border: 1px solid rgba(63,209,122,0.25);
+          border-radius: var(--radius-md, 8px);
+          background: rgba(63,209,122,0.04);
+          transition: border-color 200ms ease, background 200ms ease;
+          position: relative;
+          overflow: hidden;
+        }
+        .volume-card::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0;
+          width: 3px; height: 100%;
+          background: var(--green-bright, #3FD17A);
+        }
+        .volume-card:hover {
+          border-color: rgba(63,209,122,0.5);
+          background: rgba(63,209,122,0.07);
+        }
+        .volume-card-inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+          padding: 28px 32px;
+        }
+        .volume-card-eyebrow {
+          font-family: var(--font-mono, 'JetBrains Mono', monospace);
+          font-size: 9px;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--green-bright, #3FD17A);
+          margin-bottom: 10px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .volume-card-dot {
+          width: 6px; height: 6px;
+          border-radius: 50%;
+          background: var(--green-bright, #3FD17A);
+          animation: pulse-dot 2s infinite;
+          flex-shrink: 0;
+        }
+        @keyframes pulse-dot {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(0.8); }
+        }
+        .volume-card-title {
+          font-size: clamp(18px, 2.5vw, 24px);
+          font-weight: 800;
+          color: var(--white, #EEF1F4);
+          letter-spacing: -0.03em;
+          margin-bottom: 8px;
+          line-height: 1.2;
+        }
+        .volume-card-sub {
+          font-size: 13px;
+          color: var(--gray-5, #9EA8B3);
+          line-height: 1.6;
+          margin-bottom: 14px;
+          max-width: 500px;
+        }
+        .volume-card-meta {
+          font-family: var(--font-mono, 'JetBrains Mono', monospace);
+          font-size: 10px;
+          color: var(--gray-4, #6B7A8D);
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          align-items: center;
+        }
+        .volume-meta-sep { color: var(--border-hi, #2A3240); }
+        .volume-card-badge {
+          font-family: var(--font-mono, 'JetBrains Mono', monospace);
+          font-size: 10px;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: var(--green-bright, #3FD17A);
+          border: 1px solid rgba(63,209,122,0.3);
+          padding: 10px 18px;
+          border-radius: var(--radius-sm, 4px);
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          transition: background 150ms ease;
+        }
+        .volume-card:hover .volume-card-badge { background: rgba(63,209,122,0.1); }
+        @media (max-width: 640px) {
+          .volume-card-inner { flex-direction: column; align-items: flex-start; }
+          .volume-card-right { align-self: flex-start; }
+        }
+      </style>
 
       <!-- METHODOLOGY NOTE -->
       <p class="insights-methodology-note reveal-block" data-reveal="fade-up-slow">
