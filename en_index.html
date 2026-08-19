@@ -17,6 +17,202 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="./style-2.css" />
 
+  <!-- SPORT TEASER SECTION — scoped styles (shared with index.html) -->
+  <style>
+    .sp-teaser-section {
+      position: relative;
+      background: var(--black-1, #0c0e11);
+      padding: 120px 0;
+      overflow: hidden;
+    }
+    .sp-teaser-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 40% at 85% 20%, rgba(63,209,122,0.06) 0%, transparent 55%),
+        radial-gradient(ellipse 45% 55% at 10% 80%, rgba(63,209,122,0.04) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .sp-teaser-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--border, rgba(255,255,255,0.06));
+    }
+    .sp-teaser-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .sp-teaser-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .sp-teaser-eyebrow-line {
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--green-bright, #3FD17A);
+      flex-shrink: 0;
+    }
+    .sp-teaser-eyebrow-text {
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--green-bright, #3FD17A);
+      text-transform: uppercase;
+    }
+    .sp-teaser-headline {
+      font-family: var(--font-sans, 'Inter', sans-serif);
+      font-size: clamp(1.9rem, 3.2vw, 2.65rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--white, #EEF1F4);
+      letter-spacing: -0.025em;
+      margin: 0 0 16px;
+    }
+    .sp-teaser-supporting {
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: rgba(238,241,244,0.45);
+      text-transform: uppercase;
+      margin: 0 0 28px;
+    }
+    .sp-teaser-body {
+      font-family: var(--font-sans, 'Inter', sans-serif);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.75;
+      color: rgba(238,241,244,0.65);
+      margin: 0 0 40px;
+      max-width: 480px;
+    }
+    .sp-teaser-body strong {
+      color: var(--white, #EEF1F4);
+      font-weight: 600;
+    }
+    .sp-teaser-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 26px;
+      background: transparent;
+      border: 1px solid var(--green-bright, #3FD17A);
+      color: var(--green-bright, #3FD17A);
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease;
+      cursor: pointer;
+    }
+    .sp-teaser-cta:hover {
+      background: var(--green-bright, #3FD17A);
+      color: var(--black, #05090D);
+    }
+    .sp-teaser-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .sp-teaser-panel {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 28px 32px;
+      position: relative;
+    }
+    .sp-teaser-panel::before {
+      content: attr(data-label);
+      position: absolute;
+      top: -1px;
+      left: 24px;
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      color: rgba(238,241,244,0.25);
+      background: var(--black-1, #0c0e11);
+      padding: 0 6px;
+      text-transform: uppercase;
+    }
+    .sp-teaser-panel-title {
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: rgba(238,241,244,0.35);
+      text-transform: uppercase;
+      margin: 0 0 16px;
+    }
+    .sp-teaser-roles {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sp-teaser-role-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sp-teaser-role-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--green-bright, #3FD17A);
+      flex-shrink: 0;
+      opacity: 0.6;
+    }
+    .sp-teaser-role-name {
+      font-family: var(--font-sans, 'Inter', sans-serif);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(238,241,244,0.75);
+      letter-spacing: 0.01em;
+    }
+    .sp-teaser-statement {
+      margin-top: 1px;
+      background: rgba(63,209,122,0.04);
+      border: 1px solid rgba(63,209,122,0.12);
+      padding: 24px 32px;
+    }
+    .sp-teaser-statement-text {
+      font-family: var(--font-mono, 'JetBrains Mono', monospace);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      color: rgba(63,209,122,0.7);
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+    .sp-teaser-statement-text span {
+      color: var(--green-bright, #3FD17A);
+      font-weight: 600;
+    }
+    @media (max-width: 900px) {
+      .sp-teaser-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+      .sp-teaser-body { max-width: 100%; }
+      .sp-teaser-section { padding: 80px 0; }
+    }
+    @media (max-width: 600px) {
+      .sp-teaser-headline { font-size: 1.7rem; }
+      .sp-teaser-section { padding: 64px 0; }
+      .sp-teaser-panel { padding: 20px 20px; }
+      .sp-teaser-statement { padding: 18px 20px; }
+    }
+  </style>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMSTXZRSMX"></script>
   <script>
@@ -889,6 +1085,90 @@
       </div>
     </div>
     <div class="section-layer-bottom" aria-hidden="true"></div>
+  </section>
+
+  <!-- ============================
+       RATIO · PROFESSIONAL SPORT
+  ============================= -->
+  <section class="sp-teaser-section" aria-labelledby="sp-teaser-headline" id="professional-sport">
+    <div class="container">
+      <div class="sp-teaser-inner">
+
+        <!-- LEFT: copy -->
+        <div class="sp-teaser-left">
+          <div class="sp-teaser-eyebrow reveal-block" data-reveal="fade-up-slow">
+            <span class="sp-teaser-eyebrow-line" aria-hidden="true"></span>
+            <span class="sp-teaser-eyebrow-text">RATIO · PROFESSIONAL SPORT</span>
+          </div>
+
+          <h2 id="sp-teaser-headline" class="sp-teaser-headline reveal-block" data-reveal="fade-up-slow" data-reveal-delay="80">
+            Critical appointments<br />
+            shape sporting<br />
+            organisations.
+          </h2>
+
+          <p class="sp-teaser-supporting reveal-block" data-reveal="fade-up-slow" data-reveal-delay="140">
+            Sporting Director &middot; Technical Director &middot; Performance Leadership &middot; Academy Leadership
+          </p>
+
+          <p class="sp-teaser-body reveal-block" data-reveal="fade-up-slow" data-reveal-delay="200">
+            The higher the impact of the role, the greater the cost of a wrong decision.<br /><br />
+            RATIO applies <strong>Decision Intelligence</strong> to critical leadership appointments in professional sport.
+          </p>
+
+          <a href="./en_sport.html" class="sp-teaser-cta reveal-block" data-reveal="fade-up-slow" data-reveal-delay="280" aria-label="Explore RATIO Professional Sport">
+            EXPLORE SPORT DECISION INTELLIGENCE
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- RIGHT: system panel -->
+        <div class="sp-teaser-right reveal-block" data-reveal="fade-up-slow" data-reveal-delay="160">
+
+          <div class="sp-teaser-panel" data-label="MODULE.SPORT-01">
+            <div class="sp-teaser-panel-title">High-impact appointments</div>
+            <div class="sp-teaser-roles">
+              <div class="sp-teaser-role-row">
+                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
+                <span class="sp-teaser-role-name">Sporting Director</span>
+              </div>
+              <div class="sp-teaser-role-row">
+                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
+                <span class="sp-teaser-role-name">Technical Director</span>
+              </div>
+              <div class="sp-teaser-role-row">
+                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
+                <span class="sp-teaser-role-name">Head of Football</span>
+              </div>
+              <div class="sp-teaser-role-row">
+                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
+                <span class="sp-teaser-role-name">Academy Director</span>
+              </div>
+              <div class="sp-teaser-role-row">
+                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
+                <span class="sp-teaser-role-name">Head of Performance</span>
+              </div>
+              <div class="sp-teaser-role-row">
+                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
+                <span class="sp-teaser-role-name">Mental Performance Leadership</span>
+              </div>
+              <div class="sp-teaser-role-row">
+                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
+                <span class="sp-teaser-role-name">Senior Technical Leadership</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sp-teaser-statement">
+            <p class="sp-teaser-statement-text">
+              RATIO does not find the person.<br />
+              <span>RATIO protects the decision.</span>
+            </p>
+          </div>
+
+        </div><!-- /.sp-teaser-right -->
+      </div><!-- /.sp-teaser-inner -->
+    </div><!-- /.container -->
   </section>
 
   <!-- ============================
