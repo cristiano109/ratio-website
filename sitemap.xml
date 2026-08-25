@@ -5,8 +5,8 @@
   <!-- ==========================================
        RATIO Decision Intelligence — sitemap.xml
        Canonical domain: https://ratioapp.co
-       Updated: 2026-08-19
-       Pages: 30 URL (15 IT + 15 EN)
+       Updated: 2026-08-26
+       Pages: 32 URL (16 IT + 16 EN)
   =========================================== -->
 
   <!-- ======================================
@@ -397,6 +397,30 @@
     <lastmod>2026-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+  </url>
+
+  <!-- ======================================
+       INSIGHT 12 — Quando l'esperienza diventa un rischio decisionale (IT + EN)
+  ====================================== -->
+
+  <url>
+    <loc>https://ratioapp.co/insight-12.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-12.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-12.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-12.html"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ratioapp.co/en_insight-12.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-12.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-12.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-12.html"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
