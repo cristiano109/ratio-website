@@ -8,217 +8,17 @@
   <meta property="og:title" content="RATIO — Executive Decisions. Without Error." />
   <meta property="og:description" content="Decision intelligence for high-stakes executive hiring. Structured. Verified. Defensible." />
   <meta property="og:locale" content="en_US" />
+  <!-- CANONICAL: questa pagina è una versione precedente — la versione autorevole è en_index.html -->
+  <!-- NOINDEX: impedisce a Google di indicizzare questa pagina duplicata -->
   <link rel="canonical" href="https://ratioapp.co/en_index.html" />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="alternate" hreflang="it" href="https://ratioapp.co/index.html" />
   <link rel="alternate" hreflang="en" href="https://ratioapp.co/en_index.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="./style-2.css" />
-
-  <!-- SPORT TEASER SECTION — scoped styles (shared with index.html) -->
-  <style>
-    .sp-teaser-section {
-      position: relative;
-      background: var(--black-1, #0c0e11);
-      padding: 120px 0;
-      overflow: hidden;
-    }
-    .sp-teaser-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 55% 40% at 85% 20%, rgba(63,209,122,0.06) 0%, transparent 55%),
-        radial-gradient(ellipse 45% 55% at 10% 80%, rgba(63,209,122,0.04) 0%, transparent 50%);
-      pointer-events: none;
-    }
-    .sp-teaser-section::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: var(--border, rgba(255,255,255,0.06));
-    }
-    .sp-teaser-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-    .sp-teaser-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-    .sp-teaser-eyebrow-line {
-      display: block;
-      width: 32px;
-      height: 1px;
-      background: var(--green-bright, #3FD17A);
-      flex-shrink: 0;
-    }
-    .sp-teaser-eyebrow-text {
-      font-family: var(--font-mono, 'JetBrains Mono', monospace);
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      color: var(--green-bright, #3FD17A);
-      text-transform: uppercase;
-    }
-    .sp-teaser-headline {
-      font-family: var(--font-sans, 'Inter', sans-serif);
-      font-size: clamp(1.9rem, 3.2vw, 2.65rem);
-      font-weight: 800;
-      line-height: 1.1;
-      color: var(--white, #EEF1F4);
-      letter-spacing: -0.025em;
-      margin: 0 0 16px;
-    }
-    .sp-teaser-supporting {
-      font-family: var(--font-mono, 'JetBrains Mono', monospace);
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-      color: rgba(238,241,244,0.45);
-      text-transform: uppercase;
-      margin: 0 0 28px;
-    }
-    .sp-teaser-body {
-      font-family: var(--font-sans, 'Inter', sans-serif);
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.75;
-      color: rgba(238,241,244,0.65);
-      margin: 0 0 40px;
-      max-width: 480px;
-    }
-    .sp-teaser-body strong {
-      color: var(--white, #EEF1F4);
-      font-weight: 600;
-    }
-    .sp-teaser-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 26px;
-      background: transparent;
-      border: 1px solid var(--green-bright, #3FD17A);
-      color: var(--green-bright, #3FD17A);
-      font-family: var(--font-mono, 'JetBrains Mono', monospace);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.25s ease, color 0.25s ease;
-      cursor: pointer;
-    }
-    .sp-teaser-cta:hover {
-      background: var(--green-bright, #3FD17A);
-      color: var(--black, #05090D);
-    }
-    .sp-teaser-right {
-      display: flex;
-      flex-direction: column;
-      gap: 1px;
-    }
-    .sp-teaser-panel {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(255,255,255,0.06);
-      padding: 28px 32px;
-      position: relative;
-    }
-    .sp-teaser-panel::before {
-      content: attr(data-label);
-      position: absolute;
-      top: -1px;
-      left: 24px;
-      font-family: var(--font-mono, 'JetBrains Mono', monospace);
-      font-size: 0.6rem;
-      letter-spacing: 0.12em;
-      color: rgba(238,241,244,0.25);
-      background: var(--black-1, #0c0e11);
-      padding: 0 6px;
-      text-transform: uppercase;
-    }
-    .sp-teaser-panel-title {
-      font-family: var(--font-mono, 'JetBrains Mono', monospace);
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      color: rgba(238,241,244,0.35);
-      text-transform: uppercase;
-      margin: 0 0 16px;
-    }
-    .sp-teaser-roles {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .sp-teaser-role-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .sp-teaser-role-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--green-bright, #3FD17A);
-      flex-shrink: 0;
-      opacity: 0.6;
-    }
-    .sp-teaser-role-name {
-      font-family: var(--font-sans, 'Inter', sans-serif);
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: rgba(238,241,244,0.75);
-      letter-spacing: 0.01em;
-    }
-    .sp-teaser-statement {
-      margin-top: 1px;
-      background: rgba(63,209,122,0.04);
-      border: 1px solid rgba(63,209,122,0.12);
-      padding: 24px 32px;
-    }
-    .sp-teaser-statement-text {
-      font-family: var(--font-mono, 'JetBrains Mono', monospace);
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      color: rgba(63,209,122,0.7);
-      text-transform: uppercase;
-      line-height: 1.6;
-    }
-    .sp-teaser-statement-text span {
-      color: var(--green-bright, #3FD17A);
-      font-weight: 600;
-    }
-    @media (max-width: 900px) {
-      .sp-teaser-inner {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-      .sp-teaser-body { max-width: 100%; }
-      .sp-teaser-section { padding: 80px 0; }
-    }
-    @media (max-width: 600px) {
-      .sp-teaser-headline { font-size: 1.7rem; }
-      .sp-teaser-section { padding: 64px 0; }
-      .sp-teaser-panel { padding: 20px 20px; }
-      .sp-teaser-statement { padding: 18px 20px; }
-    }
-  </style>
-
-  <!-- NOSCRIPT: boot overlay fix for bots/crawlers without JavaScript (AdsBot-Google, Googlebot light) -->
-  <!-- Ensures landing page content is visible without JS execution -->
-  <noscript><style>
-    #boot-overlay { display: none !important; }
-    body.booting { overflow: visible !important; }
-  </style></noscript>
+  <link rel="stylesheet" href="../style.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMSTXZRSMX"></script>
@@ -227,26 +27,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-TMSTXZRSMX');
-  </script>
-
-  <!-- Schema.org Organization — sameAs: LinkedIn + YouTube -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://ratioapp.co/#organization",
-    "name": "RATIO Decision Intelligence",
-    "url": "https://ratioapp.co",
-    "logo": { "@type": "ImageObject", "url": "https://ratioapp.co/ratio-logo.png" },
-    "description": "Decision intelligence filter for executive selection. Verifiable, defensible, certified outputs.",
-    "email": "decision@ratioapp.co",
-    "areaServed": ["Italy", "UAE", "Worldwide"],
-    "knowsAbout": ["Decision Intelligence", "Executive Assessment", "Decision Risk", "Executive Hiring", "Board Decision Making"],
-    "sameAs": [
-      "https://www.linkedin.com/company/ratioappco/",
-      "https://www.youtube.com/@ratiodecisionintelligence"
-    ]
-  }
   </script>
 </head>
 <body class="booting">
@@ -270,10 +50,10 @@
   <!-- ============================
        NAVIGATION
   ============================= -->
-  <header id="main-header" class="nav-visible" role="banner">
+  <header id="main-header" role="banner">
     <nav class="nav-inner" role="navigation" aria-label="Main navigation">
       <div class="nav-logo">
-        <img src="./ratio-logo.png" alt="RATIO" class="logo-img" />
+        <img src="../ratio-logo.png" alt="RATIO" class="logo-img" />
         <span class="logo-badge">SYS v2.4</span>
       </div>
       <ul class="nav-links" role="list">
@@ -281,26 +61,17 @@
         <li><a href="#chi-siamo"     class="nav-link" data-section="chi-siamo">ABOUT</a></li>
         <li><a href="#come-funziona" class="nav-link" data-section="come-funziona">HOW IT WORKS</a></li>
         <li><a href="#output"        class="nav-link" data-section="output">OUTPUT</a></li>
-        <li><a href="./en_insights.html"     class="nav-link">INSIGHTS</a></li>
-        <li><a href="./en_libro-vol1.html"   class="nav-link">VOLUMES</a></li>
-        <li><a href="#contatti"              class="nav-link" data-section="contatti">CONTACT</a></li>
+        <li><a href="../en/insights.html" class="nav-link">INSIGHTS</a></li>
+        <li><a href="#contatti"      class="nav-link" data-section="contatti">CONTACT</a></li>
       </ul>
       <div class="nav-contact">
         <span class="sys-status-dot"></span>
         <a href="mailto:decision@ratioapp.co" class="nav-email">decision@ratioapp.co</a>
       </div>
-      <div class="nav-social" aria-label="Official social channels">
-        <a href="https://www.linkedin.com/company/ratioappco/" class="nav-social-link" target="_blank" rel="noopener noreferrer" aria-label="RATIO on LinkedIn">
-          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.youtube.com/@ratiodecisionintelligence" class="nav-social-link nav-social-link--yt" target="_blank" rel="noopener noreferrer" aria-label="RATIO on YouTube">
-          <i class="fab fa-youtube" aria-hidden="true"></i>
-        </a>
-      </div>
       <div class="lang-switcher" aria-label="Select language">
         <a href="./index.html" class="lang-btn" aria-label="Versione italiana">IT</a>
         <span class="lang-sep" aria-hidden="true"></span>
-        <a href="./en_index.html" class="lang-btn active" aria-label="English version">EN</a>
+        <a href="./index.html" class="lang-btn active" aria-label="English version">EN</a>
       </div>
       <button class="nav-toggle" aria-label="Mobile menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -514,27 +285,6 @@
         </div>
       </div>
 
-      <!-- FOUNDER CARD -->
-      <a href="./en_cristiano-ludovisi.html" class="founder-strip-card reveal-block" data-reveal="fade-up-slow" data-reveal-delay="80" aria-label="Discover Cristiano Ludovisi, Founder of RATIO" style="display:flex; margin-bottom: 32px;">
-        <div class="fsc-left">
-          <div class="fsc-avatar" aria-hidden="true">
-            <span class="fsc-avatar-letter">CL</span>
-            <span class="fsc-avatar-dot"></span>
-          </div>
-          <div class="fsc-info">
-            <div class="fsc-label">FOUNDER &amp; CEO</div>
-            <div class="fsc-name">Cristiano Ludovisi</div>
-            <div class="fsc-role">Decision Intelligence &middot; Italy &amp; Dubai</div>
-          </div>
-        </div>
-        <div class="fsc-center">
-          <p class="fsc-quote">"I transformed over 20 years of entrepreneurial experience into a system designed to protect the decisions organisations cannot afford to get wrong."</p>
-        </div>
-        <div class="fsc-right">
-          <span class="fsc-cta">Discover the story <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
-
       <div class="cards-grid three-col">
         <article class="data-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="0" data-index="01">
           <div class="card-index">01</div>
@@ -599,128 +349,6 @@
     </div>
     <div class="section-layer-bottom" aria-hidden="true"></div>
   </section>
-
-
-
-  <style>
-  .founder-strip-section {
-    padding: 0 0 0 0;
-    position: relative;
-    z-index: 2;
-  }
-  .founder-strip-card {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 32px 40px;
-    border: 1px solid rgba(63,209,122,0.18);
-    border-radius: var(--radius-md);
-    background: linear-gradient(135deg, rgba(63,209,122,0.04) 0%, rgba(15,20,28,0.98) 60%, rgba(8,11,16,0.98) 100%);
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 280ms ease, transform 280ms ease, box-shadow 280ms ease;
-  }
-  .founder-strip-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(63,209,122,0.4), transparent);
-  }
-  .founder-strip-card::after {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(63,209,122,0.15), transparent);
-  }
-  .founder-strip-card:hover {
-    border-color: rgba(63,209,122,0.35);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(63,209,122,0.08);
-  }
-  .fsc-left {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-shrink: 0;
-  }
-  .fsc-avatar {
-    width: 56px; height: 56px;
-    border-radius: 50%;
-    border: 1px solid rgba(63,209,122,0.3);
-    background: rgba(63,209,122,0.08);
-    display: flex; align-items: center; justify-content: center;
-    position: relative;
-    flex-shrink: 0;
-  }
-  .fsc-avatar-letter {
-    font-family: var(--font-sans);
-    font-size: 14px; font-weight: 800;
-    letter-spacing: 0.05em;
-    color: var(--green-bright);
-  }
-  .fsc-avatar-dot {
-    position: absolute;
-    bottom: 2px; right: 2px;
-    width: 10px; height: 10px;
-    border-radius: 50%;
-    background: var(--green-bright);
-    border: 2px solid var(--black-2);
-    box-shadow: 0 0 6px var(--green-bright);
-  }
-  .fsc-info { display: flex; flex-direction: column; gap: 3px; }
-  .fsc-label {
-    font-family: var(--font-mono);
-    font-size: 9px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--green-bright);
-  }
-  .fsc-name {
-    font-size: 18px; font-weight: 800;
-    letter-spacing: -0.025em;
-    color: var(--white);
-  }
-  .fsc-role {
-    font-family: var(--font-mono);
-    font-size: 10px; font-weight: 400;
-    color: var(--gray-5);
-    letter-spacing: 0.04em;
-  }
-  .fsc-center {
-    flex: 1;
-    padding: 0 32px;
-    border-left: 1px solid var(--border);
-    border-right: 1px solid var(--border);
-  }
-  .fsc-quote {
-    font-size: 14px;
-    color: var(--gray-6);
-    line-height: 1.65;
-    font-style: italic;
-    margin: 0;
-  }
-  .fsc-right { flex-shrink: 0; }
-  .fsc-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-mono);
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--green-bright);
-    white-space: nowrap;
-    transition: gap 200ms ease;
-  }
-  .founder-strip-card:hover .fsc-cta { gap: 12px; }
-  @media (max-width: 900px) {
-    .founder-strip-card { flex-direction: column; gap: 24px; padding: 24px; text-align: center; }
-    .fsc-center { padding: 16px 0; border-left: none; border-right: none; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .fsc-left { justify-content: center; }
-  }
-  @media (max-width: 640px) {
-    .founder-strip-card { padding: 20px 16px; }
-    .fsc-name { font-size: 16px; }
-  }
-  </style>
 
   <!-- ============================
        SYSTEM ARCHITECTURE
@@ -1095,90 +723,6 @@
   </section>
 
   <!-- ============================
-       RATIO · PROFESSIONAL SPORT
-  ============================= -->
-  <section class="sp-teaser-section" aria-labelledby="sp-teaser-headline" id="professional-sport">
-    <div class="container">
-      <div class="sp-teaser-inner">
-
-        <!-- LEFT: copy -->
-        <div class="sp-teaser-left">
-          <div class="sp-teaser-eyebrow reveal-block" data-reveal="fade-up-slow">
-            <span class="sp-teaser-eyebrow-line" aria-hidden="true"></span>
-            <span class="sp-teaser-eyebrow-text">RATIO · PROFESSIONAL SPORT</span>
-          </div>
-
-          <h2 id="sp-teaser-headline" class="sp-teaser-headline reveal-block" data-reveal="fade-up-slow" data-reveal-delay="80">
-            Critical appointments<br />
-            shape sporting<br />
-            organisations.
-          </h2>
-
-          <p class="sp-teaser-supporting reveal-block" data-reveal="fade-up-slow" data-reveal-delay="140">
-            Sporting Director &middot; Technical Director &middot; Performance Leadership &middot; Academy Leadership
-          </p>
-
-          <p class="sp-teaser-body reveal-block" data-reveal="fade-up-slow" data-reveal-delay="200">
-            The higher the impact of the role, the greater the cost of a wrong decision.<br /><br />
-            RATIO applies <strong>Decision Intelligence</strong> to critical leadership appointments in professional sport.
-          </p>
-
-          <a href="./en_sport.html" class="sp-teaser-cta reveal-block" data-reveal="fade-up-slow" data-reveal-delay="280" aria-label="Explore RATIO Professional Sport">
-            EXPLORE SPORT DECISION INTELLIGENCE
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <!-- RIGHT: system panel -->
-        <div class="sp-teaser-right reveal-block" data-reveal="fade-up-slow" data-reveal-delay="160">
-
-          <div class="sp-teaser-panel" data-label="MODULE.SPORT-01">
-            <div class="sp-teaser-panel-title">High-impact appointments</div>
-            <div class="sp-teaser-roles">
-              <div class="sp-teaser-role-row">
-                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
-                <span class="sp-teaser-role-name">Sporting Director</span>
-              </div>
-              <div class="sp-teaser-role-row">
-                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
-                <span class="sp-teaser-role-name">Technical Director</span>
-              </div>
-              <div class="sp-teaser-role-row">
-                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
-                <span class="sp-teaser-role-name">Head of Football</span>
-              </div>
-              <div class="sp-teaser-role-row">
-                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
-                <span class="sp-teaser-role-name">Academy Director</span>
-              </div>
-              <div class="sp-teaser-role-row">
-                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
-                <span class="sp-teaser-role-name">Head of Performance</span>
-              </div>
-              <div class="sp-teaser-role-row">
-                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
-                <span class="sp-teaser-role-name">Mental Performance Leadership</span>
-              </div>
-              <div class="sp-teaser-role-row">
-                <span class="sp-teaser-role-dot" aria-hidden="true"></span>
-                <span class="sp-teaser-role-name">Senior Technical Leadership</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="sp-teaser-statement">
-            <p class="sp-teaser-statement-text">
-              RATIO does not find the person.<br />
-              <span>RATIO protects the decision.</span>
-            </p>
-          </div>
-
-        </div><!-- /.sp-teaser-right -->
-      </div><!-- /.sp-teaser-inner -->
-    </div><!-- /.container -->
-  </section>
-
-  <!-- ============================
        CTA BANNER
   ============================= -->
   <section class="cta-banner" aria-label="Main call to action">
@@ -1267,18 +811,6 @@
             <span>The full process is shared after the initial conversation.</span>
           </div>
           <div class="ci-separator"></div>
-          <div class="ci-block">
-            <div class="ci-label">OFFICIAL CHANNELS</div>
-            <div class="ci-social-links">
-              <a href="https://www.linkedin.com/company/ratioappco/" class="ci-social-btn" target="_blank" rel="noopener noreferrer" aria-label="RATIO on LinkedIn">
-                <i class="fab fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span>
-              </a>
-              <a href="https://www.youtube.com/@ratiodecisionintelligence" class="ci-social-btn ci-social-btn--yt" target="_blank" rel="noopener noreferrer" aria-label="RATIO on YouTube">
-                <i class="fab fa-youtube" aria-hidden="true"></i><span>YouTube</span>
-              </a>
-            </div>
-          </div>
-          <div class="ci-separator"></div>
           <div class="ci-legal">
             <div class="ci-label">COMPLIANCE</div>
             <div class="ci-value-small">GDPR Compliant · ISO 27001 · Anonymous data by default</div>
@@ -1297,14 +829,6 @@
         <div class="footer-logo">RATIO</div>
         <p class="footer-desc">Decision intelligence for executive selection. Verifiable, defensible, certified outputs.</p>
         <a href="mailto:decision@ratioapp.co" class="footer-email mono">decision@ratioapp.co</a>
-        <div class="footer-social" aria-label="Official RATIO channels">
-          <a href="https://www.linkedin.com/company/ratioappco/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="RATIO on LinkedIn">
-            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.youtube.com/@ratiodecisionintelligence" class="footer-social-link footer-social-link--yt" target="_blank" rel="noopener noreferrer" aria-label="RATIO on YouTube">
-            <i class="fab fa-youtube" aria-hidden="true"></i>
-          </a>
-        </div>
         <div class="footer-sys-info">
           <span class="mono">SYS v2.4.1</span>
           <span class="footer-sep">·</span>
@@ -1317,7 +841,7 @@
           <li><a href="#chi-siamo">ABOUT</a></li>
           <li><a href="#come-funziona">HOW IT WORKS</a></li>
           <li><a href="#output">OUTPUT</a></li>
-          <li><a href="./en_insights.html">INSIGHTS</a></li>
+          <li><a href="../en/insights.html">INSIGHTS</a></li>
           <li><a href="#contatti">CONTACT</a></li>
         </ul>
       </nav>
@@ -1330,6 +854,6 @@
     </div>
   </footer>
 
-  <script src="./main.js"></script>
+  <script src="../main.js"></script>
 </body>
 </html>

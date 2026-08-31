@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="it" data-lang="it">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insights — Rischio Decisionale e Executive Hiring | RATIO Decision Intelligence</title>
-  <meta name="description" content="Analisi sul rischio decisionale nelle assunzioni strategiche, executive hiring, valutazione candidati e leadership assessment. Knowledge base RATIO per CEO, HR Director e imprenditori." />
-  <meta name="keywords" content="rischio decisionale, assunzioni strategiche, executive hiring, valutazione candidati, leadership assessment, errore di assunzione, decision intelligence" />
-  <link rel="canonical" href="https://ratioapp.co/insights.html" />
+  <title>Insights — Decision Risk &amp; Executive Hiring | RATIO Decision Intelligence</title>
+  <meta name="description" content="Analysis on decision risk in strategic hiring, executive assessment, candidate evaluation and leadership risk. RATIO knowledge base for CEOs, HR Directors and board decision makers." />
+  <meta name="keywords" content="decision risk, strategic hiring, executive hiring, candidate evaluation, leadership assessment, hiring error, decision intelligence" />
+  <!-- CANONICAL: questa pagina è una versione precedente — la versione autorevole è en_insights.html -->
+  <!-- NOINDEX: impedisce a Google di indicizzare questa pagina duplicata -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://ratioapp.co/en_insights.html" />
   <link rel="alternate" hreflang="it" href="https://ratioapp.co/insights.html" />
   <link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insights.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Insights — Decision Risk &amp; Executive Hiring | RATIO Decision Intelligence" />
+  <meta property="og:description" content="Structured analysis on decision risk in executive hiring. For CEOs, HR Directors and board members who cannot afford the wrong choice." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.ratioapp.co/en/insights.html" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="RATIO Decision Intelligence" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="./style-2.css" />
-  <link rel="stylesheet" href="./insights.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../insights.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMSTXZRSMX"></script>
@@ -27,57 +39,43 @@
 </head>
 <body>
 
-  <!-- SYSTEM GRID OVERLAY -->
   <div class="sys-grid-overlay" aria-hidden="true"></div>
   <div class="sys-scanline" aria-hidden="true"></div>
 
-  <!-- ============================
-       NAVIGATION
-  ============================= -->
+  <!-- NAVIGATION -->
   <header id="main-header" class="nav-visible" role="banner">
-    <nav class="nav-inner" role="navigation" aria-label="Navigazione principale">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
       <div class="nav-logo">
-        <a href="./index.html" aria-label="RATIO — Home">
-          <img src="./ratio-logo.png" alt="RATIO" class="logo-img" />
+        <a href="../en/index.html" aria-label="RATIO — Home">
+          <img src="../ratio-logo.png" alt="RATIO" class="logo-img" />
         </a>
         <span class="logo-badge">SYS v2.4</span>
       </div>
       <ul class="nav-links" role="list">
-        <li><a href="./index.html#home"          class="nav-link" data-section="home">HOME</a></li>
-        <li><a href="./index.html#chi-siamo"     class="nav-link" data-section="chi-siamo">CHI SIAMO</a></li>
-        <li><a href="./index.html#come-funziona" class="nav-link" data-section="come-funziona">COME FUNZIONA</a></li>
-        <li><a href="./index.html#output"        class="nav-link" data-section="output">OUTPUT</a></li>
-        <li><a href="./insights.html"            class="nav-link active">INSIGHTS</a></li>
-        <li><a href="./libro-vol1.html"          class="nav-link">VOLUMI</a></li>
-        <li><a href="./index.html#contatti"      class="nav-link" data-section="contatti">CONTATTI</a></li>
+        <li><a href="../en/index.html#home"          class="nav-link">HOME</a></li>
+        <li><a href="../en/index.html#chi-siamo"     class="nav-link">ABOUT</a></li>
+        <li><a href="../en/index.html#come-funziona" class="nav-link">HOW IT WORKS</a></li>
+        <li><a href="../en/index.html#output"        class="nav-link">OUTPUT</a></li>
+        <li><a href="../en/insights.html"            class="nav-link active">INSIGHTS</a></li>
+        <li><a href="../en/index.html#contatti"      class="nav-link">CONTACT</a></li>
       </ul>
       <div class="nav-contact">
         <span class="sys-status-dot"></span>
         <a href="mailto:decision@ratioapp.co" class="nav-email">decision@ratioapp.co</a>
       </div>
-      <div class="nav-social" aria-label="Canali social">
-        <a href="https://www.linkedin.com/company/ratioappco/" class="nav-social-link" target="_blank" rel="noopener noreferrer" aria-label="RATIO su LinkedIn">
-          <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.youtube.com/@ratiodecisionintelligence" class="nav-social-link nav-social-link--yt" target="_blank" rel="noopener noreferrer" aria-label="RATIO su YouTube">
-          <i class="fab fa-youtube" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div class="lang-switcher" aria-label="Seleziona lingua">
-        <a href="./insights.html" class="lang-btn active" aria-label="Versione italiana">IT</a>
+      <div class="lang-switcher" aria-label="Select language">
+        <a href="../insights.html" class="lang-btn" aria-label="Versione italiana">IT</a>
         <span class="lang-sep" aria-hidden="true"></span>
-        <a href="./en_insights.html" class="lang-btn" aria-label="English version">EN</a>
+        <a href="../en/insights.html" class="lang-btn active" aria-label="English version">EN</a>
       </div>
-      <button class="nav-toggle" aria-label="Menu mobile" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Mobile menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </nav>
     <div class="nav-progress-bar" id="nav-progress"></div>
   </header>
 
-  <!-- ============================
-       INSIGHTS HERO
-  ============================= -->
+  <!-- INSIGHTS HERO -->
   <section class="insights-hero" aria-labelledby="insights-headline">
     <div class="insights-hero-bg" aria-hidden="true">
       <div class="ihb-glow-left"></div>
@@ -94,10 +92,10 @@
         Insights
       </h1>
       <p class="insights-hero-institutional reveal-block" data-reveal="fade-up-slow" data-reveal-delay="130">
-        Knowledge Base dedicata a CEO, imprenditori, HR Director e decision maker coinvolti in assunzioni ad alto impatto.
+        Knowledge base for CEOs, entrepreneurs, HR Directors and decision makers involved in high-impact executive hiring.
       </p>
       <p class="insights-hero-sub reveal-block" data-reveal="fade-up-slow" data-reveal-delay="180">
-        Analisi sul rischio decisionale nelle assunzioni. Per chi non può permettersi l'errore.
+        Analysis on decision risk in executive hiring. For those who cannot afford the wrong choice.
       </p>
       <div class="insights-hero-meta reveal-block" data-reveal="fade-up-slow" data-reveal-delay="240">
         <span class="meta-chip"><span class="meta-dot green"></span>Decision Risk</span>
@@ -107,144 +105,19 @@
     </div>
   </section>
 
-  <!-- ============================
-       ARTICLE GRID
-  ============================= -->
-  <main class="insights-main" id="insights-grid" aria-label="Lista articoli Insights">
+  <!-- ARTICLE GRID -->
+  <main class="insights-main" id="insights-grid" aria-label="Insights article list">
     <div class="container">
-
-      <!-- ══ VOLUME I CARD ══ -->
-      <a href="./libro-vol1.html" class="volume-card reveal-block" data-reveal="fade-up-slow" aria-label="Leggi Decision Risk — Volume I">
-        <div class="volume-card-inner">
-          <div class="volume-card-left">
-            <div class="volume-card-eyebrow">
-              <span class="volume-card-dot"></span>
-              RATIO · Knowledge Base · Volume I
-            </div>
-            <div class="volume-card-title">Decision Risk — Volume I</div>
-            <div class="volume-card-sub">I primi 10 insight raccolti in un unico volume. Analisi strutturate sul rischio decisionale nell'executive hiring.</div>
-            <div class="volume-card-meta">
-              <span>10 Capitoli</span>
-              <span class="volume-meta-sep">·</span>
-              <span>Aprile – Agosto 2026</span>
-              <span class="volume-meta-sep">·</span>
-              <span>C-Suite · Board · Imprenditori</span>
-            </div>
-          </div>
-          <div class="volume-card-right">
-            <div class="volume-card-badge">Leggi il Volume <i class="fas fa-arrow-right"></i></div>
-          </div>
-        </div>
-      </a>
-      <style>
-        .volume-card {
-          display: block;
-          text-decoration: none;
-          margin-bottom: 32px;
-          border: 1px solid rgba(63,209,122,0.25);
-          border-radius: var(--radius-md, 8px);
-          background: rgba(63,209,122,0.04);
-          transition: border-color 200ms ease, background 200ms ease;
-          position: relative;
-          overflow: hidden;
-        }
-        .volume-card::before {
-          content: '';
-          position: absolute;
-          top: 0; left: 0;
-          width: 3px; height: 100%;
-          background: var(--green-bright, #3FD17A);
-        }
-        .volume-card:hover {
-          border-color: rgba(63,209,122,0.5);
-          background: rgba(63,209,122,0.07);
-        }
-        .volume-card-inner {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 24px;
-          padding: 28px 32px;
-        }
-        .volume-card-eyebrow {
-          font-family: var(--font-mono, 'JetBrains Mono', monospace);
-          font-size: 9px;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-          color: var(--green-bright, #3FD17A);
-          margin-bottom: 10px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-        .volume-card-dot {
-          width: 6px; height: 6px;
-          border-radius: 50%;
-          background: var(--green-bright, #3FD17A);
-          animation: pulse-dot 2s infinite;
-          flex-shrink: 0;
-        }
-        @keyframes pulse-dot {
-          0%, 100% { opacity: 1; transform: scale(1); }
-          50% { opacity: 0.5; transform: scale(0.8); }
-        }
-        .volume-card-title {
-          font-size: clamp(18px, 2.5vw, 24px);
-          font-weight: 800;
-          color: var(--white, #EEF1F4);
-          letter-spacing: -0.03em;
-          margin-bottom: 8px;
-          line-height: 1.2;
-        }
-        .volume-card-sub {
-          font-size: 13px;
-          color: var(--gray-5, #9EA8B3);
-          line-height: 1.6;
-          margin-bottom: 14px;
-          max-width: 500px;
-        }
-        .volume-card-meta {
-          font-family: var(--font-mono, 'JetBrains Mono', monospace);
-          font-size: 10px;
-          color: var(--gray-4, #6B7A8D);
-          display: flex;
-          flex-wrap: wrap;
-          gap: 6px;
-          align-items: center;
-        }
-        .volume-meta-sep { color: var(--border-hi, #2A3240); }
-        .volume-card-badge {
-          font-family: var(--font-mono, 'JetBrains Mono', monospace);
-          font-size: 10px;
-          font-weight: 600;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          color: var(--green-bright, #3FD17A);
-          border: 1px solid rgba(63,209,122,0.3);
-          padding: 10px 18px;
-          border-radius: var(--radius-sm, 4px);
-          white-space: nowrap;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          transition: background 150ms ease;
-        }
-        .volume-card:hover .volume-card-badge { background: rgba(63,209,122,0.1); }
-        @media (max-width: 640px) {
-          .volume-card-inner { flex-direction: column; align-items: flex-start; }
-          .volume-card-right { align-self: flex-start; }
-        }
-      </style>
 
       <!-- METHODOLOGY NOTE -->
       <p class="insights-methodology-note reveal-block" data-reveal="fade-up-slow">
         <i class="fas fa-shield-alt" aria-hidden="true"></i>
-        Analisi basate su metodologie di valutazione strutturata, rischio decisionale e assessment comportamentale.
+        Analysis based on structured evaluation methodologies, decision risk frameworks and behavioural assessment.
       </p>
 
-      <!-- FEATURED ARTICLE — full width -->
+      <!-- FEATURED ARTICLE -->
       <article class="insight-card featured reveal-block" data-reveal="fade-up-slow">
-        <a href="./insight-1.html" class="insight-card-link" aria-label="Leggi: Il costo nascosto di un'assunzione sbagliata">
+        <a href="../en/insight-1.html" class="insight-card-link" aria-label="Read: The Hidden Cost of a Wrong Hire">
           <div class="insight-card-cover featured-cover" aria-hidden="true">
             <div class="cover-bg cover-1"></div>
             <div class="cover-overlay"></div>
@@ -256,14 +129,14 @@
             <div class="insight-card-meta">
               <span class="insight-category">Decision Risk</span>
               <span class="insight-sep">·</span>
-              <time class="insight-date" datetime="2026-05-15">15 Maggio 2026</time>
+              <time class="insight-date" datetime="2025-05-15">May 15, 2025</time>
               <span class="insight-sep">·</span>
-              <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 7 min lettura</span>
+              <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 9 min read</span>
             </div>
-            <h2 class="insight-title">Il costo nascosto di un'assunzione sbagliata</h2>
-            <p class="insight-subtitle">Un errore di hiring a livello C-suite non si misura solo con il costo diretto. Si misura con il danno silenzioso che lascia nel tempo.</p>
+            <h2 class="insight-title">The Hidden Cost of a Wrong Executive Hire</h2>
+            <p class="insight-subtitle">A C-suite hiring mistake cannot be measured by its direct cost alone. It is measured by the silent damage it leaves over time.</p>
             <div class="insight-card-footer">
-              <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+              <span class="insight-cta-inline">Read the analysis <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </div>
           </div>
         </a>
@@ -272,9 +145,8 @@
       <!-- ARTICLE GRID — 2 col -->
       <div class="insights-grid-2" role="list">
 
-        <!-- ARTICLE 2 -->
         <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="0" role="listitem">
-          <a href="./insight-2.html" class="insight-card-link" aria-label="Leggi: Perché il CV non basta">
+          <a href="../en/insight-2.html" class="insight-card-link" aria-label="Read: Why a CV Is Not Enough">
             <div class="insight-card-cover" aria-hidden="true">
               <div class="cover-bg cover-2"></div>
               <div class="cover-overlay"></div>
@@ -283,22 +155,21 @@
               <div class="insight-card-meta">
                 <span class="insight-category">Assessment</span>
                 <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-04-28">28 Aprile 2026</time>
+                <time class="insight-date" datetime="2025-04-28">April 28, 2025</time>
                 <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 5 min lettura</span>
+                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 8 min read</span>
               </div>
-              <h2 class="insight-title">Perché il CV non basta per valutare un candidato ad alto impatto</h2>
-              <p class="insight-subtitle">Il curriculum descrive il passato. Non predice il comportamento sotto pressione, né la capacità di reggere un ruolo critico.</p>
+              <h2 class="insight-title">Why a CV Is Not Enough to Evaluate a High-Impact Candidate</h2>
+              <p class="insight-subtitle">A resume describes the past. It does not predict behaviour under pressure, nor the capacity to hold a critical role.</p>
               <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                <span class="insight-cta-inline">Read the analysis <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
               </div>
             </div>
           </a>
         </article>
 
-        <!-- ARTICLE 3 -->
         <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="120" role="listitem">
-          <a href="./insight-3.html" class="insight-card-link" aria-label="Leggi: Come ridurre il rischio decisionale">
+          <a href="../en/insight-3.html" class="insight-card-link" aria-label="Read: Reducing Decision Risk in Strategic Hiring">
             <div class="insight-card-cover" aria-hidden="true">
               <div class="cover-bg cover-3"></div>
               <div class="cover-overlay"></div>
@@ -307,231 +178,14 @@
               <div class="insight-card-meta">
                 <span class="insight-category">Decision Intelligence</span>
                 <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-04-10">10 Aprile 2026</time>
+                <time class="insight-date" datetime="2025-04-10">April 10, 2025</time>
                 <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 6 min lettura</span>
+                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 6 min read</span>
               </div>
-              <h2 class="insight-title">Come ridurre il rischio decisionale nelle assunzioni strategiche</h2>
-              <p class="insight-subtitle">Le assunzioni strategiche non possono affidarsi all'intuizione. Esistono metodologie strutturate per ridurre l'errore a dati misurabili.</p>
+              <h2 class="insight-title">How to Reduce Decision Risk in Strategic Executive Hiring</h2>
+              <p class="insight-subtitle">Strategic hiring cannot rely on intuition alone. Structured methodologies exist to reduce error to measurable, defensible data.</p>
               <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <!-- ARTICLE 4 -->
-        <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="240" role="listitem">
-          <a href="./insight-4.html" class="insight-card-link" aria-label="Leggi: Perché le migliori decisioni di assunzione non iniziano dal candidato">
-            <div class="insight-card-cover" aria-hidden="true">
-              <div class="cover-bg cover-4"></div>
-              <div class="cover-overlay"></div>
-            </div>
-            <div class="insight-card-body">
-              <div class="insight-card-meta">
-                <span class="insight-category">Decision Intelligence</span>
-                <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-06-15">15 Giugno 2026</time>
-                <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 5 min lettura</span>
-              </div>
-              <h2 class="insight-title">Perché le migliori decisioni di assunzione non iniziano dal candidato</h2>
-              <p class="insight-subtitle">Le organizzazioni più efficaci non cercano di eliminare il rischio. Cercano di ridurre gli errori evitabili.</p>
-              <div class="insight-card-footer">
-                <span class="insight-card-author-tag" style="font-family:var(--font-mono);font-size:10px;color:var(--green-bright);letter-spacing:0.06em;font-weight:600;margin-right:auto;">By Cristiano Ludovisi</span>
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <!-- ARTICLE 5 -->
-        <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="360" role="listitem">
-          <a href="./insight-5.html" class="insight-card-link" aria-label="Leggi: L'errore di assunzione più costoso avviene prima del colloquio">
-            <div class="insight-card-cover" aria-hidden="true">
-              <div class="cover-bg cover-5"></div>
-              <div class="cover-overlay"></div>
-            </div>
-            <div class="insight-card-body">
-              <div class="insight-card-meta">
-                <span class="insight-category">Decision Risk</span>
-                <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-06-23">23 Giugno 2026</time>
-                <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 8 min lettura</span>
-              </div>
-              <h2 class="insight-title">L'errore di assunzione più costoso avviene prima del colloquio</h2>
-              <p class="insight-subtitle">Le organizzazioni spesso attribuiscono gli errori al candidato sbagliato. In realtà, molte decisioni falliscono molto prima che il candidato entri nella stanza.</p>
-              <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <!-- ARTICLE 6 -->
-        <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="480" role="listitem">
-          <a href="./insight-6.html" class="insight-card-link" aria-label="Leggi: Le decisioni sbagliate non nascono da informazioni insufficienti">
-            <div class="insight-card-cover" aria-hidden="true">
-              <div class="cover-bg cover-6"></div>
-              <div class="cover-overlay"></div>
-            </div>
-            <div class="insight-card-body">
-              <div class="insight-card-meta">
-                <span class="insight-category">Decision Intelligence</span>
-                <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-07-01">1 Luglio 2026</time>
-                <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 10 min lettura</span>
-              </div>
-              <h2 class="insight-title">Le decisioni sbagliate non nascono da informazioni insufficienti. Nascono da assunzioni sbagliate.</h2>
-              <p class="insight-subtitle">Ogni decisione importante si basa su decine di assunzioni invisibili. Più sono sbagliate, maggiore è il rischio. La Decision Intelligence serve prima di tutto a renderle visibili.</p>
-              <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <!-- ARTICLE 7 -->
-        <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="600" role="listitem">
-          <a href="./insight-7.html" class="insight-card-link" aria-label="Leggi: L'assunzione più pericolosa nell'executive hiring">
-            <div class="insight-card-cover" aria-hidden="true">
-              <div class="cover-bg cover-7"></div>
-              <div class="cover-overlay"></div>
-            </div>
-            <div class="insight-card-body">
-              <div class="insight-card-meta">
-                <span class="insight-category">Executive Hiring</span>
-                <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-07-06">6 Luglio 2026</time>
-                <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 9 min lettura</span>
-              </div>
-              <h2 class="insight-title">L'assunzione più pericolosa nell'executive hiring</h2>
-              <p class="insight-subtitle">Ogni decisione di executive hiring inizia con delle assunzioni. Le organizzazioni che le riconoscono prendono decisioni migliori. Quelle che non lo fanno spesso pagano errori invisibili.</p>
-              <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <!-- ARTICLE 8 -->
-        <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="720" role="listitem">
-          <a href="./insight-8.html" class="insight-card-link" aria-label="Leggi: Il Costo Silenzioso del Consenso">
-            <div class="insight-card-cover" aria-hidden="true">
-              <div class="cover-bg cover-8"></div>
-              <div class="cover-overlay"></div>
-            </div>
-            <div class="insight-card-body">
-              <div class="insight-card-meta">
-                <span class="insight-category">Decision Intelligence</span>
-                <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-07-22">22 Luglio 2026</time>
-                <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 10 min lettura</span>
-              </div>
-              <h2 class="insight-title">Il Costo Silenzioso del Consenso</h2>
-              <p class="insight-subtitle">Le decisioni executive più pericolose raramente iniziano con dati mancanti. Iniziano quando il consenso arriva troppo presto e viene scambiato per giudizio.</p>
-              <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <!-- ARTICLE 9 -->
-        <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="800" role="listitem">
-          <a href="./insight-9.html" class="insight-card-link" aria-label="Leggi: Il rischio più pericoloso è decidere bene sul problema sbagliato">
-            <div class="insight-card-cover" aria-hidden="true">
-              <div class="cover-bg cover-9"></div>
-              <div class="cover-overlay"></div>
-            </div>
-            <div class="insight-card-body">
-              <div class="insight-card-meta">
-                <span class="insight-category">Decision Intelligence</span>
-                <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-08-08">8 Agosto 2026</time>
-                <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 10 min lettura</span>
-              </div>
-              <h2 class="insight-title">Il rischio più pericoloso è decidere bene sul problema sbagliato</h2>
-              <p class="insight-subtitle">Una decisione può essere perfettamente razionale e produrre comunque il risultato sbagliato. Il rischio nasce quando l'organizzazione risolve con precisione un problema che non ha mai verificato.</p>
-              <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <!-- ARTICLE 10 -->
-        <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="880" role="listitem">
-          <a href="./insight-10.html" class="insight-card-link" aria-label="Leggi: Perché le decisioni di Executive Hiring falliscono prima ancora del colloquio">
-            <div class="insight-card-cover" aria-hidden="true">
-              <div class="cover-bg cover-10"></div>
-              <div class="cover-overlay"></div>
-            </div>
-            <div class="insight-card-body">
-              <div class="insight-card-meta">
-                <span class="insight-category">Executive Hiring</span>
-                <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-08-11">11 Agosto 2026</time>
-                <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 10 min lettura</span>
-              </div>
-              <h2 class="insight-title">Perché le decisioni di Executive Hiring falliscono prima ancora del colloquio</h2>
-              <p class="insight-subtitle">L'errore più importante in una selezione executive può verificarsi prima ancora che il primo candidato entri nella stanza. Il rischio nasce dalla qualità della decisione costruita intorno al ruolo.</p>
-              <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <!-- ARTICLE 11 -->
-        <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="960" role="listitem">
-          <a href="./insight-11.html" class="insight-card-link" aria-label="Leggi: Perché più dati non portano necessariamente a decisioni executive migliori">
-            <div class="insight-card-cover" aria-hidden="true">
-              <div class="cover-bg cover-11"></div>
-              <div class="cover-overlay"></div>
-            </div>
-            <div class="insight-card-body">
-              <div class="insight-card-meta">
-                <span class="insight-category">Decision Intelligence</span>
-                <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-08-18">18 Agosto 2026</time>
-                <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 12 min lettura</span>
-              </div>
-              <h2 class="insight-title">Perché più dati non portano necessariamente a decisioni executive migliori</h2>
-              <p class="insight-subtitle">Il problema delle organizzazioni moderne non è avere accesso alle informazioni. È capire quali informazioni meritano di influenzare una decisione. La distinzione tra data intelligence e decision intelligence.</p>
-              <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
-              </div>
-            </div>
-          </a>
-        </article>
-
-        <!-- ARTICLE 12 -->
-        <article class="insight-card reveal-block" data-reveal="fade-up-sharp" data-reveal-delay="1040" role="listitem">
-          <a href="./insight-12.html" class="insight-card-link" aria-label="Leggi: Quando l'esperienza diventa un rischio decisionale">
-            <div class="insight-card-cover" aria-hidden="true">
-              <div class="cover-bg cover-12"></div>
-              <div class="cover-overlay"></div>
-            </div>
-            <div class="insight-card-body">
-              <div class="insight-card-meta">
-                <span class="insight-category">Leadership Judgment</span>
-                <span class="insight-sep">·</span>
-                <time class="insight-date" datetime="2026-08-26">26 Agosto 2026</time>
-                <span class="insight-sep">·</span>
-                <span class="insight-read"><i class="fas fa-clock" aria-hidden="true"></i> 12 min lettura</span>
-              </div>
-              <h2 class="insight-title">Quando l'esperienza diventa un rischio decisionale</h2>
-              <p class="insight-subtitle">Perché i leader più esperti possono essere i più vulnerabili quando il contesto cambia. Come separare l'esperienza accumulata dalla sua reale rilevanza contestuale.</p>
-              <div class="insight-card-footer">
-                <span class="insight-cta-inline">Leggi l'analisi <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                <span class="insight-cta-inline">Read the analysis <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
               </div>
             </div>
           </a>
@@ -542,43 +196,31 @@
     </div><!-- /container -->
   </main>
 
-  <!-- ============================
-       INSIGHTS CTA BANNER
-  ============================= -->
-  <section class="insights-cta-section" aria-label="Call to action Insights">
+  <!-- INSIGHTS CTA BANNER -->
+  <section class="insights-cta-section" aria-label="Call to action">
     <div class="container">
       <div class="insights-cta-inner reveal-block" data-reveal="fade-up-slow">
         <div class="section-eyebrow center-eyebrow" style="justify-content:center;">
           <span class="eyebrow-line light"></span>
-          <span>PRONTO A DECIDERE CON METODO?</span>
+          <span>READY TO DECIDE WITH METHOD?</span>
         </div>
-        <h2 class="insights-cta-headline">Vuoi ridurre il rischio nelle tue prossime assunzioni ad alto impatto?</h2>
-        <p class="insights-cta-sub">Ogni assunzione strategica è una decisione ad alto impatto. Individuiamo i punti di rischio prima che si trasformino in costi, attriti organizzativi o errori difficili da correggere.</p>
-        <a href="./index.html#contatti" class="btn-primary">
-          <span class="btn-label">RICHIEDI UNA PRIMA ANALISI RISERVATA</span>
+        <h2 class="insights-cta-headline">Want to reduce risk in your next high-impact executive hire?</h2>
+        <p class="insights-cta-sub">Every strategic hire is a high-stakes decision. We identify risk factors before they become costs, organisational friction or mistakes that are difficult to reverse.</p>
+        <a href="../en/index.html#contatti" class="btn-primary">
+          <span class="btn-label">REQUEST A CONFIDENTIAL FIRST ANALYSIS</span>
           <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ============================
-       FOOTER
-  ============================= -->
+  <!-- FOOTER -->
   <footer id="main-footer" role="contentinfo">
     <div class="footer-inner container">
       <div class="footer-left">
         <div class="footer-logo">RATIO</div>
-        <p class="footer-desc">Filtro decisionale per la selezione executive. Output verificabili, difendibili, certificati.</p>
+        <p class="footer-desc">Decision filter for executive selection. Verifiable, defensible, certified outputs.</p>
         <a href="mailto:decision@ratioapp.co" class="footer-email mono">decision@ratioapp.co</a>
-        <div class="footer-social" aria-label="Canali social RATIO">
-          <a href="https://www.linkedin.com/company/ratioappco/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="RATIO su LinkedIn">
-            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.youtube.com/@ratiodecisionintelligence" class="footer-social-link footer-social-link--yt" target="_blank" rel="noopener noreferrer" aria-label="RATIO su YouTube">
-            <i class="fab fa-youtube" aria-hidden="true"></i>
-          </a>
-        </div>
         <div class="footer-sys-info">
           <span class="mono">SYS v2.4.1</span>
           <span class="footer-sep">·</span>
@@ -587,12 +229,12 @@
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <ul role="list">
-          <li><a href="./index.html#home">HOME</a></li>
-          <li><a href="./index.html#chi-siamo">CHI SIAMO</a></li>
-          <li><a href="./index.html#come-funziona">COME FUNZIONA</a></li>
-          <li><a href="./index.html#output">OUTPUT</a></li>
-          <li><a href="./insights.html">INSIGHTS</a></li>
-          <li><a href="./index.html#contatti">CONTATTI</a></li>
+          <li><a href="../en/index.html#home">HOME</a></li>
+          <li><a href="../en/index.html#chi-siamo">ABOUT</a></li>
+          <li><a href="../en/index.html#come-funziona">HOW IT WORKS</a></li>
+          <li><a href="../en/index.html#output">OUTPUT</a></li>
+          <li><a href="../en/insights.html">INSIGHTS</a></li>
+          <li><a href="../en/index.html#contatti">CONTACT</a></li>
         </ul>
       </nav>
     </div>
@@ -604,6 +246,6 @@
     </div>
   </footer>
 
-  <script src="./insights-nav.js"></script>
+  <script src="../insights-nav.js"></script>
 </body>
 </html>
