@@ -213,6 +213,13 @@
     }
   </style>
 
+  <!-- NOSCRIPT: boot overlay fix for bots/crawlers without JavaScript (AdsBot-Google, Googlebot light) -->
+  <!-- Ensures landing page content is visible without JS execution -->
+  <noscript><style>
+    #boot-overlay { display: none !important; }
+    body.booting { overflow: visible !important; }
+  </style></noscript>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMSTXZRSMX"></script>
   <script>
