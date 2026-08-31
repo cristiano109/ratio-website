@@ -1,7 +1,7 @@
 name = "ratio"
 compatibility_date = "2026-07-02"
-main = "_worker.js"
 
 [assets]
 directory = "."
-binding = "ASSETS"
+html_handling = "force-trailing-slash"
+not_found_handling = "single-page-application"
