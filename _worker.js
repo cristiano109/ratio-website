@@ -65,9 +65,15 @@ export default {
         return env.ASSETS.fetch(request);
       }
 
-      // 2e. Redirect 302 (temporaneo — non cached dai motori di ricerca)
-      const redirectUrl = new URL(targetPath, url.origin).href;
-      return Response.redirect(redirectUrl, 302);
+      // 2e. Redirect 302 con no-cache (il redirect dipende dal browser/cookie)
+      return new Response(null, {
+        status: 302,
+        headers: {
+          'Location': new URL(targetPath, url.origin).href,
+          'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0',
+          'Vary': 'Accept-Language, Cookie',
+        }
+      });
     }
 
     // ──────────────────────────────────────────────
