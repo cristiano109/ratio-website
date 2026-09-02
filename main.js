@@ -487,6 +487,42 @@ function initSectionPolish() {
 }
 
 /* ─────────────────────────────
+   10. LANG SWITCHER — cookie di preferenza
+   Quando l'utente clicca EN o IT salva ratio_lang
+   per 1 anno. Il Worker la rispetta nelle visite successive.
+───────────────────────────── */
+function initLangSwitcher() {
+  $$('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      // Determina quale lingua ha cliccato
+      const lang = this.getAttribute('aria-label');
+      let code = null;
+      if (lang && lang.toLowerCase().includes('english'))  code = 'en';
+      if (lang && lang.toLowerCase().includes('italiana')) code = 'it';
+
+      // Fallback: leggi dal testo del bottone
+      if (!code) {
+        const txt = this.textContent.trim().toLowerCase();
+        if (txt === 'en') code = 'en';
+        if (txt === 'it') code = 'it';
+      }
+
+      if (code) {
+        // Salva cookie per 1 anno (365 giorni)
+        const expires = new Date();
+        expires.setFullYear(expires.getFullYear() + 1);
+        document.cookie =
+          'ratio_lang=' + code +
+          '; expires=' + expires.toUTCString() +
+          '; path=/' +
+          '; SameSite=Lax';
+      }
+      // Navigazione avviene normalmente via href — non blocchiamo
+    });
+  });
+}
+
+/* ─────────────────────────────
    INIT
 ───────────────────────────── */
 function init() {
@@ -494,6 +530,7 @@ function init() {
   initContactForm();
   initLiveClock();
   initSectionPolish();
+  initLangSwitcher();
   buildRevealObserver();
   buildOutputObserver();
 

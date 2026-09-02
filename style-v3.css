@@ -1,0 +1,1371 @@
+/* ============================================================
+   RATIO VISUAL SYSTEM V3
+   Premium Executive Visual Layer
+   
+   STRATEGY: Override layer — loaded AFTER style.css + style-2.css
+   RULE: Zero content change. Zero functionality change.
+         Visual elevation only. 70-80% continuity, 20-30% elevation.
+   
+   Target: CEO · Board · Founder · CHRO · Investor · Senior DM
+   Feel:   Executive Intelligence Document · Institutional Authority
+   NOT:    SaaS dashboard · Control room · Tech startup
+   
+   Version: 3.0.0 — September 2026
+   ============================================================ */
+
+
+/* ============================================================
+   V3 TOKEN REFINEMENTS
+   Layered on existing tokens — no destructive changes
+   ============================================================ */
+:root {
+  /* Refined spacing rhythm */
+  --v3-section-pad:   128px;
+  --v3-section-pad-m: 80px;
+  --v3-section-pad-s: 56px;
+
+  /* Editorial type scale */
+  --v3-hero-size:     clamp(32px, 4vw, 56px);
+  --v3-h2-size:       clamp(28px, 3.4vw, 48px);
+  --v3-h3-size:       clamp(20px, 2vw, 28px);
+  --v3-body-size:     15px;
+  --v3-body-lh:       1.82;
+
+  /* Refined color touches */
+  --v3-surface:       rgba(238,241,244,0.025);
+  --v3-surface-hover: rgba(238,241,244,0.04);
+  --v3-border-fine:   rgba(238,241,244,0.055);
+  --v3-border-mid:    rgba(238,241,244,0.09);
+  --v3-border-hi:     rgba(238,241,244,0.15);
+  --v3-ink-1:         #EEF1F4;       /* primary text */
+  --v3-ink-2:         #B8C4CE;       /* secondary text — slightly warmer */
+  --v3-ink-3:         #72808F;       /* tertiary / labels */
+  --v3-ink-4:         #3A4355;       /* muted / placeholders */
+  --v3-green-accent:  #3FD17A;
+  --v3-green-dim:     rgba(63,209,122,0.07);
+  --v3-green-border:  rgba(63,209,122,0.2);
+
+  /* Premium shadow system */
+  --v3-shadow-sm:     0 2px 12px rgba(0,0,0,0.35), 0 1px 3px rgba(0,0,0,0.5);
+  --v3-shadow-md:     0 8px 32px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.4);
+  --v3-shadow-lg:     0 24px 80px rgba(0,0,0,0.7), 0 4px 16px rgba(0,0,0,0.5);
+  --v3-shadow-xl:     0 40px 120px rgba(0,0,0,0.85), 0 8px 32px rgba(0,0,0,0.6);
+}
+
+
+/* ============================================================
+   GLOBAL REFINEMENTS
+   Body, headings, links
+   ============================================================ */
+
+/* More editorial body text */
+body {
+  font-size: var(--v3-body-size);
+  line-height: var(--v3-body-lh);
+  letter-spacing: 0.005em;
+}
+
+/* Heading refinement — stronger hierarchy */
+h1, h2, h3, h4 {
+  letter-spacing: -0.03em;
+  line-height: 1.06;
+  font-weight: 800;
+}
+
+/* Improved paragraph readability */
+p {
+  line-height: var(--v3-body-lh);
+}
+
+
+/* ============================================================
+   NAVIGATION V3
+   More premium, less SaaS
+   ============================================================ */
+
+/* Taller, more authoritative nav */
+.nav-inner {
+  height: 64px;
+  padding: 0 40px;
+  gap: 32px;
+}
+
+/* Logo badge — subtler */
+.logo-badge {
+  font-size: 7px;
+  letter-spacing: 0.06em;
+  color: var(--v3-ink-4);
+  border-color: rgba(238,241,244,0.08);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+/* Nav links — slightly larger, better tracking */
+.nav-link {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--v3-ink-3);
+  padding: 7px 13px;
+  border-radius: 2px;
+  border-color: transparent;
+  transition: color 200ms, background 200ms;
+}
+
+/* Cleaner hover — no box border, just subtle bg */
+.nav-link:hover,
+.nav-link.active {
+  color: var(--v3-ink-1);
+  border-color: transparent;
+  background: var(--v3-surface);
+}
+
+/* Underline accent — thinner, more refined */
+.nav-link::after {
+  width: 12px;
+  height: 1px;
+  bottom: 3px;
+}
+
+/* Email in nav */
+.nav-email {
+  font-size: 10.5px;
+  letter-spacing: 0.02em;
+  color: var(--v3-ink-4);
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+.nav-email:hover {
+  color: var(--v3-ink-2);
+}
+
+/* Status dot — more restrained */
+.sys-status-dot {
+  width: 5px;
+  height: 5px;
+  box-shadow: 0 0 5px var(--green-bright);
+  animation: pulse-dot 3.5s ease-in-out infinite;
+}
+
+/* Mobile nav overlay */
+.nav-links.open {
+  background: rgba(6,8,9,0.98);
+  border-bottom: 1px solid var(--v3-border-fine);
+  backdrop-filter: blur(20px);
+}
+
+/* Lang switcher — EN first (visual order handled in HTML) */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--v3-border-fine);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.lang-btn {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 5px 10px;
+  color: var(--v3-ink-4);
+  background: transparent;
+  border-radius: 0;
+  transition: color 180ms, background 180ms;
+  border: none;
+}
+
+.lang-btn.active {
+  color: var(--v3-ink-1);
+  background: var(--v3-surface);
+}
+
+.lang-btn:hover:not(.active) {
+  color: var(--v3-ink-2);
+  background: var(--v3-surface);
+}
+
+.lang-sep {
+  display: block;
+  width: 1px;
+  height: 14px;
+  background: var(--v3-border-fine);
+  flex-shrink: 0;
+}
+
+
+/* ============================================================
+   SECTION BASE V3
+   More breathing room, editorial rhythm
+   ============================================================ */
+.section {
+  padding: var(--v3-section-pad) 0;
+}
+
+/* Section eyebrow — cleaner, less "code terminal" */
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--v3-ink-4);
+  text-transform: uppercase;
+}
+
+/* Remove the code/version label — less SaaS */
+.eyebrow-code,
+.eyebrow-ver {
+  display: none;
+}
+
+/* Eyebrow line — slightly longer, more editorial */
+.eyebrow-line {
+  width: 28px;
+  height: 1px;
+  background: var(--v3-green-accent);
+  opacity: 0.8;
+}
+
+/* Section headlines — more powerful */
+.section-headline {
+  font-size: var(--v3-h2-size);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.06;
+  color: var(--v3-ink-1);
+}
+
+/* Section subtext — more comfortable reading */
+.section-subtext,
+.split-subtext {
+  font-size: 15px;
+  color: var(--v3-ink-2);
+  line-height: var(--v3-body-lh);
+  max-width: 500px;
+}
+
+/* Headline accent — italic/light contrast */
+.headline-accent {
+  color: var(--v3-ink-3);
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+/* ============================================================
+   HERO SECTION V3
+   First viewport — must communicate Authority in 3 seconds
+   ============================================================ */
+.hero-section {
+  padding: 140px 0 100px;
+}
+
+/* Hero eyebrow — sans-serif instead of full mono */
+.hero-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--v3-ink-4);
+}
+
+/* Hero headline — elevated scale and hierarchy */
+.hero-headline {
+  font-size: var(--v3-hero-size);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  color: var(--v3-ink-1);
+  margin-top: 18px;
+  text-shadow: 0 4px 48px rgba(0,0,0,0.5);
+}
+
+/* Hero body — more readable */
+.hero-body {
+  font-size: var(--v3-body-size);
+  color: var(--v3-ink-2);
+  line-height: var(--v3-body-lh);
+  margin-top: 14px;
+}
+
+/* Hero clarify — institutional quote style */
+.hero-clarify {
+  font-size: 13.5px;
+  color: var(--v3-ink-3);
+  line-height: 1.75;
+  margin-top: 10px;
+  font-style: italic;
+  border-left: 1px solid var(--v3-border-mid);
+  padding-left: 16px;
+  max-width: 520px;
+}
+
+/* Hero CTA row — more breathing room */
+.hero-cta-row {
+  margin-top: 32px;
+  gap: 16px;
+}
+
+/* Hero meta chips — slightly more refined */
+.meta-chip {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: 2px;
+  color: var(--v3-ink-3);
+  border-color: var(--v3-border-fine);
+  background: transparent;
+}
+
+/* Hero panel — more elevated, document-like */
+.hero-panel {
+  background: linear-gradient(170deg, rgba(20,24,31,0.98) 0%, rgba(10,13,18,0.99) 100%);
+  border: 1px solid var(--v3-border-mid);
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow:
+    0 0 0 1px rgba(238,241,244,0.03),
+    var(--v3-shadow-xl),
+    0 0 60px rgba(63,209,122,0.03);
+}
+
+/* Panel top line — thinner, more refined */
+.hero-panel::before {
+  opacity: 0.3;
+}
+
+/* Panel fields — more readable */
+.field-label {
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+  color: var(--v3-ink-4);
+}
+.field-value {
+  font-size: 12px;
+  color: var(--v3-ink-2);
+}
+.field-value.mono {
+  font-size: 11px;
+}
+
+/* Panel section label */
+.panel-section-label {
+  font-size: 8.5px;
+  color: var(--v3-ink-4);
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+
+
+/* ============================================================
+   BUTTONS V3
+   More premium, restrained
+   ============================================================ */
+
+/* Primary button — slightly more refined proportions */
+.btn-primary {
+  padding: 14px 26px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  border-radius: 2px;
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.06);
+  transition: background 200ms, box-shadow 220ms, transform 180ms;
+}
+.btn-primary:hover {
+  background: var(--green-bright);
+  border-color: var(--green-bright);
+  box-shadow: 0 0 28px rgba(63,209,122,0.35), 0 6px 20px rgba(0,0,0,0.45);
+  transform: translateY(-1px);
+}
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* Ghost button — cleaner */
+.btn-ghost {
+  padding: 14px 22px;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  color: var(--v3-ink-2);
+  border-color: var(--v3-border-mid);
+  transition: color 180ms, border-color 180ms, background 180ms;
+}
+.btn-ghost:hover {
+  color: var(--v3-ink-1);
+  border-color: var(--v3-border-hi);
+  background: var(--v3-surface);
+}
+
+
+/* ============================================================
+   CONTEXT SECTION V3 ("Chi Siamo")
+   From "metrics display" to "editorial intelligence"
+   ============================================================ */
+.context-section {
+  background: linear-gradient(180deg, #0B0D12 0%, #060809 100%);
+}
+
+/* Context secondary text */
+.context-secondary {
+  font-size: 14px;
+  color: var(--v3-ink-3);
+  line-height: var(--v3-body-lh);
+  margin-top: 8px;
+  max-width: 500px;
+}
+
+/* "What it is" block — more institutional */
+.wii-inner {
+  border: 1px solid var(--v3-border-fine);
+  border-left: 2px solid var(--v3-green-accent);
+  border-radius: 3px;
+  padding: 24px 28px;
+  background: rgba(8,11,16,0.6);
+  max-width: 760px;
+}
+.wii-label {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--v3-green-accent);
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+.wii-text {
+  font-size: 14.5px;
+  color: var(--v3-ink-2);
+  line-height: var(--v3-body-lh);
+}
+
+/* Founder card — more institutional, less social */
+.founder-strip-card {
+  padding: 36px 44px;
+  gap: 44px;
+  border: 1px solid rgba(63,209,122,0.12);
+  border-radius: 3px;
+  background: linear-gradient(145deg,
+    rgba(63,209,122,0.03) 0%,
+    rgba(12,16,22,0.98) 50%,
+    rgba(6,8,9,0.99) 100%);
+  transition: border-color 300ms, box-shadow 300ms;
+}
+.founder-strip-card:hover {
+  border-color: rgba(63,209,122,0.22);
+  transform: none; /* remove pop — keep institutional */
+  box-shadow: 0 12px 48px rgba(0,0,0,0.45);
+}
+
+/* Avatar — less social, more formal */
+.fsc-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 3px; /* square instead of circle — institutional */
+  border: 1px solid rgba(63,209,122,0.2);
+  background: rgba(63,209,122,0.05);
+}
+.fsc-avatar-letter {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.fsc-label {
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  color: var(--v3-green-accent);
+  opacity: 0.65;
+}
+.fsc-name {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.fsc-role {
+  font-size: 11px;
+  color: var(--v3-ink-4);
+  letter-spacing: 0.02em;
+  font-family: var(--font-sans);
+}
+
+/* Data cards — V3 refinement */
+.cards-grid {
+  gap: 0;
+  background: transparent;
+  border: 1px solid var(--v3-border-fine);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-top: 56px;
+}
+.cards-grid.three-col {
+  /* Separator lines rendered with box-shadow on cards */
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--v3-border-fine);
+  gap: 1px;
+}
+
+.data-card {
+  background: rgba(10,13,18,0.9);
+  padding: 32px 26px;
+  gap: 16px;
+  transition: background 300ms, transform 280ms, box-shadow 280ms;
+}
+.data-card:hover {
+  background: rgba(15,18,26,0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+
+/* Card top line — thinner, more restrained */
+.data-card::before {
+  height: 1px;
+  background: var(--v3-border-fine);
+  transition: background 280ms, opacity 280ms;
+}
+.data-card:hover::before {
+  background: rgba(63,209,122,0.5);
+}
+.data-card.featured::before {
+  background: rgba(255,46,46,0.35);
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--v3-ink-1);
+}
+.card-body {
+  font-size: 13px;
+  color: var(--v3-ink-3);
+  line-height: 1.72;
+}
+
+/* Card metric numbers — preserved bold drama */
+.card-metric {
+  padding-top: 16px;
+  border-top: 1px solid var(--v3-border-fine);
+}
+.card-metric-number {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+.card-metric-label {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  color: var(--v3-ink-4);
+  margin-top: 2px;
+}
+
+/* Card footer meta */
+.card-footer-meta {
+  border-top: 1px solid var(--v3-border-fine);
+  padding-top: 10px;
+}
+.cfm-label {
+  font-size: 8px;
+  color: var(--v3-ink-4);
+  letter-spacing: 0.03em;
+  font-family: var(--font-sans);
+}
+
+
+/* ============================================================
+   SYSTEM SECTION V3 ("Come Funziona")
+   Framework, not product catalogue
+   ============================================================ */
+.system-section {
+  background: rgba(8,10,15,0.98);
+  border-top: 1px solid var(--v3-border-fine);
+  border-bottom: 1px solid var(--v3-border-fine);
+}
+
+.sys-info-chip {
+  border: 1px solid var(--v3-border-fine);
+  border-radius: 2px;
+  background: transparent;
+  padding: 9px 16px;
+}
+.sic-key {
+  font-family: var(--font-sans);
+  font-size: 7.5px;
+  letter-spacing: 0.1em;
+  color: var(--v3-ink-4);
+}
+.sic-val {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--v3-ink-1);
+}
+
+/* Module cards — intelligence pillars, not feature boxes */
+.module-card {
+  background: rgba(8,11,16,0.9);
+  padding: 28px 26px;
+  gap: 15px;
+  border-radius: 0;
+  transition: background 300ms, transform 260ms, box-shadow 260ms;
+}
+.module-card:hover {
+  background: rgba(12,16,23,0.95);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 1px rgba(63,209,122,0.1);
+}
+
+/* Module top line — preserved semantic indicator */
+.module-card::after {
+  height: 1px;
+  background: var(--v3-border-mid);
+  transition: background 250ms, box-shadow 250ms;
+}
+.module-card:hover::after {
+  background: var(--v3-green-accent);
+  box-shadow: 0 0 6px rgba(63,209,122,0.3);
+}
+.module-card.focus::after {
+  background: var(--red-bright);
+  box-shadow: 0 0 8px rgba(255,46,46,0.4);
+}
+
+.module-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--v3-ink-1);
+}
+.module-desc {
+  font-size: 12.5px;
+  color: var(--v3-ink-3);
+  line-height: 1.68;
+}
+.module-tag {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  color: var(--v3-ink-4);
+}
+
+/* Module features — cleaner list */
+.module-features li {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--v3-ink-3);
+  letter-spacing: 0.01em;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--v3-border-fine);
+  transition: color 160ms, padding-left 160ms;
+}
+.module-features li:hover {
+  color: var(--v3-ink-1);
+  padding-left: 4px;
+}
+
+/* Mini metrics — cleaner */
+.mini-val {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--v3-ink-1);
+}
+.mini-lbl {
+  font-family: var(--font-sans);
+  font-size: 7.5px;
+  color: var(--v3-ink-4);
+  letter-spacing: 0.07em;
+}
+
+
+/* ============================================================
+   PROCESS SECTION V3
+   Sequential intelligence, not software onboarding
+   ============================================================ */
+.process-section {
+  background: linear-gradient(180deg, #060809 0%, #0B0D12 100%);
+}
+
+.process-timeline {
+  gap: 0;
+  background: var(--v3-border-fine);
+  border: 1px solid var(--v3-border-fine);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.process-step {
+  background: rgba(9,11,16,0.95);
+  padding: 28px 22px;
+  gap: 14px;
+  transition: background 300ms, transform 240ms;
+}
+.process-step:hover {
+  background: rgba(14,17,24,0.98);
+  transform: translateY(-2px);
+}
+
+/* Step top indicator */
+.process-step::before {
+  background: var(--v3-border-mid);
+  height: 1px;
+  transition: background 250ms, box-shadow 250ms;
+}
+.process-step:hover::before {
+  background: rgba(63,209,122,0.45);
+  box-shadow: 0 0 6px rgba(63,209,122,0.2);
+}
+.process-step.output-step::before {
+  background: var(--v3-green-accent);
+  box-shadow: 0 0 8px rgba(63,209,122,0.3);
+}
+
+/* Step number — slightly more refined */
+.step-number {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 900;
+  color: rgba(238,241,244,0.08);
+  letter-spacing: -0.03em;
+  transition: color 250ms;
+}
+.process-step:hover .step-number {
+  color: rgba(238,241,244,0.12);
+}
+
+.step-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--v3-ink-1);
+}
+.step-body {
+  font-size: 12px;
+  color: var(--v3-ink-3);
+  line-height: 1.65;
+}
+.step-tag {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  color: var(--v3-ink-4);
+}
+
+/* Human supervision note — elevated presence */
+.phn-block {
+  padding: 18px 36px;
+  border: 1px solid var(--v3-border-mid);
+  background: rgba(6,8,9,0.8);
+  border-radius: 2px;
+  backdrop-filter: blur(10px);
+}
+.phn-label {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--v3-ink-1);
+}
+.phn-desc {
+  font-size: 12px;
+  color: var(--v3-ink-3);
+  letter-spacing: 0.01em;
+}
+
+
+/* ============================================================
+   OUTPUT SECTION V3
+   "NOT A REPORT. A DECISION." — cinematic authority
+   ============================================================ */
+.output-section {
+  padding: var(--v3-section-pad) 0;
+  background: var(--black);
+}
+
+/* Output copy — executive editorial */
+.output-clarify {
+  font-size: 14.5px;
+  color: var(--v3-ink-2);
+  line-height: var(--v3-body-lh);
+  font-style: normal;
+  border-left: 2px solid var(--v3-green-border);
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.output-body {
+  font-size: 14px;
+  color: var(--v3-ink-3);
+  line-height: var(--v3-body-lh);
+}
+
+.output-human {
+  font-size: 12px;
+  color: var(--v3-ink-4);
+  line-height: 1.7;
+  font-style: italic;
+  padding: 12px 16px;
+  border-left: 1px solid var(--v3-border-mid);
+  background: transparent;
+  border-radius: 0;
+}
+
+/* Output feature rows — editorial list */
+.of-row {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--v3-border-fine);
+  transition: padding-left 180ms, background 180ms;
+}
+.of-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--v3-ink-1);
+}
+.of-sub {
+  font-size: 12px;
+  color: var(--v3-ink-4);
+}
+
+/* Report mockup — confidential document feel */
+.report-mockup {
+  border: 1px solid var(--v3-border-mid);
+  border-radius: 3px;
+  background: linear-gradient(168deg, rgba(14,18,26,0.99) 0%, rgba(6,8,9,0.99) 100%);
+  box-shadow: var(--v3-shadow-xl);
+}
+.report-mockup::before {
+  opacity: 0.3;
+}
+
+
+/* ============================================================
+   CTA BANNER V3
+   Decision moment — controlled green environment
+   ============================================================ */
+.cta-banner {
+  padding: var(--v3-section-pad) 0;
+  background: radial-gradient(ellipse 70% 55% at 50% 50%, #0D2318 0%, #061210 50%, #020506 100%);
+}
+
+.cta-headline {
+  font-size: clamp(34px, 4.5vw, 62px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--v3-ink-1);
+  text-shadow: 0 0 80px rgba(63,209,122,0.1);
+  line-height: 1.05;
+}
+
+.cta-subheadline {
+  font-size: 15px;
+  color: rgba(63,209,122,0.65);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+}
+
+.cta-body {
+  font-size: 14.5px;
+  color: rgba(238,241,244,0.5);
+  line-height: var(--v3-body-lh);
+  max-width: 520px;
+}
+
+.cta-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: rgba(63,209,122,0.4);
+}
+
+.cta-info-chip {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  color: rgba(238,241,244,0.35);
+  letter-spacing: 0.04em;
+}
+
+
+/* ============================================================
+   CONTACT SECTION V3
+   Private, selective, institutional
+   ============================================================ */
+.contact-section {
+  background: rgba(6,8,9,0.98);
+  border-top: 1px solid var(--v3-border-fine);
+}
+
+.contact-subtext {
+  font-size: 14.5px;
+  color: var(--v3-ink-3);
+  line-height: var(--v3-body-lh);
+  max-width: 480px;
+  margin: 14px auto 20px;
+}
+
+.contact-notice {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--v3-ink-4);
+  border: 1px solid var(--v3-border-fine);
+  border-radius: 2px;
+  padding: 6px 16px;
+}
+
+/* Form inputs — more refined */
+.form-input {
+  background: rgba(8,10,15,0.8);
+  border: 1px solid var(--v3-border-fine);
+  border-radius: 2px;
+  color: var(--v3-ink-1);
+  font-size: 13px;
+  padding: 12px 14px;
+  transition: border-color 180ms, box-shadow 200ms;
+}
+.form-input:hover:not(:focus) {
+  border-color: var(--v3-border-mid);
+}
+.form-input:focus {
+  border-color: rgba(63,209,122,0.5);
+  background: rgba(8,10,15,0.95);
+  box-shadow: 0 0 0 2px rgba(63,209,122,0.07), 0 0 16px rgba(63,209,122,0.04);
+}
+
+.form-label {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--v3-ink-4);
+}
+
+/* Contact info aside */
+.contact-info {
+  border: 1px solid var(--v3-border-fine);
+  border-radius: 3px;
+  background: rgba(8,10,15,0.6);
+}
+.ci-label {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  color: var(--v3-ink-4);
+}
+.ci-value {
+  font-size: 12px;
+  color: var(--v3-ink-2);
+}
+
+/* Contact guide section */
+.cg-label {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  color: var(--v3-green-accent);
+  opacity: 0.75;
+}
+.cg-text {
+  font-size: 14px;
+  color: var(--v3-ink-2);
+  line-height: var(--v3-body-lh);
+}
+.cg-list li {
+  font-size: 13.5px;
+  color: var(--v3-ink-3);
+  line-height: 1.6;
+}
+.cg-reply {
+  font-size: 12.5px;
+  color: var(--v3-ink-4);
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   FOOTER V3
+   Institutional restraint
+   ============================================================ */
+#main-footer {
+  background: rgba(3,4,5,0.99);
+  border-top: 1px solid var(--v3-border-fine);
+  padding-top: 60px;
+}
+
+.footer-inner {
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--v3-border-fine);
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  color: var(--v3-ink-1);
+  margin-bottom: 12px;
+}
+.footer-logo:hover {
+  text-shadow: none;
+}
+
+.footer-desc {
+  font-size: 12px;
+  color: var(--v3-ink-4);
+  line-height: 1.75;
+  max-width: 360px;
+}
+
+.footer-email {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--v3-ink-3);
+  letter-spacing: 0.02em;
+  transition: color 160ms;
+}
+.footer-email:hover {
+  color: var(--v3-ink-1);
+  text-shadow: none;
+}
+
+.footer-sys-info {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  color: var(--v3-ink-4);
+  letter-spacing: 0.06em;
+  opacity: 0.6;
+}
+
+.footer-nav a {
+  font-family: var(--font-sans);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--v3-ink-3);
+  transition: color 160ms;
+}
+.footer-nav a::before {
+  content: none; /* remove the — prefix */
+}
+.footer-nav a:hover {
+  color: var(--v3-ink-1);
+}
+.footer-nav ul {
+  gap: 8px;
+}
+
+.footer-bottom-inner {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  color: var(--v3-ink-4);
+  opacity: 0.5;
+  letter-spacing: 0.04em;
+}
+.footer-hash {
+  color: var(--v3-ink-4);
+  opacity: 0.4;
+}
+
+
+/* ============================================================
+   SPORT TEASER SECTION V3
+   Decision Intelligence Applied to Sport
+   ============================================================ */
+.sp-teaser-section {
+  background: linear-gradient(180deg, rgba(8,10,14,0.99) 0%, rgba(10,13,18,0.98) 100%);
+  padding: 128px 0;
+}
+.sp-teaser-headline {
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  line-height: 1.08;
+  color: var(--v3-ink-1);
+}
+.sp-teaser-supporting {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: rgba(238,241,244,0.3);
+}
+.sp-teaser-body {
+  font-size: 1rem;
+  line-height: var(--v3-body-lh);
+  color: rgba(238,241,244,0.55);
+}
+.sp-teaser-cta {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  border: 1px solid rgba(63,209,122,0.4);
+  padding: 14px 26px;
+  transition: background 220ms, color 220ms;
+}
+.sp-teaser-panel {
+  border: 1px solid var(--v3-border-fine);
+  background: rgba(8,10,15,0.7);
+}
+.sp-teaser-role-name {
+  font-size: 0.88rem;
+  color: rgba(238,241,244,0.7);
+  font-weight: 500;
+}
+
+/* ============================================================
+   SCROLLBAR V3
+   Thinner, more refined
+   ============================================================ */
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-thumb { background: rgba(238,241,244,0.12); border-radius: 1px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(238,241,244,0.2); }
+
+
+/* ============================================================
+   MICROINTERACTIONS V3
+   Precision motion — not entertainment
+   ============================================================ */
+
+/* Eyebrow line — smooth extend */
+.reveal-block.revealed .eyebrow-line {
+  animation: v3-eyebrow-extend 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+@keyframes v3-eyebrow-extend {
+  from { width: 0; opacity: 0; }
+  to   { width: 28px; opacity: 0.8; }
+}
+
+/* Card metric numbers — precise scale in */
+.data-card.revealed .card-metric-number {
+  animation: v3-metric-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+@keyframes v3-metric-in {
+  from { transform: translateY(6px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+
+/* Process step numbers */
+.process-step.revealed .step-number {
+  animation: v3-step-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes v3-step-in {
+  from { opacity: 0; transform: translateX(-4px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* Report lines — preserved */
+.report-line.line-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* ============================================================
+   RESPONSIVE V3
+   Mobile-first refinements
+   ============================================================ */
+@media (max-width: 1100px) {
+  .nav-inner { padding: 0 28px; gap: 24px; }
+  .hero-headline { font-size: clamp(28px, 5.5vw, 48px); }
+}
+
+@media (max-width: 900px) {
+  .section { padding: var(--v3-section-pad-m) 0; }
+  .founder-strip-card { padding: 28px 28px; gap: 28px; }
+  .sp-teaser-section { padding: var(--v3-section-pad-m) 0; }
+  .cta-banner { padding: var(--v3-section-pad-m) 0; }
+  .output-section { padding: var(--v3-section-pad-m) 0; }
+}
+
+@media (max-width: 768px) {
+  .nav-inner { height: 56px; padding: 0 20px; }
+  .section { padding: var(--v3-section-pad-s) 0; }
+  .hero-section { padding: 100px 0 60px; }
+  .hero-headline { font-size: clamp(26px, 9vw, 44px); letter-spacing: -0.03em; }
+  .hero-clarify { border-left-width: 1px; padding-left: 14px; }
+  .hero-cta-row { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .cards-grid.three-col { grid-template-columns: 1fr; }
+  .process-timeline { grid-template-columns: 1fr; }
+  .founder-strip-card { flex-direction: column; padding: 24px 24px; gap: 24px; }
+  .fsc-center { border-left: none; border-right: none; border-top: 1px solid var(--v3-border-fine); border-bottom: 1px solid var(--v3-border-fine); padding: 20px 0; }
+  .contact-layout { grid-template-columns: 1fr; }
+  .cta-actions { flex-direction: column; }
+  .sp-teaser-inner { grid-template-columns: 1fr; gap: 40px; }
+  .sp-teaser-section { padding: var(--v3-section-pad-s) 0; }
+  .cta-banner { padding: var(--v3-section-pad-s) 0; }
+  .output-section { padding: var(--v3-section-pad-s) 0; }
+  .footer-inner { padding-bottom: 32px; }
+  .wii-inner { padding: 20px 22px; }
+  .phn-block { padding: 16px 24px; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .hero-headline { font-size: clamp(24px, 11vw, 38px); }
+  .section-headline { font-size: clamp(22px, 7.5vw, 34px); }
+  .cta-headline { font-size: clamp(28px, 9vw, 44px); }
+  .data-card { padding: 24px 20px; }
+  .process-step { padding: 22px 18px; }
+  .hero-panel { padding: 18px; }
+}
+
+
+/* ============================================================
+   ACCESSIBILITY V3
+   High contrast + readability preserved
+   ============================================================ */
+
+/* Focus states — clear and controlled */
+:focus-visible {
+  outline: 1px solid rgba(63,209,122,0.6);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Button focus */
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible {
+  outline: 1px solid rgba(63,209,122,0.8);
+  outline-offset: 3px;
+}
+
+
+/* ============================================================
+   SPECIAL REFINEMENTS
+   Targeting specific existing components
+   ============================================================ */
+
+/* Panel recommendation — restrained authority */
+.panel-recommendation {
+  padding: 12px;
+  background: rgba(63,209,122,0.04);
+  border: 1px solid rgba(63,209,122,0.16);
+  border-radius: 2px;
+  transition: border-color 200ms;
+}
+.panel-recommendation:hover {
+  background: rgba(63,209,122,0.06);
+  border-color: rgba(63,209,122,0.25);
+  box-shadow: none;
+}
+
+/* Metric rows — cleaner spacing */
+.metric-row {
+  padding: 10px;
+  border: 1px solid var(--v3-border-fine);
+  border-radius: 2px;
+  background: rgba(0,0,0,0.15);
+}
+.metric-row:hover {
+  border-color: var(--v3-border-mid);
+  background: rgba(0,0,0,0.2);
+}
+
+/* Panel divider — finer line */
+.panel-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--v3-border-mid), transparent);
+  margin: 12px 0;
+}
+
+/* Badge refinement */
+.badge {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2px 7px;
+  border-radius: 1px;
+}
+
+/* Status chips in metric rows */
+.cfm-status {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+/* Module footer meta */
+.mfm-code {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  color: var(--v3-ink-4);
+}
+.mfm-status {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 7px;
+  border-radius: 1px;
+}
+
+/* Step output final */
+.step-output {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  color: var(--v3-ink-4);
+}
+.step-output.final {
+  color: var(--v3-green-accent);
+  font-weight: 600;
+}
+
+/* Step duration */
+.step-duration {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  color: var(--v3-ink-4);
+}
+
+/* Output section CTA row */
+.output-cta-row {
+  margin-top: 4px;
+  gap: 14px;
+}
+
+/* Contact process note */
+.ci-process-note {
+  font-size: 11px;
+  color: var(--v3-ink-4);
+  font-style: normal;
+  line-height: 1.6;
+  padding: 12px 15px;
+}
+
+/* Nav progress bar — single pixel */
+.nav-progress-bar {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(63,209,122,0.5), rgba(63,209,122,0.8));
+}
+
+/* System info chips in system section */
+.sys-info-row {
+  gap: 8px;
+  margin-top: 20px;
+}
+
+/* Metric bar ghost */
+.metric-bar-ghost {
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0px, transparent 8px,
+    rgba(238,241,244,0.02) 8px, rgba(238,241,244,0.02) 9px
+  );
+}
+
+
+/* ============================================================
+   END OF RATIO VISUAL SYSTEM V3
+   ============================================================ */
