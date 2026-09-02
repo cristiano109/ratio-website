@@ -278,6 +278,17 @@
     linear-gradient(150deg, var(--black-4) 0%, rgba(8,10,13,1) 58%, var(--black-2) 100%);
 }
 
+/* COVER 13 — decision traceability / organizational learning — deep blue-slate + cold white */
+.cover-13 {
+  background:
+    radial-gradient(ellipse 55% 40% at 75% 15%, rgba(99,179,237,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 45% 55% at 20% 70%, rgba(63,209,122,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 65% 30% at 50% 5%, rgba(99,179,237,0.07) 0%, transparent 48%),
+    radial-gradient(ellipse 40% 45% at 85% 75%, rgba(63,209,122,0.06) 0%, transparent 42%),
+    radial-gradient(ellipse 50% 35% at 5% 40%, rgba(99,179,237,0.05) 0%, transparent 40%),
+    linear-gradient(155deg, rgba(4,8,14,1) 0%, rgba(5,8,16,1) 60%, rgba(4,8,12,1) 100%);
+}
+
 /* COVER 12 — leadership judgment / experience vs context — deep emerald-green + gold */
 .cover-12 {
   background:
