@@ -78,8 +78,18 @@ export default {
 
     // ──────────────────────────────────────────────
     // 3. Tutte le altre richieste → asset statici normali
+    //    Per i file .html: forza no-cache così Cloudflare
+    //    non serve mai una versione stantia dopo un deploy.
     // ──────────────────────────────────────────────
-    return env.ASSETS.fetch(request);
+    const assetResponse = await env.ASSETS.fetch(request);
+
+    if (pathname.endsWith('.html') || pathname.endsWith('/')) {
+      const newRes = new Response(assetResponse.body, assetResponse);
+      newRes.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+      return newRes;
+    }
+
+    return assetResponse;
   }
 };
 
