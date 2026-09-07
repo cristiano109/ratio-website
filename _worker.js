@@ -9,7 +9,9 @@
  *    - Altrimenti legge Accept-Language del browser:
  *      → "it" → index.html (italiano)
  *      → qualsiasi altra lingua → en_index.html (inglese, default internazionale)
- * 3. Language switcher: quando l'utente clicca EN o IT nel switcher,
+ * 3. Redirect legacy /en/ e /en/index.html → /en_index.html (301 permanente)
+ *    Questo risolve l'errore 1101 / 5xx su Google Search Console.
+ * 4. Language switcher: quando l'utente clicca EN o IT nel switcher,
  *    il JS della pagina imposta il cookie ratio_lang=en|it (1 anno).
  *    Il worker lo legge e lo rispetta nelle visite successive.
  *
@@ -26,21 +28,45 @@ export default {
     // 1. SITEMAP — Content-Type fix
     // ──────────────────────────────────────────────
     if (pathname === '/sitemap.xml') {
-      const response = await env.ASSETS.fetch(request);
-      const newResponse = new Response(response.body, response);
-      newResponse.headers.set('Content-Type', 'application/xml; charset=utf-8');
-      return newResponse;
+      try {
+        const response = await env.ASSETS.fetch(request);
+        const newResponse = new Response(response.body, response);
+        newResponse.headers.set('Content-Type', 'application/xml; charset=utf-8');
+        return newResponse;
+      } catch (e) {
+        return new Response('Sitemap not found', { status: 404 });
+      }
     }
 
     // ──────────────────────────────────────────────
-    // 2. LANGUAGE REDIRECT — solo su root e /index.html
+    // 2. REDIRECT LEGACY /en/ e /en/index.html
+    //    Questi path non esistono come file statici.
+    //    301 permanente → /en_index.html (canonical EN)
+    //    Questo elimina l'errore 5xx / 1101 segnalato da Google.
+    // ──────────────────────────────────────────────
+    if (
+      pathname === '/en/' ||
+      pathname === '/en' ||
+      pathname === '/en/index.html'
+    ) {
+      return new Response(null, {
+        status: 301,
+        headers: {
+          'Location': new URL('/en_index.html', url.origin).href,
+          'Cache-Control': 'public, max-age=31536000, immutable',
+        }
+      });
+    }
+
+    // ──────────────────────────────────────────────
+    // 3. LANGUAGE REDIRECT — solo su root e /index.html
     // ──────────────────────────────────────────────
     const isRoot      = pathname === '/' || pathname === '';
     const isIndexHtml = pathname === '/index.html';
 
     if (isRoot || isIndexHtml) {
 
-      // 2a. Controlla il cookie di preferenza manuale (ratio_lang)
+      // 3a. Controlla il cookie di preferenza manuale (ratio_lang)
       const cookieHeader = request.headers.get('Cookie') || '';
       const langCookieMatch = cookieHeader.match(/(?:^|;\s*)ratio_lang=([^;]+)/);
       const savedLang = langCookieMatch ? langCookieMatch[1].trim() : null;
@@ -51,21 +77,28 @@ export default {
         // Preferenza manuale salvata → la rispettiamo sempre
         targetLang = savedLang;
       } else {
-        // 2b. Nessuna preferenza → rileva dal browser (Accept-Language)
+        // 3b. Nessuna preferenza → rileva dal browser (Accept-Language)
         const acceptLang = request.headers.get('Accept-Language') || '';
         targetLang = detectLanguage(acceptLang);
       }
 
-      // 2c. Costruisci URL di destinazione
+      // 3c. Costruisci URL di destinazione
       const targetPath = targetLang === 'it' ? '/index.html' : '/en_index.html';
 
-      // 2d. Se siamo già sulla pagina giusta, non redirigere
+      // 3d. Se siamo già sulla pagina giusta, non redirigere
       // (evita loop su /index.html → /index.html)
       if (isIndexHtml && targetPath === '/index.html') {
-        return env.ASSETS.fetch(request);
+        try {
+          const res = await env.ASSETS.fetch(request);
+          const newRes = new Response(res.body, res);
+          newRes.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+          return newRes;
+        } catch (e) {
+          return new Response('Not found', { status: 404 });
+        }
       }
 
-      // 2e. Redirect 302 con no-cache (il redirect dipende dal browser/cookie)
+      // 3e. Redirect 302 con no-cache (il redirect dipende dal browser/cookie)
       return new Response(null, {
         status: 302,
         headers: {
@@ -77,19 +110,26 @@ export default {
     }
 
     // ──────────────────────────────────────────────
-    // 3. Tutte le altre richieste → asset statici normali
+    // 4. Tutte le altre richieste → asset statici normali
     //    Per i file .html: forza no-cache così Cloudflare
     //    non serve mai una versione stantia dopo un deploy.
     // ──────────────────────────────────────────────
-    const assetResponse = await env.ASSETS.fetch(request);
+    try {
+      const assetResponse = await env.ASSETS.fetch(request);
 
-    if (pathname.endsWith('.html') || pathname.endsWith('/')) {
-      const newRes = new Response(assetResponse.body, assetResponse);
-      newRes.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-      return newRes;
+      if (pathname.endsWith('.html') || pathname.endsWith('/')) {
+        const newRes = new Response(assetResponse.body, assetResponse);
+        newRes.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+        return newRes;
+      }
+
+      return assetResponse;
+
+    } catch (e) {
+      // Asset non trovato o errore runtime — restituisce 404 pulito
+      // invece di lasciare esplodere il Worker con errore 1101
+      return new Response('Not found', { status: 404 });
     }
-
-    return assetResponse;
   }
 };
 
