@@ -515,4 +515,28 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ======================================
+       INSIGHT 17 — Quando tutti partecipano alla decisione, ma nessuno ne è responsabile. / When Everyone Participates in the Decision, but No One Owns It. (IT + EN)
+  ====================================== -->
+
+  <url>
+    <loc>https://ratioapp.co/insight-17.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-17.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-17.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-17.html"/>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ratioapp.co/en_insight-17.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-17.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-17.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-17.html"/>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
