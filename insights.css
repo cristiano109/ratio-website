@@ -340,6 +340,16 @@
     linear-gradient(162deg, rgba(4,8,16,1) 0%, rgba(4,8,14,1) 50%, rgba(6,8,14,1) 100%);
 }
 
+/* COVER 19 — execution readiness — deep navy / amber tension */
+.cover-19 {
+  background:
+    radial-gradient(ellipse 56% 44% at 75% 18%, rgba(212,175,55,0.12) 0%, transparent 54%),
+    radial-gradient(ellipse 46% 54% at 18% 72%, rgba(99,179,237,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 38% 32% at 52% 6%, rgba(212,175,55,0.07) 0%, transparent 46%),
+    radial-gradient(ellipse 34% 42% at 88% 82%, rgba(63,209,122,0.05) 0%, transparent 42%),
+    linear-gradient(158deg, rgba(4,8,16,1) 0%, rgba(5,8,15,1) 50%, rgba(6,9,16,1) 100%);
+}
+
 /* COVER 12 — leadership judgment / experience vs context — deep emerald-green + gold */
 .cover-12 {
   background:
