@@ -563,4 +563,52 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ======================================
+       INSIGHT 19 — Una decisione non è completa quando viene presa. Lo diventa quando può essere eseguita. / A decision is not complete when it is made. It becomes complete when it can be executed. (IT + EN)
+  ====================================== -->
+
+  <url>
+    <loc>https://ratioapp.co/insight-19.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-19.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-19.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-19.html"/>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ratioapp.co/en_insight-19.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-19.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-19.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-19.html"/>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ======================================
+       INSIGHT 20 — Una decisione non smette di essere rischiosa quando iniziamo a eseguirla. / A decision does not stop being risky the moment we start executing it. (IT + EN)
+  ====================================== -->
+
+  <url>
+    <loc>https://ratioapp.co/insight-20.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-20.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-20.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-20.html"/>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ratioapp.co/en_insight-20.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-20.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-20.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-20.html"/>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

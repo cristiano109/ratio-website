@@ -350,6 +350,16 @@
     linear-gradient(158deg, rgba(4,8,16,1) 0%, rgba(5,8,15,1) 50%, rgba(6,9,16,1) 100%);
 }
 
+/* COVER 20 — assumption drift / decision monitoring — deep amber-green signal */
+.cover-20 {
+  background:
+    radial-gradient(ellipse 58% 44% at 72% 16%, rgba(212,175,55,0.13) 0%, transparent 54%),
+    radial-gradient(ellipse 48% 56% at 20% 74%, rgba(63,209,122,0.09) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 32% at 50% 6%, rgba(212,175,55,0.07) 0%, transparent 46%),
+    radial-gradient(ellipse 36% 42% at 88% 80%, rgba(239,68,68,0.04) 0%, transparent 42%),
+    linear-gradient(160deg, rgba(4,8,14,1) 0%, rgba(6,8,8,1) 52%, rgba(4,7,11,1) 100%);
+}
+
 /* COVER 12 — leadership judgment / experience vs context — deep emerald-green + gold */
 .cover-12 {
   background:
