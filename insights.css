@@ -360,6 +360,16 @@
     linear-gradient(160deg, rgba(4,8,14,1) 0%, rgba(6,8,8,1) 52%, rgba(4,7,11,1) 100%);
 }
 
+/* COVER 21 — decision portfolio / concentration risk — multi-decision converging tension */
+.cover-21 {
+  background:
+    radial-gradient(ellipse 50% 38% at 24% 18%, rgba(212,175,55,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 46% 40% at 76% 20%, rgba(99,179,237,0.10) 0%, transparent 50%),
+    radial-gradient(ellipse 44% 36% at 50% 62%, rgba(239,68,68,0.08) 0%, transparent 48%),
+    radial-gradient(ellipse 40% 46% at 18% 80%, rgba(63,209,122,0.05) 0%, transparent 46%),
+    linear-gradient(160deg, rgba(5,8,13,1) 0%, rgba(7,8,10,1) 52%, rgba(5,7,12,1) 100%);
+}
+
 /* COVER 12 — leadership judgment / experience vs context — deep emerald-green + gold */
 .cover-12 {
   background:

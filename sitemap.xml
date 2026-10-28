@@ -611,4 +611,28 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ======================================
+       INSIGHT 21 — Il rischio più grande può non essere in una decisione. Ma nella somma di tutte le decisioni. / The biggest risk may not be in a decision. But in the sum of all decisions. (IT + EN)
+  ====================================== -->
+
+  <url>
+    <loc>https://ratioapp.co/insight-21.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-21.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-21.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-21.html"/>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ratioapp.co/en_insight-21.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-21.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-21.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-21.html"/>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>

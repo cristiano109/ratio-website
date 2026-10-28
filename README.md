@@ -146,7 +146,16 @@ js/
 - **Inter** — Headlines, body, UI
 - **JetBrains Mono** — Dati tecnici, codici, timestamp, metriche
 
-## 📚 Knowledge Base RATIO — Insights (20 Articoli IT + EN)
+## 📚 Knowledge Base RATIO — Insights (21 Articoli IT + EN)
+
+### Insight 21 — "Il rischio più grande può non essere in una decisione. Ma nella somma di tutte le decisioni." (28 Ottobre 2026)
+- `insight-21.html` + `en_insight-21.html`
+- Nuovo framework: **Mappa RATIO del Portafoglio Decisionale** (Decisioni → Assunzioni Condivise → Capacità → Interdipendenze → Esposizione Complessiva)
+- Nuovo framework: **Verifica RATIO del Portafoglio Decisionale** (7 domande)
+- Concetto: **Rischio di Concentrazione Decisionale** (Decision Portfolio Risk)
+- `.cover-21` aggiunto a `insights.css`
+- Cards aggiunte in `insights.html` + `en_insights.html`; backlink bidirezionale insight-20 ↔ insight-21 (IT+EN)
+- sitemap.xml aggiornato
 
 ### Insight 20 — "Una decisione non smette di essere rischiosa quando iniziamo a eseguirla." (21 Ottobre 2026)
 - `insight-20.html` + `en_insight-20.html`
