@@ -146,7 +146,17 @@ js/
 - **Inter** — Headlines, body, UI
 - **JetBrains Mono** — Dati tecnici, codici, timestamp, metriche
 
-## 📚 Knowledge Base RATIO — Insights (21 Articoli IT + EN)
+## 📚 Knowledge Base RATIO — Insights (22 Articoli IT + EN)
+
+### Insight 22 — "La qualità delle decisioni si misura anche da ciò che scegliamo di non fare." (4 Novembre 2026)
+- `insight-22.html` + `en_insight-22.html`
+- Nuovo framework: **Modello RATIO dei Compromessi Strategici** (Valore → Coerenza → Capacità → Rinuncia → Flessibilità)
+- Nuovo framework: **Verifica RATIO della Disciplina Strategica** (7 domande)
+- Concetto: **Costo Opportunità Strategico** / Compromesso Strategico Consapevole
+- `.cover-22` aggiunto a `insights.css`
+- Cards aggiunte in `insights.html` + `en_insights.html`; backlink bidirezionale insight-21 ↔ insight-22 (IT+EN)
+- sitemap.xml aggiornato
+- Nuova variante colore `.ase-val.red` aggiunta al framework `article-scenario-eval`
 
 ### Insight 21 — "Il rischio più grande può non essere in una decisione. Ma nella somma di tutte le decisioni." (28 Ottobre 2026)
 - `insight-21.html` + `en_insight-21.html`

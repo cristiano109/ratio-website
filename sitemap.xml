@@ -635,4 +635,28 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- ======================================
+       INSIGHT 22 — La qualità delle decisioni si misura anche da ciò che scegliamo di non fare. / Decision quality is also measured by what we choose not to do. (IT + EN)
+  ====================================== -->
+
+  <url>
+    <loc>https://ratioapp.co/insight-22.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-22.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-22.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-22.html"/>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ratioapp.co/en_insight-22.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://ratioapp.co/insight-22.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ratioapp.co/en_insight-22.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ratioapp.co/insight-22.html"/>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
