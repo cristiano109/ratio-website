@@ -380,6 +380,16 @@
     linear-gradient(158deg, rgba(5,8,12,1) 0%, rgba(8,7,8,1) 52%, rgba(5,7,11,1) 100%);
 }
 
+/* COVER 23 — reversibility / exit cost — blue-gold-red tension at the point of no return */
+.cover-23 {
+  background:
+    radial-gradient(ellipse 52% 40% at 22% 22%, rgba(99,179,237,0.12) 0%, transparent 52%),
+    radial-gradient(ellipse 46% 38% at 78% 18%, rgba(212,175,55,0.10) 0%, transparent 50%),
+    radial-gradient(ellipse 44% 36% at 50% 68%, rgba(239,68,68,0.09) 0%, transparent 48%),
+    radial-gradient(ellipse 38% 44% at 82% 84%, rgba(63,209,122,0.05) 0%, transparent 44%),
+    linear-gradient(162deg, rgba(5,7,13,1) 0%, rgba(7,8,9,1) 52%, rgba(5,8,12,1) 100%);
+}
+
 /* COVER 12 — leadership judgment / experience vs context — deep emerald-green + gold */
 .cover-12 {
   background:

@@ -146,7 +146,16 @@ js/
 - **Inter** — Headlines, body, UI
 - **JetBrains Mono** — Dati tecnici, codici, timestamp, metriche
 
-## 📚 Knowledge Base RATIO — Insights (22 Articoli IT + EN)
+## 📚 Knowledge Base RATIO — Insights (23 Articoli IT + EN)
+
+### Insight 23 — "Il rischio di una decisione dipende anche dalla possibilità di tornare indietro." (11 Novembre 2026)
+- `insight-23.html` + `en_insight-23.html`
+- Nuovo framework: **Modello RATIO delle Condizioni di Uscita** (Impegno → Esposizione → Flessibilità → Segnali → Condizioni di Uscita → Giudizio)
+- Nuovo framework: **Verifica RATIO della Reversibilità** (7 domande)
+- Concetto: **Esposizione dell'Impegno** / Reversibilità Progettata / Costo Sommerso
+- `.cover-23` aggiunto a `insights.css`
+- Cards aggiunte in `insights.html` + `en_insights.html`; backlink bidirezionale insight-22 ↔ insight-23 (IT+EN)
+- sitemap.xml aggiornato
 
 ### Insight 22 — "La qualità delle decisioni si misura anche da ciò che scegliamo di non fare." (4 Novembre 2026)
 - `insight-22.html` + `en_insight-22.html`
