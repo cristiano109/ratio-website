@@ -9,16 +9,19 @@ RATIO è una piattaforma di Decision Intelligence premium per la selezione execu
 
 ---
 
-## 🗺️ Sitemap Completa (30 URL — 15 IT + 15 EN) — aggiornato 2026-08-19
+## 🗺️ Sitemap Completa (32 URL — 16 IT + 16 EN) — aggiornato 2026-11-11
 
 | Pagina | IT | EN |
 |--------|----|----|
 | Homepage | `index.html` | `en_index.html` |
-| Insights listing | `insights.html` | `en_insights.html` |
+| Insights listing (compattato) | `insights.html` | `en_insights.html` |
 | Chi è / About | `cristiano-ludovisi.html` | `en_cristiano-ludovisi.html` |
-| Volume I | `libro-vol1.html` | `en_libro-vol1.html` |
+| Volume I (Insight 1–10) | `libro-vol1.html` | `en_libro-vol1.html` |
+| **Volume II (Insight 11–20)** | **`libro-vol2.html`** | **`en_libro-vol2.html`** |
 | **Professional Sport** | **`sport.html`** | **`en_sport.html`** |
-| Insight 1–11 | `insight-1.html` … `insight-11.html` | `en_insight-1.html` … `en_insight-11.html` |
+| Insight 1–23 | `insight-1.html` … `insight-23.html` | `en_insight-1.html` … `en_insight-23.html` |
+
+> Nota: a partire da novembre 2026, `insights.html`/`en_insights.html` mostrano solo le card Volume I, Volume II e gli insight 21–23 (i futuri nuovi insight si aggiungono qui); gli Insight 1–20 restano pubblicati ai loro URL individuali (richiamati dai capitoli dei volumi) ma non più come card nella griglia.
 
 ---
 
@@ -43,6 +46,13 @@ RATIO è una piattaforma di Decision Intelligence premium per la selezione execu
 - `en_sport.html` — pagina English Professional Sport, 10 sezioni
 - Sezione "RATIO · PROFESSIONAL SPORT" aggiunta a `index.html` e `en_index.html`
 - sitemap.xml aggiornato (30 URL, 2026-08-19)
+
+### Fase 4 — Volume II Digital Book + Compattazione Insights (COMPLETO — in attesa di deploy, 2026-11-11)
+- `libro-vol2.html` + `en_libro-vol2.html` — libro digitale "Decision Intelligence — Volume II" (10 capitoli, Insight 11–20, periodo "Agosto – Ottobre 2026"), stessa struttura/CSS del Volume I, con `.vol-prev-banner` di rimando a Volume I
+- Banner "Volume II" aggiunto in fondo a `insight-11.html` … `insight-20.html` (IT) e `en_insight-11.html` … `en_insight-20.html` (EN) — 20 file, analogo al banner Volume I già presente su insight 1–10
+- `insights.html` + `en_insights.html` **compattati**: rimossi i 20 card individuali degli Insight 1–20 (incluso il Featured Article #1), sostituiti da 2 card "Volume" (Volume I e Volume II) + nota metodologica; la griglia ora mostra solo gli Insight 21, 22, 23 (e i futuri)
+- `libro-vol1.html` + `en_libro-vol1.html` — colophon `.vol-next-banner` aggiornato: non annuncia più un Volume II "in arrivo" placeholder, ma linka al vero `libro-vol2.html` / `en_libro-vol2.html` ora pubblicato
+- `sitemap.xml` aggiornato con le 2 nuove URL (`libro-vol2.html`, `en_libro-vol2.html`), hreflang IT/EN/x-default, lastmod 2026-11-11
 
 ---
 

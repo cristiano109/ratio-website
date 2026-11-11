@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Decision Intelligence — Volume II | 10 Analyses on Executive Decision Risk — RATIO</title>
+  <meta name="description" content="The next 10 RATIO insights collected in a single volume. Decision intelligence, experience bias, outcome bias, decision latency, ownership and structured dissent. For CEOs, boards and founders." />
+  <meta name="keywords" content="decision intelligence, decision risk, executive hiring, decision latency, decision ownership, outcome bias, RATIO, Cristiano Ludovisi" />
+  <meta name="author" content="RATIO Decision Intelligence" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://ratioapp.co/en_libro-vol2.html" />
+  <link rel="alternate" hreflang="it" href="https://ratioapp.co/libro-vol2.html" />
+  <link rel="alternate" hreflang="en" href="https://ratioapp.co/en_libro-vol2.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Decision Intelligence — Volume II · RATIO Decision Intelligence" />
+  <meta property="og:description" content="The next 10 RATIO insights in a single volume. Decision intelligence, outcome bias, decision latency, ownership and structured dissent for CEOs, boards and founders." />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://ratioapp.co/en_libro-vol2.html" />
+  <meta property="og:image" content="https://ratioapp.co/ratio-logo.png" />
+  <meta property="og:site_name" content="RATIO Decision Intelligence" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Decision Intelligence — Volume II · RATIO" />
+  <meta name="twitter:description" content="10 structured analyses on decision intelligence, outcome bias, decision latency and ownership. The second volume of the RATIO knowledge base." />
+  <meta name="twitter:image" content="https://ratioapp.co/ratio-logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style-2.css" />
+  <link rel="stylesheet" href="./style-v3.css" />
+  <link rel="stylesheet" href="./insights.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TMSTXZRSMX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TMSTXZRSMX');
+  </script>
+
+  <style>
+    /* ══════════════════════════════════════════
+       LIBRO — DEDICATED STYLES (identical to Volume I)
+    ══════════════════════════════════════════ */
+
+    #read-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      background: var(--green-bright);
+      z-index: 9999;
+      transition: width 0.1s linear;
+      box-shadow: 0 0 8px rgba(63,209,122,0.5);
+    }
+
+    .libro-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 0;
+      min-height: 100vh;
+      padding-top: 70px;
+    }
+
+    .libro-sidebar {
+      position: sticky;
+      top: 70px;
+      height: calc(100vh - 70px);
+      overflow-y: auto;
+      border-right: 1px solid var(--border);
+      background: var(--black-2);
+      padding: 32px 0 48px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    .libro-sidebar::-webkit-scrollbar { width: 4px; }
+    .libro-sidebar::-webkit-scrollbar-track { background: transparent; }
+    .libro-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+    .sidebar-book-title {
+      padding: 0 24px 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+    .sidebar-book-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 6px;
+    }
+    .sidebar-book-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+    .sidebar-book-vol {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--gray-4);
+      margin-top: 4px;
+    }
+
+    .sidebar-toc-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      padding: 0 24px;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-toc {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .sidebar-toc li a {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 24px;
+      text-decoration: none;
+      transition: background 150ms ease, border-left-color 150ms ease;
+      border-left: 2px solid transparent;
+    }
+    .sidebar-toc li a:hover,
+    .sidebar-toc li a.active {
+      background: rgba(63,209,122,0.05);
+      border-left-color: var(--green-bright);
+    }
+    .sidebar-toc li a.active .toc-num { color: var(--green-bright); }
+    .sidebar-toc li a.active .toc-title { color: var(--white); }
+
+    .toc-num {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gray-4);
+      flex-shrink: 0;
+      padding-top: 2px;
+      min-width: 24px;
+    }
+    .toc-title {
+      font-size: 12px;
+      color: var(--gray-5);
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+
+    .sidebar-toc-section {
+      padding: 20px 24px 8px;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      border-top: 1px solid var(--border);
+      margin-top: 8px;
+    }
+
+    .sidebar-cta-mini {
+      margin: 24px 16px 0;
+      padding: 16px;
+      border: 1px solid rgba(63,209,122,0.2);
+      border-radius: var(--radius-md);
+      background: rgba(63,209,122,0.04);
+      text-align: center;
+    }
+    .sidebar-cta-mini p {
+      font-size: 11px;
+      color: var(--gray-5);
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .sidebar-cta-mini a {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      text-decoration: none;
+      border: 1px solid rgba(63,209,122,0.3);
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      display: inline-block;
+      transition: background 150ms ease;
+    }
+    .sidebar-cta-mini a:hover { background: rgba(63,209,122,0.1); }
+
+    .libro-main {
+      max-width: 780px;
+      padding: 0 48px 120px;
+      margin: 0 auto;
+    }
+
+    .book-cover {
+      padding: 80px 0 72px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+      position: relative;
+    }
+    .book-cover-glow {
+      position: absolute;
+      top: 0; left: -48px; right: -48px;
+      height: 400px;
+      background: radial-gradient(ellipse 80% 60% at 30% 50%, rgba(63,209,122,0.06) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .book-cover-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .book-cover-eyebrow-line {
+      height: 1px;
+      width: 32px;
+      background: var(--green-bright);
+    }
+    .book-cover-eyebrow span {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+    }
+    .book-cover-title {
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--white);
+      line-height: 1.0;
+      margin-bottom: 8px;
+    }
+    .book-cover-vol {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--green-bright);
+      line-height: 1.0;
+      margin-bottom: 28px;
+    }
+    .book-cover-subtitle {
+      font-size: 16px;
+      color: var(--gray-5);
+      line-height: 1.6;
+      max-width: 520px;
+      margin-bottom: 40px;
+    }
+    .book-cover-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .book-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .book-meta-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+    }
+    .book-meta-value {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .book-meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(63,209,122,0.1);
+      border: 1px solid rgba(63,209,122,0.25);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--green-bright);
+      letter-spacing: 0.06em;
+    }
+    .book-meta-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green-bright);
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .book-preface {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+    .book-section-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 16px;
+    }
+    .book-section-title {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .book-preface p {
+      font-size: 15px;
+      color: var(--gray-5);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .book-preface .preface-signature {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .preface-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(63,209,122,0.08);
+      border: 1px solid rgba(63,209,122,0.3);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .preface-avatar span { font-size: 13px; font-weight: 800; color: var(--green-bright); }
+    .preface-avatar::after {
+      content: '';
+      position: absolute; bottom: 1px; right: 1px;
+      width: 9px; height: 9px; border-radius: 50%;
+      background: var(--green-bright);
+      border: 2px solid var(--black-2);
+    }
+    .preface-sig-name { font-size: 14px; font-weight: 700; color: var(--white); }
+    .preface-sig-role { font-family: var(--font-mono); font-size: 10px; color: var(--gray-5); margin-top: 2px; }
+
+    .book-toc-visual {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+    .toc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .toc-card {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+      text-decoration: none;
+      transition: border-color 200ms ease, background 200ms ease;
+      cursor: pointer;
+    }
+    .toc-card:hover {
+      border-color: var(--border-hi);
+      background: rgba(63,209,122,0.04);
+    }
+    .toc-card-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--green-bright);
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+    .toc-card-info {}
+    .toc-card-cat {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      margin-bottom: 4px;
+    }
+    .toc-card-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+    .toc-card-date {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--gray-4);
+      margin-top: 4px;
+    }
+
+    .book-chapter {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 90px;
+    }
+    .book-chapter:last-of-type { border-bottom: none; }
+
+    .chapter-header {
+      margin-bottom: 40px;
+    }
+    .chapter-num-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .chapter-num {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      background: rgba(63,209,122,0.08);
+      border: 1px solid rgba(63,209,122,0.2);
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+    }
+    .chapter-cat {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+    }
+    .chapter-sep {
+      font-size: 10px;
+      color: var(--gray-4);
+    }
+    .chapter-date {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--gray-4);
+    }
+    .chapter-title {
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 900;
+      letter-spacing: -0.035em;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .chapter-subtitle {
+      font-size: 15px;
+      color: var(--gray-5);
+      line-height: 1.7;
+      max-width: 600px;
+      padding-left: 16px;
+      border-left: 2px solid var(--border-hi);
+    }
+    .chapter-cover-quote {
+      margin: 28px 0;
+      padding: 16px 20px;
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      border-left: 2px solid rgba(63,209,122,0.3);
+    }
+    .chapter-cover-quote span {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: rgba(238,241,244,0.4);
+      letter-spacing: 0.06em;
+      font-style: italic;
+    }
+
+    .chapter-body h2 {
+      font-size: clamp(18px, 2.5vw, 22px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      margin: 36px 0 14px;
+      line-height: 1.25;
+    }
+    .chapter-body h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 28px 0 12px;
+    }
+    .chapter-body p {
+      font-size: 15px;
+      color: var(--gray-5);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .chapter-body ul, .chapter-body ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    .chapter-body li {
+      font-size: 15px;
+      color: var(--gray-5);
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+    .chapter-body strong { color: var(--white); }
+    .chapter-body em { color: var(--gray-5); }
+
+    .libro-stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .libro-stat {
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+      text-align: center;
+    }
+    .libro-stat-value {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: clamp(16px, 2.2vw, 20px);
+      font-weight: 700;
+      color: var(--green-bright);
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .libro-stat-label {
+      font-size: 11px;
+      color: var(--gray-4);
+      line-height: 1.5;
+    }
+
+    .libro-pullquote {
+      margin: 32px 0;
+      padding: 24px 28px;
+      border-left: 3px solid var(--green-bright);
+      background: rgba(63,209,122,0.04);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+    .libro-pullquote p {
+      font-size: 17px !important;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--white) !important;
+      line-height: 1.6 !important;
+      margin: 0 !important;
+    }
+
+    .libro-scenario {
+      margin: 32px 0;
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+    }
+    .libro-scenario-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .libro-scenario p { margin-bottom: 10px; }
+    .libro-scenario p:last-child { margin-bottom: 0; }
+
+    .libro-closing-quote {
+      margin: 40px 0;
+      padding: 32px;
+      background: var(--black-3);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .libro-closing-quote blockquote {
+      font-size: clamp(18px, 2.5vw, 22px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.4;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+    .libro-closing-quote .cq-line { color: var(--gray-5); font-weight: 400; }
+
+    .libro-board-box {
+      margin: 32px 0;
+      padding: 28px 32px;
+      border: 1px solid rgba(63,209,122,0.25);
+      border-radius: var(--radius-md);
+      background: rgba(63,209,122,0.04);
+      position: relative;
+      overflow: hidden;
+    }
+    .libro-board-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--green-bright);
+    }
+    .libro-board-box-tag {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .libro-board-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    .libro-board-box p { margin-bottom: 10px; }
+    .libro-board-box .box-q {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 6px 0;
+      font-size: 14px;
+      color: var(--gray-5);
+    }
+    .libro-board-box .box-q::before {
+      content: '→';
+      color: var(--green-bright);
+      flex-shrink: 0;
+    }
+    .libro-board-box .box-verdict {
+      margin-top: 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .libro-bias-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0;
+    }
+    .libro-bias-item {
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+    }
+    .libro-bias-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .libro-bias-desc {
+      font-size: 12px;
+      color: var(--gray-5);
+      line-height: 1.6;
+    }
+
+    .libro-timeline {
+      margin: 28px 0;
+    }
+    .libro-tl-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .libro-tl-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 28px;
+      width: 1px;
+      height: calc(100% + 4px);
+      background: var(--border);
+    }
+    .libro-tl-dot {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--black-3);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .libro-tl-dot span {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gray-3);
+    }
+    .libro-tl-dot.green span { background: var(--green-bright); }
+    .libro-tl-dot.amber span { background: var(--yellow-bright); }
+    .libro-tl-dot.red span { background: var(--red-bright); }
+    .libro-tl-content {}
+    .libro-tl-month {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      margin-bottom: 2px;
+    }
+    .libro-tl-event {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 3px;
+    }
+    .libro-tl-desc { font-size: 12px; color: var(--gray-5); line-height: 1.5; }
+
+    .chapter-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(63,209,122,0.3);
+      padding-bottom: 2px;
+      transition: border-color 150ms ease;
+    }
+    .chapter-read-more:hover { border-color: var(--green-bright); }
+
+    .chapter-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 48px 0;
+    }
+    .chapter-divider-line { flex: 1; height: 1px; background: var(--border); }
+    .chapter-divider-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+    }
+
+    .book-colophon {
+      padding: 64px 0 80px;
+      text-align: center;
+    }
+    .book-colophon-logo {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--green-bright);
+      margin-bottom: 8px;
+    }
+    .book-colophon-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      margin-bottom: 6px;
+    }
+    .book-colophon-sub {
+      font-size: 13px;
+      color: var(--gray-5);
+      margin-bottom: 32px;
+    }
+    .book-colophon-info {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--gray-4);
+      letter-spacing: 0.06em;
+      line-height: 2;
+    }
+    .book-colophon-cta {
+      margin-top: 40px;
+      padding: 32px;
+      border: 1px solid rgba(63,209,122,0.2);
+      border-radius: var(--radius-md);
+      background: rgba(63,209,122,0.04);
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .book-colophon-cta h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    .book-colophon-cta p {
+      font-size: 13px;
+      color: var(--gray-5);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .vol-next-banner {
+      margin: 48px 0 0;
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .vol-next-info {}
+    .vol-next-label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-4);
+      margin-bottom: 6px;
+    }
+    .vol-next-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+    }
+    .vol-next-sub { font-size: 12px; color: var(--gray-5); margin-top: 4px; }
+    .vol-next-badge {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--gray-4);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* PREV VOLUME LINK (Volume I) */
+    .vol-prev-banner {
+      margin: 0 0 48px;
+      padding: 18px 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--black-3);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--gray-5);
+    }
+    .vol-prev-banner a {
+      color: var(--green-bright);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(63,209,122,0.3);
+    }
+
+    @media (max-width: 1024px) {
+      .libro-layout { grid-template-columns: 1fr; }
+      .libro-sidebar { display: none; }
+      .libro-main { padding: 0 24px 80px; max-width: 100%; }
+      .toc-grid { grid-template-columns: 1fr; }
+      .libro-stat-row { grid-template-columns: 1fr; }
+      .libro-bias-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .book-cover { padding: 48px 0 40px; }
+      .book-cover-meta { flex-direction: column; gap: 16px; }
+      .vol-next-banner { flex-direction: column; }
+      .chapter-body h2 { font-size: 18px; }
+      .libro-pullquote p { font-size: 15px !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="read-progress"></div>
+  <div class="sys-grid-overlay" aria-hidden="true"></div>
+  <div class="sys-scanline" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <header id="main-header" class="nav-visible" role="banner">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <div class="nav-logo">
+        <a href="./en_index.html" aria-label="RATIO — Home">
+          <img src="./ratio-logo.png" alt="RATIO" class="logo-img" />
+        </a>
+        <span class="logo-badge">SYS v2.4</span>
+      </div>
+      <ul class="nav-links" role="list">
+        <li><a href="./en_index.html#home"          class="nav-link">HOME</a></li>
+        <li><a href="./en_index.html#chi-siamo"     class="nav-link">ABOUT</a></li>
+        <li><a href="./en_index.html#come-funziona" class="nav-link">HOW IT WORKS</a></li>
+        <li><a href="./en_index.html#output"        class="nav-link">OUTPUT</a></li>
+        <li><a href="./en_insights.html"            class="nav-link">INSIGHTS</a></li>
+        <li><a href="./en_libro-vol2.html"          class="nav-link active">VOLUMES</a></li>
+        <li><a href="./en_index.html#contatti"      class="nav-link">CONTACT</a></li>
+      </ul>
+      <div class="nav-contact">
+        <span class="sys-status-dot"></span>
+        <a href="mailto:decision@ratioapp.co" class="nav-email">decision@ratioapp.co</a>
+      </div>
+      <div class="lang-switcher" aria-label="Select language">
+        <a href="./en_libro-vol2.html" class="lang-btn active" aria-label="English version">EN</a>
+        <span class="lang-sep" aria-hidden="true"></span>
+        <a href="./libro-vol2.html" class="lang-btn" aria-label="Versione italiana">IT</a>
+      </div>
+      <button class="nav-toggle" aria-label="Mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-progress-bar" id="nav-progress"></div>
+  </header>
+
+  <!-- BOOK LAYOUT -->
+  <div class="libro-layout">
+
+    <!-- SIDEBAR TOC -->
+    <aside class="libro-sidebar" aria-label="Volume table of contents">
+      <div class="sidebar-book-title">
+        <div class="sidebar-book-eyebrow">RATIO · Knowledge Base</div>
+        <div class="sidebar-book-name">Decision Intelligence</div>
+        <div class="sidebar-book-vol">Volume II · Insights 11–20</div>
+      </div>
+
+      <div class="sidebar-toc-label">Contents</div>
+      <ul class="sidebar-toc">
+        <li><a href="#prefazione">
+          <span class="toc-num">—</span>
+          <span class="toc-title">Preface</span>
+        </a></li>
+        <li><a href="#indice">
+          <span class="toc-num">—</span>
+          <span class="toc-title">Table of Contents</span>
+        </a></li>
+      </ul>
+
+      <div class="sidebar-toc-section">Chapters</div>
+      <ul class="sidebar-toc">
+        <li><a href="#cap1"><span class="toc-num">11</span><span class="toc-title">Does more data mean better decisions?</span></a></li>
+        <li><a href="#cap2"><span class="toc-num">12</span><span class="toc-title">When experience becomes a decision risk</span></a></li>
+        <li><a href="#cap3"><span class="toc-num">13</span><span class="toc-title">Not knowing why we decided</span></a></li>
+        <li><a href="#cap4"><span class="toc-num">14</span><span class="toc-title">Decision quality vs outcome quality</span></a></li>
+        <li><a href="#cap5"><span class="toc-num">15</span><span class="toc-title">Changing a decision isn't being wrong</span></a></li>
+        <li><a href="#cap6"><span class="toc-num">16</span><span class="toc-title">Not deciding is already a decision</span></a></li>
+        <li><a href="#cap7"><span class="toc-num">17</span><span class="toc-title">Everyone participates, no one is accountable</span></a></li>
+        <li><a href="#cap8"><span class="toc-num">18</span><span class="toc-title">Dissent tests the decision</span></a></li>
+        <li><a href="#cap9"><span class="toc-num">19</span><span class="toc-title">Decided does not mean executable</span></a></li>
+        <li><a href="#cap10"><span class="toc-num">20</span><span class="toc-title">Risk doesn't end when you act</span></a></li>
+      </ul>
+
+      <div class="sidebar-toc-section">Closing</div>
+      <ul class="sidebar-toc">
+        <li><a href="#colophon">
+          <span class="toc-num">—</span>
+          <span class="toc-title">Colophon &amp; Volume III</span>
+        </a></li>
+      </ul>
+
+      <div class="sidebar-cta-mini">
+        <p>Want a confidential review for your next strategic hire?</p>
+        <a href="./en_index.html#contatti">Contact us</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="libro-main" role="main">
+
+      <!-- ══ COVER ══ -->
+      <section class="book-cover" id="cover">
+        <div class="book-cover-glow" aria-hidden="true"></div>
+        <div class="book-cover-eyebrow">
+          <div class="book-cover-eyebrow-line"></div>
+          <span>RATIO Decision Intelligence · Knowledge Base</span>
+        </div>
+        <div class="book-cover-title">Decision Intelligence</div>
+        <div class="book-cover-vol">Volume II</div>
+        <p class="book-cover-subtitle">
+          Ten structured analyses on executive decision risk. Experience bias, outcome bias, decision latency, authority ownership and structured dissent: the architecture that separates a good decision from good luck.
+        </p>
+        <div class="book-cover-meta">
+          <div class="book-meta-item">
+            <span class="book-meta-label">Authors</span>
+            <span class="book-meta-value">RATIO · Cristiano Ludovisi</span>
+          </div>
+          <div class="book-meta-item">
+            <span class="book-meta-label">Period</span>
+            <span class="book-meta-value">August – October 2026</span>
+          </div>
+          <div class="book-meta-item">
+            <span class="book-meta-label">Chapters</span>
+            <span class="book-meta-value">10 Insights</span>
+          </div>
+          <div class="book-meta-item">
+            <span class="book-meta-label">Level</span>
+            <span class="book-meta-value">C-Suite · Board · Founders</span>
+          </div>
+          <div class="book-meta-badge">Active Volume</div>
+        </div>
+      </section>
+
+      <!-- LINK TO VOLUME I -->
+      <div class="vol-prev-banner">
+        <i class="fas fa-book" aria-hidden="true" style="color:var(--green-bright);"></i>
+        <span>Haven't read the first volume yet? <a href="./en_libro-vol1.html">Decision Risk — Volume I (Insights 1–10)</a></span>
+      </div>
+
+      <!-- ══ PREFACE ══ -->
+      <section class="book-preface" id="prefazione">
+        <div class="book-section-eyebrow">Preface</div>
+        <h2 class="book-section-title">From assumption risk to decision risk</h2>
+        <p>
+          RATIO's Volume I examined decision risk in executive hiring: the hidden cost of mistakes, the cognitive biases, the invisible assumptions that guide choices about candidates.
+        </p>
+        <p>
+          This second volume widens the lens. The ten insights collected in these pages no longer concern only the selection of people, but the architecture of executive judgment itself: how data can create false confidence, how experience can turn into vulnerability, how a good outcome can conceal a weak decision — and how a bad outcome can coexist with impeccable judgment.
+        </p>
+        <p>
+          The narrative thread running through these ten chapters is the recurring, uncomfortable distinction between what happens and what we decided: between outcome and decision quality, between consensus and authority, between having been approved and being truly ready to act. It is a distinction organisations tend to compress — and one RATIO tries, insight after insight, to make visible again.
+        </p>
+        <p>
+          As in the first volume, every chapter can be read on its own. Read in sequence, they build an infrastructure of thought for governing high-impact decisions with more rigour — and fewer illusions.
+        </p>
+        <div class="preface-signature">
+          <div class="preface-avatar"><span>CL</span></div>
+          <div>
+            <div class="preface-sig-name">Cristiano Ludovisi</div>
+            <div class="preface-sig-role">Founder &amp; CEO, RATIO Decision Intelligence · Dubai, UAE</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ VISUAL TOC ══ -->
+      <section class="book-toc-visual" id="indice">
+        <div class="book-section-eyebrow">Table of Contents</div>
+        <h2 class="book-section-title">10 Chapters · 1 Decision Architecture</h2>
+        <div class="toc-grid">
+          <a class="toc-card" href="#cap1">
+            <span class="toc-card-num">11</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">Why more data doesn't necessarily lead to better decisions</div>
+              <div class="toc-card-date">August 18, 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap2">
+            <span class="toc-card-num">12</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Leadership Judgment</div>
+              <div class="toc-card-title">When experience becomes a decision risk</div>
+              <div class="toc-card-date">August 26, 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap3">
+            <span class="toc-card-num">13</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">The problem isn't deciding badly. It's not knowing why we did</div>
+              <div class="toc-card-date">September 2, 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap4">
+            <span class="toc-card-num">14</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">A good decision can produce a bad outcome. And vice versa</div>
+              <div class="toc-card-date">September 9, 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap5">
+            <span class="toc-card-num">15</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">Changing a decision doesn't necessarily mean you were wrong</div>
+              <div class="toc-card-date">September 16, 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap6">
+            <span class="toc-card-num">16</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">Not deciding is already a decision. And it has a cost</div>
+              <div class="toc-card-date">September 23, 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap7">
+            <span class="toc-card-num">17</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">When everyone participates, but no one is accountable</div>
+              <div class="toc-card-date">September 30, 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap8">
+            <span class="toc-card-num">18</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">Dissent doesn't slow a good decision. It tests it</div>
+              <div class="toc-card-date">October 7, 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap9">
+            <span class="toc-card-num">19</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">A decision becomes complete when it can be executed</div>
+              <div class="toc-card-date">October 14, 2026</div>
+            </div>
+          </a>
+          <a class="toc-card" href="#cap10">
+            <span class="toc-card-num">20</span>
+            <div class="toc-card-info">
+              <div class="toc-card-cat">Decision Intelligence</div>
+              <div class="toc-card-title">A decision doesn't stop being risky once we start executing it</div>
+              <div class="toc-card-date">October 21, 2026</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 11
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap1">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 11</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">August 18, 2026</span>
+          </div>
+          <h2 class="chapter-title">Why more data doesn't necessarily lead to better executive decisions</h2>
+          <p class="chapter-subtitle">The challenge facing modern organisations is no longer access to information. It is understanding which information deserves to influence a decision.</p>
+          <div class="chapter-cover-quote"><span>"Between data and decision lies something no dashboard can remove: judgment."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>For decades, the limiting factor of corporate decision-making was scarcity of information. Today the problem has reversed: real-time dashboards, business intelligence, predictive analytics and AI systems give executives more data than an entire organisation could process just a few decades ago. Yet one question remains open: is more information actually producing better decisions? Not necessarily.</p>
+
+          <h2>Data, evidence, judgment, decision</h2>
+          <p>A data point is information. It becomes evidence only when it is relevant to the decision being made. An organisation can own hundreds of metrics on a problem and still have very little truly useful evidence. Every step from data to decision requires a transformation: selection, interpretation, contextualisation, comparison. And it is precisely in these steps that a significant part of decision risk is born.</p>
+
+          <div class="libro-stat-row">
+            <div class="libro-stat">
+              <span class="libro-stat-value">More Data</span>
+              <span class="libro-stat-label">≠ Better Evidence</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">Better Evidence</span>
+              <span class="libro-stat-label">≠ Better Judgment</span>
+            </div>
+            <div class="libro-stat">
+              <span class="libro-stat-value">Better Judgment</span>
+              <span class="libro-stat-label">≠ Better Decision</span>
+            </div>
+          </div>
+
+          <h2>The abundance paradox and confirmation bias</h2>
+          <p>When information is scarce, the problem is obvious: we don't know enough. When it becomes abundant, the problem changes nature: we no longer know what deserves attention. An executive can walk into a meeting with fifty slides of analysis and leave more confident — but greater confidence doesn't mean greater decision quality. Worse, when enough information exists, it becomes possible to find evidence compatible with almost any hypothesis: those who believe a market is promising will find growth data; those who are against it will find risk data. More data can therefore make confirmation bias more sophisticated, not eliminate it.</p>
+
+          <div class="libro-pullquote">
+            <p>The precision of an analysis can be mistaken for the quality of a decision. But a model can be extremely precise in answering the wrong question.</p>
+          </div>
+
+          <h2>The question first, the analysis second</h2>
+          <p>In executive hiring this problem is particularly visible: more interviews, more assessments, more references, more scores can simply increase the confidence with which the organisation makes a decision built on a wrong assumption. If the role was defined poorly, more data on the candidate does not fix the problem. Before increasing the quantity of information, you must increase the quality of the problem definition.</p>
+
+          <div class="libro-closing-quote">
+            <blockquote>Artificial intelligence will multiply the availability of data.<br><span class="cq-line">It will not automatically multiply the quality of the judgment that interprets it.</span></blockquote>
+          </div>
+        </div>
+        <a href="./en_insight-11.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Chapter 12</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 12
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap2">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 12</span>
+            <span class="chapter-cat">Leadership Judgment</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">August 26, 2026</span>
+          </div>
+          <h2 class="chapter-title">When experience becomes a decision risk</h2>
+          <p class="chapter-subtitle">Why the most experienced leaders can be the most vulnerable when context changes. How to separate accumulated experience from its actual contextual relevance.</p>
+          <div class="chapter-cover-quote"><span>"Experience recognises the past. Judgment must decide whether it is still relevant."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>Experience is one of the most valuable assets in leadership: it allows pattern recognition, reduces the time needed to understand a situation, helps distinguish what matters from what can be ignored. But this very capability contains a risk. Experience can accelerate a decision before we have verified whether the problem we face is really the same one we already know.</p>
+
+          <h2>The expertise paradox</h2>
+          <p>The more experience we accumulate, the larger our library of patterns becomes — and the more analogies we can draw on to interpret a new situation. The problem is not having experience. It arises when experience stops being evidence and becomes a premise.</p>
+
+          <div class="libro-pullquote">
+            <p>"It worked then, so it will probably work again." This conclusion can be correct. Or it can be one of the most costly assumptions inside a decision.</p>
+          </div>
+
+          <h2>What can have changed between "then" and "now"</h2>
+          <div class="libro-bias-grid">
+            <div class="libro-bias-item"><div class="libro-bias-name">The market</div><div class="libro-bias-desc">Competitive conditions, demand, pricing structure.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">Technology</div><div class="libro-bias-desc">New solutions can invalidate established advantages.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">Organisational culture</div><div class="libro-bias-desc">People, values and competitive speed evolve.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">The power structure</div><div class="libro-bias-desc">Available capital, customer expectations, level of uncertainty.</div></div>
+          </div>
+          <p>The decision may seem familiar. The context might not be at all.</p>
+
+          <h2>Three levels not to be confused</h2>
+          <p>An important decision should distinguish at least three levels: <strong>What We Know</strong> (verified facts, observable data), <strong>What We Infer</strong> (conclusions drawn from interpretation) and <strong>What We Assume</strong> (unverified premises that silently influence judgment). Experience compresses these three levels into a synthetic judgment — "it doesn't convince me", "it's the right profile" — which for this very reason is rarely challenged, even though it may hide twenty years of assumptions never updated.</p>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-chess-king"></i> Decision Stress Test</div>
+            <h3>Before relying on an "expert" judgment</h3>
+            <div class="box-q">Is this situation really similar to the one I think I remember?</div>
+            <div class="box-q">What, among market, technology, people and culture, has changed since then?</div>
+            <div class="box-q">Am I compressing complexity or genuinely understanding it?</div>
+            <p class="box-verdict">If the judgment is fast but answers to these questions don't exist, speed is probably replacing rigour.</p>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Executive hiring is the place where the past weighs most.<br><span class="cq-line">"Succeeded there" does not equal "will succeed here".</span></blockquote>
+          </div>
+        </div>
+        <a href="./en_insight-12.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Chapter 13</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 13
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap3">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 13</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">September 2, 2026</span>
+          </div>
+          <h2 class="chapter-title">The problem isn't making a bad decision. It's not knowing why we made it.</h2>
+          <p class="chapter-subtitle">Organisations measure the results of decisions. Far more rarely do they preserve the logic that existed at the moment those decisions were made.</p>
+          <div class="chapter-cover-quote"><span>"A past decision should not be judged with information that belongs to the future."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>When an outcome is negative, it is easy to conclude the decision was wrong. But that judgment often uses information that only became available afterwards. The outcome rewrites the past — and <strong>outcome quality</strong> and <strong>decision quality</strong> are not the same thing.</p>
+
+          <h2>The most dangerous quadrant is not failure</h2>
+          <p>The relationship between decision quality and outcome quality produces four scenarios: a good decision with a good outcome (<em>Deserved Success</em>, worth replicating); a good decision with a bad outcome (<em>Unlucky Decision</em>, not to be punished); a visible failure born of a weak decision (<em>Deserved/Visible Failure</em>, which at least teaches something); and the most insidious quadrant of all — a weak decision that still produces a good result.</p>
+
+          <div class="libro-scenario">
+            <div class="libro-scenario-label"><i class="fas fa-exclamation-triangle"></i> Dangerous Luck — the most dangerous quadrant</div>
+            <p>Fragile assumptions, insufficient evidence, alternatives never truly considered — yet the outcome is positive. The organisation concludes: "We decided well." The weak process gets replicated, reinforced, turned into method. Until the moment luck stops compensating for its fragility.</p>
+          </div>
+
+          <h2>Decision Traceability</h2>
+          <p>Organisations are equipped to preserve outcomes: dashboards, KPIs, revenue, EBITDA. Far less often do they preserve the decision itself: what problem was being solved, which assumptions were considered true, which alternatives were discarded and why, which risk was deemed acceptable. Without this trace, the outcome is recorded and the decision evaporates.</p>
+
+          <div class="libro-pullquote">
+            <p>"Organisations build a memory of outcomes. Decision Intelligence also requires a memory of decisions."</p>
+          </div>
+
+          <h2>The Decision Learning Loop</h2>
+          <div class="libro-timeline">
+            <div class="libro-tl-item"><div class="libro-tl-dot green"><span></span></div><div class="libro-tl-content"><div class="libro-tl-month">01 → 02</div><div class="libro-tl-event">Decision → Expected Outcome</div><div class="libro-tl-desc">What we decide and what we expect it to produce.</div></div></div>
+            <div class="libro-tl-item"><div class="libro-tl-dot amber"><span></span></div><div class="libro-tl-content"><div class="libro-tl-month">03 → 04</div><div class="libro-tl-event">Actual Outcome → Gap Analysis</div><div class="libro-tl-desc">What actually happened and where the gap lies.</div></div></div>
+            <div class="libro-tl-item"><div class="libro-tl-dot green"><span></span></div><div class="libro-tl-content"><div class="libro-tl-month">05 → 06</div><div class="libro-tl-event">Learning → Better Next Decision</div><div class="libro-tl-desc">The cycle continues, decision after decision.</div></div></div>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Without a trace, true decision learning does not exist.<br><span class="cq-line">"Bad hire" is an explanation. It is not yet a diagnosis.</span></blockquote>
+          </div>
+        </div>
+        <a href="./en_insight-13.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Chapter 14</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 14
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap4">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 14</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">September 9, 2026</span>
+          </div>
+          <h2 class="chapter-title">A good decision can produce a bad outcome. And vice versa.</h2>
+          <p class="chapter-subtitle">Organisations often evaluate the quality of a decision by looking at the outcome it produced. This is dangerous. Decision quality and outcome quality are not the same thing.</p>
+        </div>
+
+        <div class="chapter-body">
+          <p>The decision answers one question: was it justified to decide this way, given what we knew? The outcome answers a different question: what actually happened in the real world? These two questions must remain separate before being related to each other.</p>
+
+          <h2>Outcome Bias</h2>
+          <p>We judge the quality of a past decision almost automatically using knowledge of its outcome — not an analysis of the process that preceded it. When we know something went well, the process seems more solid than it was. When we know it went badly, it seems weaker. Outcome Bias rewards weak judgment with lucky outcomes and penalises solid judgment with unlucky outcomes — building executive reputations based on outcomes rather than decision competence.</p>
+
+          <div class="libro-stat-row">
+            <div class="libro-stat"><span class="libro-stat-value">Deserved Success</span><span class="libro-stat-label">Good decision, good outcome — replicate the method</span></div>
+            <div class="libro-stat"><span class="libro-stat-value">Unlucky Decision</span><span class="libro-stat-label">Good decision, bad outcome — don't change the process</span></div>
+            <div class="libro-stat"><span class="libro-stat-value">Dangerous Luck</span><span class="libro-stat-label">Bad decision, good outcome — the most dangerous quadrant</span></div>
+          </div>
+
+          <div class="libro-pullquote">
+            <p>"Conviction has value. But a positive result does not prove the process that generated it was sound."</p>
+          </div>
+
+          <h2>Organisations that punish correct judgment</h2>
+          <p>Organisations that systematically penalise good decisions with bad outcomes end up developing risk aversion where methodological rigour should exist instead. Their leaders learn to protect their own reputation, not to improve the quality of their reasoning. That is why distinguishing the four quadrants is not an academic exercise: it is a condition for learning from decisions rather than from luck.</p>
+
+          <div class="libro-closing-quote">
+            <blockquote>A good decision increases the probability of a desirable outcome.<br><span class="cq-line">It cannot guarantee it. And that does not make it any less good.</span></blockquote>
+          </div>
+        </div>
+        <a href="./en_insight-14.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Chapter 15</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 15
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap5">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 15</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">September 16, 2026</span>
+          </div>
+          <h2 class="chapter-title">Changing a decision doesn't necessarily mean you were wrong.</h2>
+          <p class="chapter-subtitle">A decision can be correct when it is made and become wrong to maintain once the conditions that made it rational change.</p>
+        </div>
+
+        <div class="chapter-body">
+          <p>No consequential decision is universally correct: it is correct in relation to the information available, the reasonable assumptions, the objectives and constraints of that moment. A decision can be sound at T1 and become inappropriate at T2 — not because the organisation got it wrong at T1, but because reality changed.</p>
+
+          <div class="libro-pullquote">
+            <p>"A decision should not be protected by information that did not exist when it was made."</p>
+          </div>
+
+          <h2>Assumption Half-Life</h2>
+          <p>Every strategic decision contains assumptions: about market demand, about capital availability, about a competitor's behaviour. Some assumptions remain valid for years. Others become obsolete in weeks. Organisations should ask not only "what assumptions are we making?" but also "for how long can we reasonably expect them to remain valid?" The flow is simple: Assumption → Validity → New Signals → Reassessment.</p>
+
+          <h2>Consistency is not decision quality</h2>
+          <p>Senior leaders are often expected to demonstrate conviction. Reversing a communicated direction can seem costly: a CEO fears appearing uncertain, a Board resists reopening an already approved decision. But consistency only has value as long as the underlying reasoning remains valid.</p>
+
+          <div class="libro-pullquote">
+            <p>"Conviction has value. Attachment to invalidated assumptions does not."</p>
+          </div>
+
+          <h2>Not every signal justifies a new decision</h2>
+          <p>This principle is not an invitation to continuously revisit every choice. A filter is needed: a <em>Decision Reassessment Gate</em> that distinguishes everyday noise from signals that truly undermine the critical assumptions on which the decision was based.</p>
+
+          <div class="libro-closing-quote">
+            <blockquote>Changing course is not always a repudiation of the past.<br><span class="cq-line">It can be proof that judgment is still active.</span></blockquote>
+          </div>
+        </div>
+        <a href="./en_insight-15.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Chapter 16</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 16
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap6">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 16</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">September 23, 2026</span>
+          </div>
+          <h2 class="chapter-title">Not deciding is already a decision. And it has a cost.</h2>
+          <p class="chapter-subtitle">Organisations carefully measure the risk of acting. Far less often do they measure the risk that accumulates while they wait to decide.</p>
+          <div class="chapter-cover-quote"><span>"Decision risk does not exist only in action. It can exist in delay. It can exist in inaction."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <h2>Delay is not neutral: Option Loss</h2>
+          <p>At T1 an organisation may have five options available. At T2, after waiting, two may have disappeared. The organisation used the time to gather better information — but it also lost optionality. This phenomenon, which we call <strong>Option Loss</strong>, is one of the main components of <strong>Decision Latency</strong> and rarely appears in an analysis that justifies waiting.</p>
+
+          <h2>The three dimensions of decision risk</h2>
+          <div class="libro-bias-grid">
+            <div class="libro-bias-item"><div class="libro-bias-name">01 — Risk of Action</div><div class="libro-bias-desc">What can happen if we decide and act? The most visible risk, the one in business cases.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">02 — Risk of Delay</div><div class="libro-bias-desc">What can change while we wait? Market, costs, people, time windows.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">03 — Risk of Inaction</div><div class="libro-bias-desc">What happens if no significant decision is made? The status quo still produces effects.</div></div>
+          </div>
+
+          <h2>The waiting equation</h2>
+          <p>Every wait contains a trade-off: on one side the value of additional information, on the other the cost of delay (loss of options, context change, opportunity cost, execution delay, organisational drift). Waiting is rational only as long as the expected value of the new information remains higher than the cost the wait generates.</p>
+
+          <div class="libro-pullquote">
+            <p>"Some uncertainty can be reduced. Some uncertainty can only be decided through."</p>
+          </div>
+
+          <h2>The illusion of certainty</h2>
+          <p>Behind many prolonged waits lies an implicit expectation: that by continuing to analyse, uncertainty will eventually disappear. Often it does not. At that point additional analysis stops reducing uncertainty and starts merely postponing exposure to it — right at the point where executive judgment becomes indispensable.</p>
+
+          <div class="libro-closing-quote">
+            <blockquote>Waiting is not free.<br><span class="cq-line">It simply has a cost that never appears in the income statement.</span></blockquote>
+          </div>
+        </div>
+        <a href="./en_insight-16.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Chapter 17</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 17
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap7">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 17</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">September 30, 2026</span>
+          </div>
+          <h2 class="chapter-title">When everyone participates in the decision, but no one is accountable for it.</h2>
+          <p class="chapter-subtitle">Consensus can be broad, information complete and the process can look rigorous. But if it isn't clear who has the authority to decide, accountability risks dissolving exactly when it becomes necessary.</p>
+        </div>
+
+        <div class="chapter-body">
+          <p>An organisation can involve many people, gather solid evidence and reach apparent agreement without ever having clarified who is actually authorised to decide. The question is not how many people participated, but whether, at the end of the process, it is clear who decides, on what criteria and with what accountability.</p>
+
+          <h2>Four roles that must not be confused</h2>
+          <div class="libro-bias-grid">
+            <div class="libro-bias-item"><div class="libro-bias-name">01 — Decision Input</div><div class="libro-bias-desc">Who provides evidence and perspectives. Informational contribution does not automatically confer authority.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">02 — Decision Recommendation</div><div class="libro-bias-desc">Who compares alternatives and formulates a reasoned proposal.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">03 — Decision Authority</div><div class="libro-bias-desc">Who holds the formal mandate to choose among alternatives.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">04 — Decision Accountability</div><div class="libro-bias-desc">Who answers for assigned responsibilities and subsequent review.</div></div>
+          </div>
+
+          <h2>Consensus is not a substitute for authority</h2>
+          <p>When consensus becomes an implicit, unlimited condition, every stakeholder acquires a power of deferral that doesn't match their formal responsibility. The decision gets discussed, revised, postponed — no one explicitly blocks it, but no one manages to conclude it either.</p>
+
+          <div class="libro-pullquote">
+            <p>CONSULTATION ≠ APPROVAL · CONSENSUS ≠ AUTHORITY · PARTICIPATION ≠ OWNERSHIP</p>
+          </div>
+
+          <h2>The cost of ambiguous authority</h2>
+          <p>A proposal moves from one function to another. Every handoff produces new comments but no new evidence. The result is a precise chain: unclear authority → repeated consultation → diffused responsibility → decision latency → option loss. The organisation may interpret this movement as prudence, when part of the delay actually stems from a governance problem.</p>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-chess-king"></i> RATIO Principle #17</div>
+            <h3>Shared Intelligence. Clear Authority. Visible Accountability.</h3>
+            <p class="box-verdict">An effective owner doesn't eliminate dissent: they organise its contribution. They don't replace evidence with their own authority: they verify that the relevant evidence has been considered.</p>
+          </div>
+        </div>
+        <a href="./en_insight-17.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Chapter 18</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 18
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap8">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 18</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">October 7, 2026</span>
+          </div>
+          <h2 class="chapter-title">Dissent doesn't slow a good decision. It tests it.</h2>
+          <p class="chapter-subtitle">A decision can have solid data, a clear owner and a rigorous process. But if no one can genuinely challenge the dominant hypothesis, judgment remains vulnerable.</p>
+        </div>
+
+        <div class="chapter-body">
+          <p>In the previous chapter we distinguished Decision Input, Recommendation, Authority and Accountability. This architecture is necessary but not sufficient: a CEO can have a crystal-clear mandate and a Board can follow every procedure, yet the dominant hypothesis can travel through the entire process without ever meeting genuine intellectual opposition.</p>
+
+          <div class="libro-pullquote">
+            <p>Clear authority tells us who decides. Constructive dissent helps us test what is being decided.</p>
+          </div>
+
+          <h2>The risk of premature convergence</h2>
+          <p>Executive decisions often start with multiple alternatives, then the process converges on a preferred direction. The risk arises when convergence happens before the decisive assumptions have been sufficiently tested: the decision becomes progressively more coherent without necessarily becoming more robust.</p>
+
+          <h2>The RATIO Decision Challenge</h2>
+          <p>Before commitment, a consequential decision can be tested across five dimensions: <strong>Problem</strong> (are we solving the right problem?), <strong>Assumptions</strong> (which ones must be true for it to work?), <strong>Evidence</strong> (what evidence supports it, and what could contradict it?), <strong>Alternatives</strong> (which alternative did we discard too quickly?), <strong>Failure Conditions</strong> (what would have to happen for it to prove inadequate?).</p>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-chess-king"></i> Questions that separate the challenge from the person</div>
+            <div class="box-q">Not just: "Does everyone agree?"</div>
+            <div class="box-q">But: "What would have to be true for us to be wrong?"</div>
+            <div class="box-q">What is the strongest argument against the choice we're about to make?</div>
+            <p class="box-verdict">Right to Challenge ≠ Right to Veto. Dissent protects the reasoning; authority protects the conclusion.</p>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Challenge the Reasoning. Protect the Authority.<br><span class="cq-line">Strengthen the Decision.</span></blockquote>
+          </div>
+        </div>
+        <a href="./en_insight-18.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Chapter 19</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 19
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap9">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 19</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">October 14, 2026</span>
+          </div>
+          <h2 class="chapter-title">A decision is not complete when it is made. It becomes complete when it can be executed.</h2>
+          <p class="chapter-subtitle">A decision can be rational, well documented and formally approved. But without the conditions to turn it into action, the risk isn't eliminated: it changes shape.</p>
+          <div class="chapter-cover-quote"><span>"A decision can be approved without yet being ready for execution."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>A Board approves a strategy. A CEO authorises an investment. The decision has been made — but resources may not be available and some essential conditions may not be met. Organisations devote great attention to choosing the best alternative. Far less often do they check, with the same rigour, whether they have the conditions to implement it.</p>
+
+          <h2>Three conditions not to be confused</h2>
+          <div class="libro-stat-row">
+            <div class="libro-stat"><span class="libro-stat-value">Decision Commitment</span><span class="libro-stat-label">What have we decided?</span></div>
+            <div class="libro-stat"><span class="libro-stat-value">Execution Readiness</span><span class="libro-stat-label">Are we in a position to act?</span></div>
+            <div class="libro-stat"><span class="libro-stat-value">Execution Results</span><span class="libro-stat-label">What is our action actually producing?</span></div>
+          </div>
+          <p>DECISION COMMITMENT ≠ EXECUTION READINESS ≠ EXECUTION SUCCESS.</p>
+
+          <h2>The gap between decision and action</h2>
+          <p>This is the distance between a formally made decision and the organisation's actual ability to begin implementing it — not just a matter of time, but of competencies, resources, coordination and still-missing responsibilities. While this distance is being closed, the context keeps changing.</p>
+
+          <h2>The RATIO Ownership Gate: seven conditions</h2>
+          <p>Before launching a high-impact decision, an organisation can verify seven conditions: <strong>Decision, Owner, Authority, Input, Rights, Escalation, Accountability</strong>. It is not an automatic system, but a check of organisational clarity — and a direct callback to a principle already introduced: <em>Decision Accountability is not an Outcome Guarantee</em>.</p>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-chess-king"></i> RATIO Principle #19</div>
+            <h3>Role First. Candidate Second.</h3>
+            <p class="box-verdict">An excellent appointment does not automatically create an organisation ready to support it.</p>
+          </div>
+        </div>
+        <a href="./en_insight-19.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <div class="chapter-divider"><div class="chapter-divider-line"></div><span class="chapter-divider-label">Chapter 20</span><div class="chapter-divider-line"></div></div>
+
+      <!-- ══════════════════════════════════
+           CHAPTER 20
+      ══════════════════════════════════ -->
+      <section class="book-chapter" id="cap10">
+        <div class="chapter-header">
+          <div class="chapter-num-row">
+            <span class="chapter-num">Chapter 20</span>
+            <span class="chapter-cat">Decision Intelligence</span>
+            <span class="chapter-sep">·</span>
+            <span class="chapter-date">October 21, 2026</span>
+          </div>
+          <h2 class="chapter-title">A decision doesn't stop being risky once we start executing it.</h2>
+          <p class="chapter-subtitle">Every strategic decision is built on assumptions about context, resources and the future. But those assumptions can change while the organisation acts.</p>
+          <div class="chapter-cover-quote"><span>"A decision can remain formally in force even when the assumptions supporting it are no longer valid."</span></div>
+        </div>
+
+        <div class="chapter-body">
+          <p>A Board approves a strategy, responsibilities are clear, resources considered. Execution begins — but context does not stand still: demand can change, costs can rise, a critical competency can become unavailable. The decision remains formally in force. Some of the assumptions that justified its approval may, however, no longer be valid.</p>
+
+          <h2>Two distinct dimensions</h2>
+          <p>In the previous chapter we introduced execution readiness. But even once those conditions are met, another question remains: for how long will the initial assumptions continue to be valid? Execution readiness and assumption validity are two different dimensions of decision risk.</p>
+
+          <h2>Not all assumptions carry the same weight</h2>
+          <div class="libro-bias-grid">
+            <div class="libro-bias-item"><div class="libro-bias-name">Secondary Assumptions</div><div class="libro-bias-desc">Their change requires limited adjustments.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">Relevant Assumptions</div><div class="libro-bias-desc">They influence costs, timelines, capacity or expected results.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">Critical Assumptions</div><div class="libro-bias-desc">The very sustainability of the decision depends on them.</div></div>
+            <div class="libro-bias-item"><div class="libro-bias-name">Assumption Drift</div><div class="libro-bias-desc">The gradual, often silent, departure from initial hypotheses.</div></div>
+          </div>
+
+          <h2>The RATIO Decision Assumption Monitor</h2>
+          <p>A five-element model links critical assumptions to the signals that indicate their change: <strong>Critical Assumption → Original Evidence → Signal to Observe → Attention Threshold → Decision Response</strong>. Monitoring results is necessary, but not always sufficient: good current performance ≠ guaranteed validity of future assumptions.</p>
+
+          <div class="libro-pullquote">
+            <p>"The most dangerous change is not always the sudden one. It can be the one the organisation has learned to consider normal."</p>
+          </div>
+
+          <div class="libro-board-box">
+            <div class="libro-board-box-tag"><i class="fas fa-chess-king"></i> RATIO Principle #20</div>
+            <h3>Role First. Candidate Second.</h3>
+            <p class="box-verdict">The quality of an executive decision also depends on knowing when the context is no longer the same.</p>
+          </div>
+
+          <div class="libro-closing-quote">
+            <blockquote>Decision risk doesn't end with approval.<br><span class="cq-line">It keeps living on — silently — through execution.</span></blockquote>
+          </div>
+        </div>
+        <a href="./en_insight-20.html" class="chapter-read-more">Read the full insight <i class="fas fa-arrow-right"></i></a>
+      </section>
+
+      <!-- ══ COLOPHON ══ -->
+      <section class="book-colophon" id="colophon">
+        <div class="book-colophon-logo">RATIO DECISION INTELLIGENCE</div>
+        <div class="book-colophon-title">Decision Intelligence — Volume II</div>
+        <p class="book-colophon-sub">10 Insights · August – October 2026</p>
+        <div class="book-colophon-info">
+          <div>Authors: RATIO Decision Intelligence · Cristiano Ludovisi</div>
+          <div>Based in: Dubai, UAE</div>
+          <div>Contact: decision@ratioapp.co</div>
+          <div>URL: ratioapp.co</div>
+          <div>© 2026 RATIO Decision Intelligence — All rights reserved.</div>
+        </div>
+
+        <div class="book-colophon-cta">
+          <h3>An important decision deserves a defensible process.</h3>
+          <p>Planning an executive hire or a high-impact decision? Contact us for a confidential initial review.</p>
+          <a href="./en_index.html#contatti" class="btn-primary">
+            <span class="btn-label">REQUEST A CONFIDENTIAL INITIAL REVIEW</span>
+            <span class="btn-arrow"><i class="fas fa-arrow-right"></i></span>
+          </a>
+        </div>
+
+        <!-- VOLUME III ANNOUNCEMENT -->
+        <div class="vol-next-banner">
+          <div class="vol-next-info">
+            <div class="vol-next-label">Coming soon · Insights 21–30</div>
+            <div class="vol-next-title">Decision Intelligence — Volume III</div>
+            <div class="vol-next-sub">The third volume will be available once the next 10 insights are complete.</div>
+          </div>
+          <a href="./en_insights.html" class="vol-next-badge">→ All Insights</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <div class="footer-logo">RATIO</div>
+        <p class="footer-desc">Decision filter for executive selection. Verifiable, defensible, certified output.</p>
+        <a href="mailto:decision@ratioapp.co" class="footer-email mono">decision@ratioapp.co</a>
+        <div class="footer-sys-info">
+          <span class="mono">SYS v2.4.1</span>
+          <span class="footer-sep">·</span>
+          <span class="mono">BUILD 20241114</span>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <a href="./en_index.html#home" class="footer-link">HOME</a>
+        <a href="./en_index.html#chi-siamo" class="footer-link">ABOUT</a>
+        <a href="./en_index.html#come-funziona" class="footer-link">HOW IT WORKS</a>
+        <a href="./en_index.html#output" class="footer-link">OUTPUT</a>
+        <a href="./en_insights.html" class="footer-link">INSIGHTS</a>
+        <a href="./en_libro-vol2.html" class="footer-link">VOLUMES</a>
+        <a href="./en_index.html#contatti" class="footer-link">CONTACT</a>
+      </div>
+      <div class="footer-right">
+        <p>© 2026 RATIO — Decision Intelligence. Dubai, UAE.</p>
+        <p class="footer-hash mono">SHA: d4f9c2a1 · CERTIFIED</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+  <script>
+    (function() {
+      const bar = document.getElementById('read-progress');
+      function updateProgress() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        bar.style.width = pct.toFixed(1) + '%';
+      }
+      window.addEventListener('scroll', updateProgress, { passive: true });
+      updateProgress();
+    })();
+
+    (function() {
+      const sections = document.querySelectorAll('[id]');
+      const links = document.querySelectorAll('.sidebar-toc a');
+      function onScroll() {
+        let current = '';
+        sections.forEach(s => {
+          const top = s.getBoundingClientRect().top;
+          if (top <= 120) current = s.id;
+        });
+        links.forEach(l => {
+          l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+        });
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+</body>
+</html>
