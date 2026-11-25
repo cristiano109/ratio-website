@@ -47,6 +47,15 @@ RATIO è una piattaforma di Decision Intelligence premium per la selezione execu
 - Sezione "RATIO · PROFESSIONAL SPORT" aggiunta a `index.html` e `en_index.html`
 - sitemap.xml aggiornato (30 URL, 2026-08-19)
 
+### Fase 5 — Insight #25 (COMPLETO — in attesa di deploy, 2026-11-25)
+- `insight-25.html` + `en_insight-25.html` — "Quando gli incentivi premiano una scelta, ma l'organizzazione ne paga il prezzo." / "When incentives reward a choice, but the organisation pays the price."
+- Nuovo framework: la Mappa RATIO degli Incentivi Decisionali (5 dimensioni: Obiettivo, Incentivo, Esposizione, Orizzonte Temporale, Allineamento)
+- `.cover-25` aggiunto a `insights.css`
+- Card "ARTICLE 25" aggiunta in `insights.html` + `en_insights.html` (dopo l'Insight #23, nella griglia degli insight più recenti)
+- sitemap.xml aggiornato con le 2 nuove URL (`insight-25.html`, `en_insight-25.html`), lastmod 2026-11-25
+- Nota: la numerazione salta da #23 a #25 su esplicita richiesta; #24 non è stato pubblicato
+- Nessun articolo preesistente è stato modificato
+
 ### Fase 4 — Volume II Digital Book + Compattazione Insights (COMPLETO — in attesa di deploy, 2026-11-11)
 - `libro-vol2.html` + `en_libro-vol2.html` — libro digitale "Decision Intelligence — Volume II" (10 capitoli, Insight 11–20, periodo "Agosto – Ottobre 2026"), stessa struttura/CSS del Volume I, con `.vol-prev-banner` di rimando a Volume I
 - Banner "Volume II" aggiunto in fondo a `insight-11.html` … `insight-20.html` (IT) e `en_insight-11.html` … `en_insight-20.html` (EN) — 20 file, analogo al banner Volume I già presente su insight 1–10

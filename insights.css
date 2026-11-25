@@ -390,6 +390,16 @@
     linear-gradient(162deg, rgba(5,7,13,1) 0%, rgba(7,8,9,1) 52%, rgba(5,8,12,1) 100%);
 }
 
+/* COVER 25 — incentive misalignment — gold (incentive) vs green (org value) vs red (exposure) tension */
+.cover-25 {
+  background:
+    radial-gradient(ellipse 54% 40% at 24% 20%, rgba(212,175,55,0.13) 0%, transparent 52%),
+    radial-gradient(ellipse 46% 38% at 78% 18%, rgba(63,209,122,0.09) 0%, transparent 50%),
+    radial-gradient(ellipse 44% 36% at 50% 68%, rgba(239,68,68,0.08) 0%, transparent 48%),
+    radial-gradient(ellipse 38% 44% at 84% 84%, rgba(99,179,237,0.05) 0%, transparent 44%),
+    linear-gradient(160deg, rgba(5,7,13,1) 0%, rgba(8,7,7,1) 52%, rgba(5,8,12,1) 100%);
+}
+
 /* COVER 12 — leadership judgment / experience vs context — deep emerald-green + gold */
 .cover-12 {
   background:
